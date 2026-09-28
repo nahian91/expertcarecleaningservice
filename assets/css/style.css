@@ -114,7 +114,7 @@
     .svc .no{font-size:.74rem;color:var(--muted-dim);letter-spacing:.12em;text-transform:uppercase}
     .svc h3{font-family:var(--display);font-weight:600;font-size:1.35rem;margin:8px 0 4px}
     .svc .price{font-family:var(--display);font-size:1.05rem;color:var(--muted);margin-bottom:20px}
-    .svc-img{margin:-30px -30px 22px;height:180px;overflow:hidden}
+    .svc-img{margin:-30px -30px 22px;height:380px;overflow:hidden}
     .svc-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
     .svc:hover .svc-img img{transform:scale(1.05)}
     .svc ul{list-style:none;display:flex;flex-direction:column;gap:11px;flex:1;margin-bottom:24px}

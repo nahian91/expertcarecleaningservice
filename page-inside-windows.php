@@ -70,10 +70,10 @@ get_header(); ?>
       </div>
       <span class="eyebrow">
         <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        Specialist Clean · Inside Windows
+        Bespoke Detailing · Interior Glazing
       </span>
-      <h1>Inside window cleaning, <span class="shine">streak-free clarity.</span></h1>
-      <p class="sub">Crystal-clear interior glass, cleaned tracks, dusted frames, and spotless sills that maximise natural light across your London home.</p>
+      <h1>Interior window detailing, <span class="shine">flawless optical clarity.</span></h1>
+      <p class="sub">Smudge-free internal glass, debris-free track channels, washed framework, and immaculately wiped sills that flood your London property with unhindered natural light.</p>
     </div>
   </section>
 
@@ -82,14 +82,14 @@ get_header(); ?>
     <div class="wrap split">
       <!-- Left: Prose Description -->
       <div class="prose reveal in">
-        <h3>What’s included.</h3>
-        <p>Over time, cooking steam, dust, pet marks, and condensation create a dull film over internal glass. Our inside window cleaning service delivers smear-free transparency using microfibre glass polishers, non-abrasive glass solutions, and detailed attention to window frames, tracks, and sills.</p>
+        <h3>Scope of service.</h3>
+        <p>Airborne dust, airborne grease from cooking, paw prints, and atmospheric moisture steadily leave an unsightly, light-blocking haze across interior panes. Our internal glazing treatment eliminates film and residue using anti-static glass formulas, edge-to-edge lintless microfibres, and comprehensive treatment of sashes, rubber gaskets, and runners.</p>
 
-        <h3>Ideal for</h3>
-        <p>Homeowners, tenants, and Airbnb hosts wanting to maximise interior sunlight, refresh sunrooms and bi-fold glass doors, or prepare a property for end-of-tenancy inspections.</p>
+        <h3>Recommended for</h3>
+        <p>Residents seeking brighter natural spaces, properties with extensive architectural glazing or bi-folding systems, rental handovers preparing for strict inventory inspections, and short-stay hosts wanting five-star presentation.</p>
 
-        <h3>How it works</h3>
-        <p>Tell us how many rooms, window panes, or French/bi-fold doors you have. We can book this as a standalone appointment or bundle it into your regular, deep, or end-of-tenancy clean for maximum convenience.</p>
+        <h3>Arranging your clean</h3>
+        <p>Simply indicate your room count, glazing types, or specialized door configurations (such as sliding or French panels). This treatment is available as a solo specialist appointment or as a discounted bolt-on alongside our routine, deep reset, or checkout cleaning services.</p>
 
         <div class="split-actions">
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Request Window Quote</a>
@@ -99,42 +99,41 @@ get_header(); ?>
 
       <!-- Right: Boxed Checklist Card with All Items -->
       <aside class="incl reveal in">
-        <h3>Inside Windows</h3>
-        <div class="pr">Bespoke pricing · per room or full house bundle</div>
+        <h3>Internal Glazing Care</h3>
+        <div class="pr">Custom quotation · individual panes or full property packages</div>
         
-        <div class="checklist-title">Inside Window Checklist Included:</div>
+        <div class="checklist-title">Glazing Checklist Specification:</div>
         <ul>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Complete interior glass streak-free polish
+            Edge-to-edge streak-free glass polish
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Removal of fingerprints, grease &amp; condensation marks
+            Elimination of grease haze, water stains &amp; smudges
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Detailed wiping of internal window frames &amp; corners
+            Detailed cleaning of internal sashes, jambs &amp; corners
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Dusting and washing of internal window sills &amp; ledges
+            Sanitising and wiping interior ledges and sill boards
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Clearing built-up dust from sliding tracks
+            Extraction of accumulated grit &amp; grime from sliding runners
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            French door, patio door &amp; bi-fold glass panels
+            Bi-fold panels, patio sliders &amp; terrace entryway glass
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Interior glass partitions &amp; balustrades
+            Interior architectural partitions &amp; mezzanine glass panels
           </li>
           <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Final quality review for crystal clarity
+            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Rigorous optical review under direct illumination
           </li>
         </ul>
 
@@ -149,28 +148,28 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Recent Results
+          Work Showcase
         </span>
-        <h2 class="section-title">Photos from <em>real inside window cleans.</em></h2>
-        <p class="section-lead">Actual results from recent internal glass cleaning appointments across London — the standard we bring to every visit.</p>
+        <h2 class="section-title">Visuals from <em>recent interior glass cleans.</em></h2>
+        <p class="section-lead">Verified photographic records from interior glass detailing projects across London residences — demonstrating our standard across every pane.</p>
       </div>
 
       <div class="work-grid reveal">
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Streak free window glass" loading="lazy">
-          <figcaption>Streak-Free Glass</figcaption>
+          <figcaption>Ultra-Clear Polished Panes</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" alt="Window sill and frame clean" loading="lazy">
-          <figcaption>Frames &amp; Sills Cleaned</figcaption>
+          <figcaption>Purified Frames &amp; Sills</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" alt="Bathroom window clean" loading="lazy">
-          <figcaption>Bathroom Glazing</figcaption>
+          <figcaption>Condensation &amp; Steam Reset</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Living room patio window clean" loading="lazy">
-          <figcaption>Living Area Panes</figcaption>
+          <figcaption>Bi-Fold &amp; Patio Detailing</figcaption>
         </figure>
       </div>
     </div>
@@ -182,44 +181,44 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Frequently Asked
+          Common Queries
         </span>
-        <h2 class="section-title">The small <em>print.</em></h2>
+        <h2 class="section-title">Key questions <em>answered.</em></h2>
       </div>
 
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-q" type="button">Do you clean external windows as well?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Does this service include external window facades?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>This dedicated service covers all interior glass, sills, and reachable interior frames. If you need exterior glass done, reachable balcony or ground-floor glass can be accommodated upon request.</p>
+            <p>Our standard package targets internal surfaces, sills, and reachable casing. Exterior terrace panels, ground-level panes, or walk-out balcony glass can be added upon request during quotation.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Do you wipe the sills and internal tracks?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Are the window sills, seals, and runner tracks detailed?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. We remove loose dust, wipe down the window sill, clean frame corners, and ensure sliding door tracks are free of built-up grit.</p>
+            <p>Absolutely. We vacuum loose particulates, hand-wipe window ledges, sanitise surrounding woodwork, and clear trapped debris from sliding runners.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Can this be added to a domestic or deep clean?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Can this be combined with regular or tenancy services?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. While light internal glass is included in deep cleans, you can add comprehensive whole-home internal window detailing to any booking.</p>
+            <p>Yes. While essential spot-cleaning is part of standard resets, comprehensive whole-home internal pane detailing is easily integrated as an upgrade to any booking.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">What equipment do you use?<span class="pm"></span></button>
+          <button class="faq-q" type="button">What solutions and tools do your technicians utilize?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We use lint-free microfibres, premium glass treatment solutions, and squeegees designed to leave zero smears or residue.</p>
+            <p>We deploy lint-free waffle-weave microfibres, residue-free surfactant solutions, and precision squeegees to achieve completely smear-free optical clarity.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">What areas do you cover?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Which London regions are eligible for this service?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We provide full internal window cleaning coverage across all London boroughs: Central, North, East, South, and West London.</p>
+            <p>Our internal glazing specialists operate throughout all London postcodes across Central, West, North, East, and South districts.</p>
           </div>
         </div>
       </div>

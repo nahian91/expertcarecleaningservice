@@ -70,10 +70,10 @@ get_header(); ?>
       </div>
       <span class="eyebrow">
         <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        02 · Deep Clean
+        02 · Complete Intensive Restoration
       </span>
-      <h1>Deep cleaning, <span class="shine">the full home reset.</span></h1>
-      <p class="sub">An intensive, top-to-bottom refresh that tackles heavy limescale, built-up grime, furniture undersides, and high-touch areas across London.</p>
+      <h1>Comprehensive deep cleaning, <span class="shine">restoring true pristine comfort.</span></h1>
+      <p class="sub">A rigorous, corner-to-corner sanitisation package targeting hardened limescale, baked-on grease, hidden dust traps, and high-frequency touch surfaces across London.</p>
     </div>
   </section>
 
@@ -82,14 +82,14 @@ get_header(); ?>
     <div class="wrap split">
       <!-- Left: Prose Description -->
       <div class="prose reveal in">
-        <h3>What’s included.</h3>
-        <p>A deep clean goes beyond routine maintenance. It targets the grime, dust, and stubborn mineral build-ups that accumulate over months: complete cobweb removal, deep skirting board scrub, cleaning behind reachable furniture, kitchen degreasing across hobs and splashbacks, appliance sanitisation, and intensive descaling of bathroom grout, showers, and accessories.</p>
+        <h3>Scope of the treatment.</h3>
+        <p>A deep restorative clean targets the stubborn deposits that standard weekly routines cannot resolve. We address long-term residue head-on: high-level cobweb extraction, detailed baseboard and architrave washing, cleaning under moveable furniture, intensive degreasing of cooker hobs and backsplashes, appliance sanitisation, and complete bathroom scale removal across grout, screens, and fixtures.</p>
 
-        <h3>Ideal for</h3>
-        <p>Homes that haven’t had a professional clean in several months, seasonal spring cleans, pre-event preparation, or resetting a property before starting a regular cleaning routine.</p>
+        <h3>Who this is for</h3>
+        <p>Residences requiring a complete seasonal refresh, homes that have gone without professional maintenance for months, pre-hosting preparation, or properties setting a clean benchmark before commencing regular housekeeping visits.</p>
 
-        <h3>How it works</h3>
-        <p>Send us your postcode and a few property details to receive a fixed tailored quote. We bring commercial-grade descaling agents, degreasers, and specialist tools as standard. Our vetted and insured cleaners stay until every room meets our comprehensive checklist standards, leaving your home completely refreshed and revitalised.</p>
+        <h3>Our operational process</h3>
+        <p>Submit your postcode and room configuration for an all-inclusive, fixed estimate. Our operatives arrive equipped with industrial descalers, grease-dissolving formulas, and specialised extraction equipment. Every technician works systematically against our 22-point protocol, ensuring your home is left completely revitalised, hygienic, and spotless.</p>
 
         <div class="split-actions">
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Request a Tailored Quote</a>
@@ -99,33 +99,33 @@ get_header(); ?>
 
       <!-- Right: Boxed Checklist Card with All 22 Items -->
       <aside class="incl reveal in">
-        <h3>Deep Clean Reset</h3>
-        <div class="pr">Bespoke pricing · tailored to your home size</div>
+        <h3>Intensive Reset</h3>
+        <div class="pr">Customised pricing · calculated to your layout</div>
         
         <div class="checklist-title">22-Point Deep Reset Checklist Included:</div>
         <ul>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Detailed dusting of all accessible surfaces</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Removing cobwebs from ceilings, corners &amp; walls</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep cleaning skirting boards, edges &amp; corners</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning doors, door frames, handles &amp; switches</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning window sills, frames &amp; accessible interior glass</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning behind and underneath accessible furniture</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Detailed vacuuming of carpets, rugs &amp; upholstery</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep mopping of hard floors</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Degreasing kitchen surfaces, hobs &amp; splashbacks</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep cleaning fridges, ovens &amp; microwaves</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning inside and outside accessible cupboards &amp; drawers</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep cleaning showers, baths, sinks &amp; bathroom surfaces</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Thorough toilet cleaning &amp; sanitising</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning mirrors and glass surfaces</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bed making &amp; fresh linen changing</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Washing, drying &amp; folding laundry</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Emptying bins &amp; replacing bin liners</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning soap holders, taps &amp; bathroom accessories</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Dusting accessible light fittings &amp; lamps</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Wiping tables, chairs &amp; other furniture</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Extra attention to high-touch and frequently missed areas</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Final detailed check throughout the property</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Full micro-dusting of high, low, and open surface areas</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cobweb removal along cornice lines, ceiling joints &amp; wall angles</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Hand-washing skirting boards, architraves, recesses &amp; trims</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Sanitising internal doors, jambs, handles &amp; switch plates</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning window sills, internal glass, frames &amp; sliding tracks</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Vacuuming and damp-wiping beneath reachable sofas and furniture</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Edge-to-edge vacuuming of carpets, rugs, and soft upholstery</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Intensive scrubbing and conditioning of all hard floor finishes</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Grease cutting on kitchen countertops, extractor hoods &amp; splashbacks</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Internal and external sanitising of fridges, ovens &amp; microwaves</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Wiping interior and exterior faces of accessible cabinets &amp; drawers</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Shower cubicle descaling, tub scrubbing &amp; ceramic tile restoration</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Antibacterial toilet disinfection, bowl descaling &amp; rim cleanse</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Streak-free buffing of vanity mirrors, glass panels &amp; splash panels</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bed styling, duvet alignment &amp; fresh linen changes</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>On-site wash, dry, and folding for domestic linens &amp; towels</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Clearing waste bins, sorting recyclables &amp; refitting fresh liners</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Polishing chromework, mixer taps, soap trays &amp; shower fixtures</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Careful dusting of accessible chandeliers, lamp shades &amp; sconces</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Wipe-down and polishing of dining tables, credenzas &amp; seating</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Targeted sanitisation of recurrent touchpoints and overlooked nooks</li>
+          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Rigorous sign-off walk-through across every cleaned space</li>
         </ul>
 
         <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Book this clean</a>
@@ -139,28 +139,28 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Recent Results
+          Transformation Showcase
         </span>
-        <h2 class="section-title">Photos from <em>real deep cleaning jobs.</em></h2>
-        <p class="section-lead">Actual transformations from deep cleaning jobs across London — the standard we bring to every visit.</p>
+        <h2 class="section-title">Visual evidence from <em>completed deep resets.</em></h2>
+        <p class="section-lead">Documented before-and-after restorations across London residences — demonstrating the rigor brought to every assignment.</p>
       </div>
 
       <div class="work-grid reveal">
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1590725140246-201509650275?auto=format&fit=crop&w=800&q=80" alt="Oven degreasing before and after" loading="lazy">
-          <figcaption>Appliance &amp; Cooker Clean</figcaption>
+          <figcaption>Cooker &amp; Oven Restoration</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Kitchen sink descaling" loading="lazy">
-          <figcaption>Sink &amp; Tap Limescale Lifted</figcaption>
+          <figcaption>Limescale Removal on Brassware</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" alt="Bathroom tiles and shower descaling" loading="lazy">
-          <figcaption>Shower &amp; Tile Descaling</figcaption>
+          <figcaption>Sanitary Grout &amp; Tile Scrub</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Living space after deep cleaning" loading="lazy">
-          <figcaption>Groomed Floors &amp; Living Space</figcaption>
+          <figcaption>Refreshed Living Zone &amp; Flooring</figcaption>
         </figure>
       </div>
     </div>
@@ -172,44 +172,44 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Frequently Asked
+          Common Inquiries
         </span>
-        <h2 class="section-title">The small <em>print.</em></h2>
+        <h2 class="section-title">Essential <em>details &amp; policies.</em></h2>
       </div>
 
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-q" type="button">How is a deep clean different from a regular clean?<span class="pm"></span></button>
+          <button class="faq-q" type="button">What differentiates a deep clean from ongoing maintenance?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>While a regular clean maintains everyday tidiness, a deep clean tackles built-up limescale, cobweb removal from ceilings, grime on skirting boards, doors, switches, areas behind furniture, inside appliances, and intensive descaling of bathroom grout and accessories.</p>
+            <p>Routine housekeeping sustains day-to-day tidiness, whereas our deep reset removes stubborn, embedded contaminants: calcified limescale, high-level cobwebs, scuffs on baseboards, switches, dirt traps behind moveable furniture, internal appliance degreasing, and intensive tile grout revival.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Do you bring your own products and equipment?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Do your operatives arrive with all equipment and detergents?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes, we bring professional heavy-duty descalers, degreasers, microfibres, and vacuums as standard. If you prefer us to use your own on-site products, simply let us know.</p>
+            <p>Yes. Our teams bring industrial-strength descaling agents, non-abrasive degreasers, HEPA filtration vacuums, and clean microfibre systems. If you prefer us to apply your own specialised solutions, we are happy to accommodate.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Do I need to move furniture before you arrive?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Are customers expected to shift furniture prior to your arrival?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Our cleaners clean behind and beneath all accessible and safely moveable furniture (like chairs, sofas, and light tables). We do not move extremely heavy wardrobes or delicate electronics unless cleared beforehand.</p>
+            <p>Our team cleans behind and underneath accessible freestanding pieces (such as chairs, light sofas, and dining tables). To protect flooring and personnel, we do not relocate solid structural wardrobes, pianos, or delicate entertainment units unless arranged prior to the visit.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">How does payment work?<span class="pm"></span></button>
+          <button class="faq-q" type="button">What are your billing and booking deposit conditions?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We take a 50% deposit to hold your slot in our schedule. The remaining balance is paid once your clean is completed and inspected. You can reschedule free of charge with at least 48 hours notice.</p>
+            <p>We require a 50% reservation deposit to secure your operational slot. The remaining 50% is settled upon final inspection and completion of the work. Appointments can be rescheduled without fee up to 48 hours in advance.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">What areas do you cover?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Which London postal districts do you service for deep cleans?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We provide comprehensive deep cleaning coverage across all London boroughs: Central, North, East, South, and West London.</p>
+            <p>We provide full deep cleaning coverage across every London borough, encompassing Central, East, West, North, and South districts.</p>
           </div>
         </div>
       </div>

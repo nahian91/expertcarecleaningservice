@@ -282,10 +282,10 @@ get_header(); ?>
       </div>
       <span class="eyebrow">
         <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        01 · Regular Cleaning
+        01 · Ongoing Domestic Housekeeping
       </span>
-      <h1>Regular cleaning, <span class="shine">kept effortless.</span></h1>
-      <p class="sub">A dependable weekly or fortnightly clean that keeps your London home consistently fresh — same trusted cleaner, same high standard, every visit.</p>
+      <h1>Routine home cleaning, <span class="shine">consistently immaculate.</span></h1>
+      <p class="sub">Structured weekly and bi-weekly domestic visits designed to keep your London home calm, tidy, and welcoming — assigned to the same dedicated cleaner every single time.</p>
     </div>
   </section>
 
@@ -294,14 +294,14 @@ get_header(); ?>
     <div class="wrap split">
       <!-- Left: Prose Description -->
       <div class="prose reveal in">
-        <h3>What’s included.</h3>
-        <p>A regular clean keeps the whole home ticking over — the essentials done properly, every single visit, so you never come home to a list of chores. From general dusting and surface care to sanitising bathrooms, cleaning appliance exteriors, changing bed sheets, and keeping hallways and living areas spotless, we ensure complete peace of mind.</p>
+        <h3>What the service covers.</h3>
+        <p>Our recurring housekeeping service takes charge of day-to-day household maintenance before chores accumulate. We handle complete surface dusting, deep sanitary wipe-downs across bathrooms and kitchens, bed dressings, laundry rotation, and floor conditioning throughout every room — ensuring your space always feels organised and refreshed.</p>
 
-        <h3>Ideal for</h3>
-        <p>Busy professionals, families and households across London who want a consistent, dependable routine without lifting a finger.</p>
+        <h3>Designed for</h3>
+        <p>Working professionals, growing households, and busy London property owners seeking dependable, methodical support without having to oversee every single task.</p>
 
-        <h3>How it works</h3>
-        <p>Send us your postcode and a few details and we’ll confirm a tailored quote and available dates — usually within minutes. We take a 50% deposit to secure your booking, and the balance is paid once the clean is complete and you’re happy. Deposits are non-refundable, but you can reschedule with at least 48 hours’ notice. We bring our own products and equipment as standard, or use yours if you’d prefer.</p>
+        <h3>Our working arrangement</h3>
+        <p>Share your postcode and property scope to receive a confirmed, fixed quotation and schedule availability right away. A 50% reservation deposit secures your chosen recurring day and time, with the remainder settled once your property has been serviced and approved. Appointments may be rescheduled without charge with 48 hours’ notice. We arrive fully equipped with professional cleaning essentials, or gladly work with your preferred home supplies.</p>
 
         <div class="split-actions">
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Request a Tailored Quote</a>
@@ -311,66 +311,66 @@ get_header(); ?>
 
       <!-- Right: Boxed Checklist Card with All 14 Items -->
       <aside class="incl reveal in">
-        <h3>Regular Domestic Cleaning</h3>
-        <div class="pr">Bespoke pricing · tailored to your home</div>
+        <h3>Routine Domestic Care</h3>
+        <div class="pr">Transparent pricing · adapted to your property footprint</div>
         
         <div class="checklist-title">14-Point Domestic Cleaning Checklist:</div>
         <ul>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            General dusting, wiping &amp; surface cleaning
+            Systematic dusting, wiping &amp; furniture surface polishing
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Tidying and refreshing living spaces
+            Straightening, decluttering &amp; styling living quarters
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Cleaning kitchen worktops, sinks &amp; surfaces
+            Deep scrub of worktops, food-prep zones &amp; stainless sinks
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Fridge, oven, microwave, hob &amp; appliance cleaning
+            Exterior wipedown of ovens, hobs, extractor fronts &amp; fridges
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Bathroom &amp; shower area cleaning
+            Hygienic bathroom scrub: tubs, screens, showers &amp; toilets
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Mirrors and glass surface cleaning
+            Streak-free glass polishing &amp; vanity mirror wiping
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Bed making &amp; fresh linen changing
+            Bed styling &amp; fresh linen changes
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Washing, drying &amp; folding laundry
+            On-site laundry washing, tumble drying &amp; neat folding
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Vacuuming carpets, rugs &amp; floors
+            Edge-to-edge vacuuming of carpets, rugs &amp; runners
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Mopping hard floors
+            Hard floor damp mopping with neutral floor wash
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Emptying bins &amp; replacing liners
+            Waste bin clearance, recycling separation &amp; fresh liner fit
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Wiping doors, handles &amp; frequently touched areas
+            Sanitising doors, grab handles &amp; high-touch light switches
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Light cleaning of skirting boards
+            Dusting and surface wipe-downs of accessible skirting boards
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Keeping bedrooms, hallways &amp; living areas neat and fresh
+            Hallway presentation &amp; complete room-by-room inspection
           </li>
         </ul>
 
@@ -385,28 +385,28 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Recent Results
+          Work Showcase
         </span>
-        <h2 class="section-title">Photos from <em>real regular cleaning jobs.</em></h2>
-        <p class="section-lead">Actual results from recent regular cleaning jobs across London — the standard we bring to every visit.</p>
+        <h2 class="section-title">Visuals from <em>ongoing domestic cleans.</em></h2>
+        <p class="section-lead">Verified photographic records from regular home appointments across London — reflecting the attention to detail brought to every routine visit.</p>
       </div>
 
       <div class="work-grid reveal">
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80" alt="Living room cleaned" loading="lazy">
-          <figcaption>Living Area</figcaption>
+          <figcaption>Reception Lounge Care</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Spotless kitchen worktop" loading="lazy">
-          <figcaption>Kitchen Surfaces</figcaption>
+          <figcaption>Kitchen Island Sanitised</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Freshly made bed" loading="lazy">
-          <figcaption>Bedroom &amp; Linens</figcaption>
+          <figcaption>Crisp Bed Dressing</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="Clean polished bathroom" loading="lazy">
-          <figcaption>Sanitised Bathroom</figcaption>
+          <figcaption>Gleaming Sanitary Ware</figcaption>
         </figure>
       </div>
     </div>
@@ -418,44 +418,44 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Frequently Asked
+          Common Questions
         </span>
-        <h2 class="section-title">The small <em>print.</em></h2>
+        <h2 class="section-title">Important <em>clarifications.</em></h2>
       </div>
 
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-q" type="button">Do I need to be home during the clean?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Is it necessary for me to remain home during the clean?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Not at all. Many regulars give us a key or use a smart lock. Every cleaner is vetted, trained and fully insured, so you can hand over the keys and get on with your day.</p>
+            <p>Not whatsoever. Many of our recurring clients entrust us with key safe codes, concierge drop-offs, or smart locks. Each operative is comprehensively vetted, DBS-checked, and covered by insurance, letting you carry on with your day uninterrupted.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Do you bring your own products and equipment?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Do your cleaners supply their own products and equipment?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes, we bring everything we need as standard. If you’d prefer we use your own products, that’s easier still — just let us know when you book.</p>
+            <p>Yes, our professionals arrive fully prepared with industrial vacuums, fresh microfibres, and specialist cleaning solutions. Should you prefer us to utilise particular eco-friendly products or your own vacuum, we are delighted to comply.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">How does payment work?<span class="pm"></span></button>
+          <button class="faq-q" type="button">What are your payment and rescheduling terms?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We take a 50% deposit to secure your booking. The balance is paid once the clean is complete and you’re happy with the result. Deposits are non-refundable, but you can reschedule as long as you give us at least 48 hours’ notice.</p>
+            <p>A 50% deposit locks in your recurring calendar slot. The remaining 50% is settled following the visit once the work is checked and approved. While deposits hold your dedicated personnel, bookings can be moved without charge with at least 48 hours’ advance notice.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">What areas do you cover?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Which London areas do you serve for regular domestic cleans?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We cover all of London and surrounding boroughs across Central, North, East, South, and West London. Get in touch with your postcode and we’ll confirm a slot.</p>
+            <p>We provide routine housekeeping visits across every London borough, covering Central, North, West, South, and East postcodes. Simply share your postcode to find our nearest available cleaner.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">What are your opening hours?<span class="pm"></span></button>
+          <button class="faq-q" type="button">What are your customer support and operational hours?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We’re open 24 hours a day, 7 days a week.</p>
+            <p>Our dispatch line and customer service channels remain open 24 hours a day, 7 days a week.</p>
           </div>
         </div>
       </div>

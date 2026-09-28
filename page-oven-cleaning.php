@@ -70,10 +70,10 @@ get_header(); ?>
       </div>
       <span class="eyebrow">
         <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        05 · Specialist Appliance Care
+        05 · Specialist Cooker Care
       </span>
-      <h1>Oven deep cleaning, <span class="shine">restored like new.</span></h1>
-      <p class="sub">Intensive, fume-free cooker, grill, hob and extractor detailing that eliminates baked-on grease and carbon residue across London.</p>
+      <h1>Professional oven restoration, <span class="shine">immaculate and showroom-ready.</span></h1>
+      <p class="sub">Non-caustic, odourless deep cleaning for ranges, ovens, hobs, and extractors that lifts hardened carbon and burnt-in fat across all London postcodes.</p>
     </div>
   </section>
 
@@ -82,14 +82,14 @@ get_header(); ?>
     <div class="wrap split">
       <!-- Left: Prose Description -->
       <div class="prose reveal in">
-        <h3>What’s included.</h3>
-        <p>Over time, cooking fat and food splatters bake onto your oven walls, racks, and door glass, creating stubborn carbon build-ups and unpleasant smoking. Our specialist oven cleaning strips away months or years of grease without harsh, choking fumes, restoring your appliance to near-showroom condition.</p>
+        <h3>Scope of our treatment.</h3>
+        <p>Repeated roasting and baking leave layers of heat-crystallised fats, sticky splatters, and burnt soot across cavity walls, fan housings, and glazing. Our technical oven detailing breaks down months of polymerised grease without noxious fumes or toxic acids, reviving cooking efficiency and returning metal surfaces to gleaming condition.</p>
 
-        <h3>Ideal for</h3>
-        <p>Homeowners, tenants wanting to prevent checkout deposit deductions, short-let Airbnb operators, and busy families who want a clean, hygienic, and smoke-free cooking environment.</p>
+        <h3>Who benefits most</h3>
+        <p>Private homeowners desiring a pristine kitchen environment, departing tenants needing to satisfy strict landlord inventory checks, short-stay hosts maintaining pristine standards, and enthusiastic home cooks tired of smoking appliances.</p>
 
-        <h3>How it works</h3>
-        <p>Tell us whether you have a single oven, double oven, range cooker, or integrated hob. We dismantle removable parts including the door, inner glass panels, wire racks, side runners, and trays for individual dipping and detailing. We apply 100% non-caustic, food-safe degreasers, making your appliance safe for cooking immediately after completion.</p>
+        <h3>How we deliver results</h3>
+        <p>Share whether you operate a single compact unit, double oven stack, broad range cooker, or induction surface. We methodically unmount removable components—including wire racks, side guides, internal fan cover plates, and multi-pane door glass—for isolated decarbonising baths. Using 100% biodegradable, food-safe agents, your cooker is primed for culinary use the moment we pack our tools.</p>
 
         <div class="split-actions">
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Request an Oven Quote</a>
@@ -99,50 +99,50 @@ get_header(); ?>
 
       <!-- Right: Boxed Checklist Card (10-Point Detailing Checklist) -->
       <aside class="incl reveal in">
-        <h3>Oven Cleaning</h3>
-        <div class="pr">Transparent pricing · single, double &amp; ranges</div>
+        <h3>Cooker Detailing</h3>
+        <div class="pr">Upfront, fixed rates · single, double &amp; range models</div>
         
         <div class="checklist-title">10-Point Appliance Detailing Checklist:</div>
         <ul>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Complete stripping of baked-on grease &amp; carbon deposits
+            Complete breakdown of heat-hardened fats &amp; carbon layers
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Racks, grill pans &amp; side runners soaked and detailed
+            Shelves, baking trays &amp; lateral supports stripped in dip tanks
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Door dismantled to polish inside between glass layers
+            Door disassembly for inside glass pane clarity polishing
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Back plate, fan casing &amp; heating element area scrubbed
+            Rear baffle panel, blower fan &amp; element housing desoiling
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Gas, ceramic &amp; induction hob surface degreasing
+            Degreasing of gas burners, ceramic plates &amp; induction surfaces
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Extractor hood exterior wiped &amp; mesh filters degreased
+            Canopy canopy hood wiping &amp; aluminium filter degreasing
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Control dials, timers, switches &amp; handles sanitised
+            Rotary dials, control fascia, push buttons &amp; grab bars sanitised
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Rubber seals, hinges &amp; door frames cleaned
+            Thermal rubber gaskets, pivot hinges &amp; door jambs cleared
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            100% fume-free, non-caustic &amp; food-safe formulas
+            100% eco-friendly, non-abrasive &amp; fume-free formulation
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Full final inspection &amp; immediate cooking-ready handoff
+            Post-clean operational test &amp; immediate cooking clearance
           </li>
         </ul>
 
@@ -157,28 +157,28 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Recent Results
+          Transformation Gallery
         </span>
-        <h2 class="section-title">Photos from <em>real oven cleaning jobs.</em></h2>
-        <p class="section-lead">Actual before-and-after results from recent cooker and appliance cleans across London.</p>
+        <h2 class="section-title">Visual outcomes from <em>completed cooker treatments.</em></h2>
+        <p class="section-lead">Photographic evidence of greasy appliance transformations across London residences — delivered by our specialist technicians.</p>
       </div>
 
       <div class="work-grid reveal">
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1590725140246-201509650275?auto=format&fit=crop&w=800&q=80" alt="Oven interior stripped of carbon" loading="lazy">
-          <figcaption>Oven Cavity &amp; Fan Casing</figcaption>
+          <figcaption>Decarbonised Oven Cavity</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Spotless kitchen hob and cooker" loading="lazy">
-          <figcaption>Hob &amp; Cooker Surface</figcaption>
+          <figcaption>Degreased Hob Top &amp; Surrounds</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Kitchen sink and appliances polished" loading="lazy">
-          <figcaption>Grill Trays &amp; Racks Cleaned</figcaption>
+          <figcaption>Polished Wire Racks &amp; Trays</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80" alt="Finished gleaming kitchen appliance clean" loading="lazy">
-          <figcaption>Clear Sparkling Door Glass</figcaption>
+          <figcaption>Crystal-Clear Door Panes</figcaption>
         </figure>
       </div>
     </div>
@@ -190,44 +190,44 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Frequently Asked
+          Important Details
         </span>
-        <h2 class="section-title">The small <em>print.</em></h2>
+        <h2 class="section-title">Common appliance <em>questions answered.</em></h2>
       </div>
 
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-q" type="button">Can I use the oven straight away after cleaning?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Is the appliance safe to cook in right after the appointment?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. Because we use non-caustic, fume-free, and food-safe cleaning solutions, there are no dangerous fumes or chemical odours left behind. Your oven is ready for cooking immediately.</p>
+            <p>Yes, without delay. Because we employ caustic-free, plant-based bio-cleansers, there are zero persistent chemical residues or dangerous gas emissions. Your oven is 100% meal-ready straight away.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Do you clean between the glass panels on the door?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Do you dismantle and wash inside multi-layered door glass?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes, wherever the manufacturer design allows, our technicians dismantle the oven door to remove drips, grease, and streaks trapped between the inner and outer glass panes.</p>
+            <p>Yes. Providing the model's design accommodates disassembly without seal damage, our specialists separate the glass panes to eliminate streaks, runs, and fog trapped within the door construction.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">How long does an oven clean take?<span class="pm"></span></button>
+          <button class="faq-q" type="button">How much time does an oven treatment typically require?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>A standard single oven typically takes between 1.5 to 2 hours. Double ovens, large range cookers, and AGAs may take 2.5 to 3.5 hours depending on grease accumulation.</p>
+            <p>An average single-cavity appliance takes approximately 90 to 120 minutes. Larger double units, standard range cookers, and wide cast-iron models like AGAs often require 2.5 to 3.5 hours for total restoration.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Can this be added to a deep or tenancy clean?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Can this treatment be bundled with general or move-out cleans?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. Oven cleaning can be booked as a standalone service or added as a discounted extra to your regular, deep clean, or end of tenancy booking.</p>
+            <p>Certainly. While basic superficial wipe-downs accompany routine cleans, full restorative appliance detailing can be added to any regular, intensive deep, or end-of-tenancy clean at preferential package pricing.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">What areas do you cover?<span class="pm"></span></button>
+          <button class="faq-q" type="button">What geographical zones do your cooker cleaners cover?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We provide professional oven cleaning coverage across all London postcodes: Central, North, East, South, and West London.</p>
+            <p>Our dedicated cooker cleaning specialists travel to properties across Greater London, including Central, North, West, East, and South London postcodes.</p>
           </div>
         </div>
       </div>

@@ -70,10 +70,10 @@ get_header(); ?>
       </div>
       <span class="eyebrow">
         <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        06 · Fabric &amp; Living Care
+        06 · Upholstery &amp; Soft Furnishings
       </span>
-      <h1>Upholstery &amp; sofa cleaning, <span class="shine">deeply revitalised.</span></h1>
-      <p class="sub">Professional extraction, targeted stain treatment, and fabric refreshment for sofas, armchairs, dining chairs, and mattresses across London.</p>
+      <h1>Sofa &amp; fabric restoration, <span class="shine">deeply purified and renewed.</span></h1>
+      <p class="sub">Advanced deep-steam extraction, delicate stain breakdown, and restorative fabric conditioning for settees, modular suites, armchairs, and dining seating across London.</p>
     </div>
   </section>
 
@@ -82,14 +82,14 @@ get_header(); ?>
     <div class="wrap split">
       <!-- Left: Prose Description -->
       <div class="prose reveal in">
-        <h3>What’s included.</h3>
-        <p>Everyday use leaves soft furnishings holding onto trapped dust, pet hair, accidental spills, body oils, and allergens that normal vacuuming can never dislodge. Our professional upholstery cleaning penetrates deep into furniture fabrics using industrial extraction, targeted spot treatments, and gentle fibre-safe deodorisers to lift embedded grime and restore fabric vitality.</p>
+        <h3>Scope of the treatment.</h3>
+        <p>Over time, soft furnishings accumulate fine particulate dust, skin flakes, food micro-spills, pet dander, and stale aromas that domestic vacuuming simply cannot lift. Our upholstery restoration process reaches deep into the weave using pressurized thermal extraction, fiber-safe spot treatments, and neutralising rinses to lift ground-in dirt while preserving the soft texture and original weave of your pieces.</p>
 
-        <h3>Ideal for</h3>
-        <p>London households with pets or young children, fabric sofas with stubborn drink or food marks, delicate velvet or linen suites needing refreshment, and short-let Airbnb operators preparing properties for incoming guests.</p>
+        <h3>Who this is for</h3>
+        <p>Pet owners, active family homes with spill-prone fabrics, sensitive individuals managing dust allergies, and short-stay Airbnb hosts ensuring every incoming guest is greeted by immaculate, fresh-smelling furniture.</p>
 
-        <h3>How it works</h3>
-        <p>Tell us your sofa size (e.g. 2-seater, 3-seater, corner sectional, or armchair) and fabric composition. We begin with high-filtration dry vacuuming, pre-treat problem spots, and apply hot-water or low-moisture extraction. Our gentle deodorising process eliminates trapped odours without leaving harmful chemical residues behind.</p>
+        <h3>Our operational workflow</h3>
+        <p>Provide your configuration (whether an armchair, two-seater loveseat, chaise lounge, or multi-piece sectional) and the upholstery material. We begin with comprehensive dry particulate extraction, pre-condition heavy wear areas, and run high-suction moisture-controlled extraction. Our safe deodorising rinses eliminate persistent trapped scents without leaving heavy fragrances or detergent residue behind.</p>
 
         <div class="split-actions">
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Request Fabric Quote</a>
@@ -99,50 +99,50 @@ get_header(); ?>
 
       <!-- Right: Boxed Checklist Card with 10 Items -->
       <aside class="incl reveal in">
-        <h3>Upholstery &amp; Sofa</h3>
-        <div class="pr">Bespoke pricing · tailored to your furniture</div>
+        <h3>Fabric &amp; Suite Care</h3>
+        <div class="pr">Customised quote · tailored to your seating layout</div>
         
         <div class="checklist-title">10-Point Fabric Revitalisation Checklist:</div>
         <ul>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            High-filtration vacuuming &amp; allergen extraction
+            High-filtration dry extraction to lift deep particulate matter
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Targeted spot &amp; accidental spill stain pre-treatment
+            Pre-treatment of surface marks, spills &amp; drink stains
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Deep fibre extraction &amp; embedded soil removal
+            Pressurized hot-water extraction &amp; embedded soil removal
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Gentle deodorising &amp; stale odour neutralisation
+            Enzymatic deodorising to neutralize stubborn odors at the root
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Removable cushions cleaned on both sides
+            Dual-sided detailing for all loose back and seat cushions
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Armrests, headrests &amp; seating base detailed
+            Focused cleaning along armrests, headrests &amp; bolster pads
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Crevice vacuuming &amp; trapped debris removal
+            Crevice tool extraction between frame seams &amp; folds
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Pet hair, dander &amp; dust mite clearance
+            Pet hair separation, lint removal &amp; allergen reduction
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Safe handling for delicate fabrics (linen, velvet, wool)
+            Fibre-safe solutions tested for velvet, linen, synthetics &amp; wool
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Quick-dry extraction moisture reduction
+            High-velocity vacuum pass to minimize remaining moisture
           </li>
         </ul>
 
@@ -157,28 +157,28 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Recent Results
+          Results Gallery
         </span>
-        <h2 class="section-title">Photos from <em>real sofa cleaning jobs.</em></h2>
-        <p class="section-lead">Actual results from recent upholstery and sofa cleaning jobs across London — the standard we bring to every visit.</p>
+        <h2 class="section-title">Visuals from <em>completed upholstery treatments.</em></h2>
+        <p class="section-lead">Photographic results from recent furniture treatments across London properties — showcasing the standard applied to every piece.</p>
       </div>
 
       <div class="work-grid reveal">
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Fabric sofa cleaned and refreshed" loading="lazy">
-          <figcaption>Sectional Sofa Cleaned</figcaption>
+          <figcaption>Restored Sectional Weave</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80" alt="Armchair and cushion detailing" loading="lazy">
-          <figcaption>Armchair &amp; Cushion Detailing</figcaption>
+          <figcaption>Armchair Fabric Refresh</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80" alt="Living room seating refreshed" loading="lazy">
-          <figcaption>Living Room Seating</figcaption>
+          <figcaption>Lounge Suite Conditioning</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Deep vacuumed living space" loading="lazy">
-          <figcaption>Fabric Odours Removed</figcaption>
+          <figcaption>Purified &amp; Deodorised Seating</figcaption>
         </figure>
       </div>
     </div>
@@ -190,44 +190,44 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Frequently Asked
+          Common Inquiries
         </span>
-        <h2 class="section-title">The small <em>print.</em></h2>
+        <h2 class="section-title">Essential <em>information &amp; details.</em></h2>
       </div>
 
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-q" type="button">How long does it take for sofas to dry after cleaning?<span class="pm"></span></button>
+          <button class="faq-q" type="button">What is the expected drying time for cleaned upholstery?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Depending on room ventilation, heating, and fabric thickness, drying times typically range between 3 to 6 hours. Our high-suction extraction removes the majority of moisture during the clean to speed up the process.</p>
+            <p>Drying times generally range between 3 and 6 hours, depending upon room airflow, indoor heating, and the density of the textile. Our commercial suction equipment extracts the vast majority of water during the final rinse to facilitate rapid drying.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Can you remove old, stubborn stains?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Can established or deep-set stains be fully lifted?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We treat every stain with specialised lifting agents. While most common spills (coffee, food, wine, pet mud) can be completely lifted or significantly lightened, permanent chemical discoloration or bleached fibres cannot be reversed.</p>
+            <p>Every mark is addressed individually with specialized breakdown formulas. While most organic marks (such as coffee, tea, grease, wine, or pet mud) can be eliminated or noticeably faded, fiber damage caused by bleach or long-term chemical alteration cannot be reversed.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Is the cleaning safe for delicate fabrics like velvet or linen?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Are your treatments safe on delicate materials like velvet, linen, or wool?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. Our technicians inspect the manufacturer care labels and test cleaning solutions on an inconspicuous area first to ensure there is no risk of shrinkage, colour bleeding, or fabric texture distortion.</p>
+            <p>Yes. Our specialists examine manufacturer care tags and execute an initial patch test on a hidden section of fabric to confirm colorfastness and verify that the fiber weave will remain completely stable.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Can this service be added to a regular or deep clean?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Can this be scheduled alongside a general home or tenancy clean?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. You can book sofa and upholstery cleaning as a standalone appointment or bundle it with a regular clean, deep reset, or tenancy clean at a discounted combined rate.</p>
+            <p>Yes. Sofa and fabric cleaning can be booked as an individual service or bundled alongside our routine, deep, or end-of-tenancy cleans for preferential package pricing.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">What areas do you cover?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Which London postal areas do your upholstery technicians cover?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We provide upholstery and sofa cleaning across all London boroughs: Central, North, East, South, and West London.</p>
+            <p>Our upholstery teams serve residential and commercial properties across all London boroughs: encompassing Central, North, West, East, and South districts.</p>
           </div>
         </div>
       </div>

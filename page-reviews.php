@@ -183,17 +183,17 @@ get_header(); ?>
     <div class="wrap">
       <span class="eyebrow" style="justify-content:center">
         <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        Client Feedback &amp; Ratings
+        Authentic Customer Appraisals
       </span>
-      <h1>Client Reviews &amp; Testimonials</h1>
+      <h1>Client Endorsements &amp; Real Feedback</h1>
       <p class="lead">
-        Verified impressions and feedback from domestic clients, tenancy checkouts, and short-let Airbnb hosts across London.
+        Genuine reviews and service assessments from homeowners, rental leaseholders, and short-stay property hosts across Greater London.
       </p>
 
       <div class="score-badge-card">
         <div class="num">4.8</div>
         <div class="stars-gold">★★★★★</div>
-        <div class="tagline">Rated 4.8 / 5 Across Verified London Jobs</div>
+        <div class="tagline">Rated 4.8 / 5 Across Verified London Properties</div>
       </div>
     </div>
   </section>
@@ -206,19 +206,19 @@ get_header(); ?>
         <div class="form-title-wrap">
           <span class="eyebrow" style="justify-content:center">
             <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-            Leave Your Feedback
+            Rate Our Work
           </span>
-          <h2>Share Your Experience</h2>
-          <p>We appreciate your feedback. All reviews are reviewed by our team before appearing publicly.</p>
+          <h2>Tell Us About Your Clean</h2>
+          <p>We value every perspective. Submissions are checked by our administration desk before going live on our public showcase.</p>
         </div>
 
         <?php if ( isset( $_GET['review_status'] ) && $_GET['review_status'] === 'success' ) : ?>
           <div class="review-notice success">
-            <strong>Thank you!</strong> Your review has been submitted for moderation. Once approved by our team, it will be published on our home page.
+            <strong>Submission received!</strong> Your review has been routed to our team for approval. Once confirmed, it will feature directly on our website.
           </div>
         <?php elseif ( isset( $_GET['review_status'] ) && $_GET['review_status'] === 'error' ) : ?>
           <div class="review-notice error">
-            <strong>Error:</strong> Please fill in all required fields and try submitting again.
+            <strong>Submission incomplete:</strong> Please ensure all necessary fields are provided before sending.
           </div>
         <?php endif; ?>
 
@@ -230,40 +230,40 @@ get_header(); ?>
           <input type="text" name="website_hp" style="display:none" tabindex="-1" autocomplete="off">
 
           <div class="field">
-            <label for="client_name">Your Name *</label>
+            <label for="client_name">Full Name *</label>
             <input type="text" id="client_name" name="client_name" required placeholder="e.g. Kevin Wilson">
           </div>
 
           <div class="field">
-            <label for="client_location">Area / Clean Type *</label>
-            <input type="text" id="client_location" name="client_location" required placeholder="e.g. Regular Client · North London">
+            <label for="client_location">District / Booking Category *</label>
+            <input type="text" id="client_location" name="client_location" required placeholder="e.g. Weekly Domestic Client · North London">
           </div>
 
           <div class="field">
-            <label for="client_rating">Star Rating *</label>
+            <label for="client_rating">Quality Score *</label>
             <select id="client_rating" name="client_rating" required>
-              <option value="5" selected>★★★★★ (5 Stars - Excellent)</option>
-              <option value="4">★★★★☆ (4 Stars - Very Good)</option>
-              <option value="3">★★★☆☆ (3 Stars - Average)</option>
-              <option value="2">★★☆☆☆ (2 Stars - Below Average)</option>
-              <option value="1">★☆☆☆☆ (1 Star - Poor)</option>
+              <option value="5" selected>★★★★★ (5 Stars - Impeccable)</option>
+              <option value="4">★★★★☆ (4 Stars - Highly Satisfied)</option>
+              <option value="3">★★★☆☆ (3 Stars - Satisfactory)</option>
+              <option value="2">★★☆☆☆ (2 Stars - Needs Improvement)</option>
+              <option value="1">★☆☆☆☆ (1 Star - Unsatisfactory)</option>
             </select>
           </div>
 
           <div class="field">
-            <label for="client_photo">Your Photo / Avatar (Optional)</label>
+            <label for="client_photo">Profile Image / Avatar (Optional)</label>
             <div class="file-dropzone">
               <input type="file" id="client_photo" name="client_photo" accept="image/png, image/jpeg, image/webp">
             </div>
           </div>
 
           <div class="field">
-            <label for="client_comment">Your Review *</label>
-            <textarea id="client_comment" name="client_comment" required placeholder="Tell us how our cleaning team performed..."></textarea>
+            <label for="client_comment">Your Detailed Feedback *</label>
+            <textarea id="client_comment" name="client_comment" required placeholder="Describe the standards, punctuality, and overall care provided by our cleaners..."></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary" style="width:100%;padding:14px;margin-top:6px;">
-            Submit Review for Verification
+            Publish Review for Moderation
           </button>
         </form>
 

@@ -70,10 +70,10 @@ get_header(); ?>
       </div>
       <span class="eyebrow">
         <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        02 · Short-Let Turnover
+        02 · Hospitality Changeovers
       </span>
-      <h1>Airbnb cleaning, <span class="shine">guest-ready every time.</span></h1>
-      <p class="sub">Punctual, thorough turnover cleaning that protects your Superhost rating and ensures incoming guests arrive to 5-star cleanliness across London.</p>
+      <h1>Airbnb turnover care, <span class="shine">flawlessly staged for every check-in.</span></h1>
+      <p class="sub">Dependable, high-spec turnover solutions engineered to secure 5-star hospitality reviews and protect your Superhost reputation throughout London.</p>
     </div>
   </section>
 
@@ -82,14 +82,14 @@ get_header(); ?>
     <div class="wrap split">
       <!-- Left: Prose Description -->
       <div class="prose reveal in">
-        <h3>What’s included.</h3>
-        <p>Short-let hosting demands perfection between tight check-out and check-in windows. Our Airbnb turnover cleans handle every detail: hotel-quality bed dressing, complete laundry care, deep sanitisation of bathrooms and kitchens, restocking amenities, and a final quality check before your next guest arrives.</p>
+        <h3>What the service covers.</h3>
+        <p>Short-stay operations demand precision execution within compact changeover hours. Our turnover teams oversee the entire staging cycle: crisp boutique-style bed dressing, full linen and towel handling, deep hygiene resets across kitchen and bathroom spaces, restocking essential guest amenities, and a final supervisory audit before the door lock engages.</p>
 
-        <h3>Ideal for</h3>
-        <p>London Airbnb hosts, serviced apartment operators, and holiday let managers who require reliable, punctual turnarounds without having to manage cleaners directly.</p>
+        <h3>Designed for</h3>
+        <p>Independent Airbnb hosts, portfolio property managers, and luxury serviced accommodation providers across the capital who require dependable scheduling without micro-managing personnel.</p>
 
-        <h3>How it works</h3>
-        <p>Send us your property details, key safe or smart lock instructions, and regular guest check-in/out times. We coordinate seamlessly around your booking calendar. Every cleaner is vetted, trained, and fully insured. We bring professional products and equipment, handle linens, and leave welcome packs exactly where you want them.</p>
+        <h3>The workflow</h3>
+        <p>Share your property setup, access codes, and typical departure/arrival schedules. We adapt smoothly to your live booking calendar. Every operative is fully screened, trained in short-let standards, and comprehensively insured. We arrive equipped with professional-grade supplies, cycle your linens efficiently, and display your welcome touches exactly to specification.</p>
 
         <div class="split-actions">
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Request Turnover Quote</a>
@@ -99,58 +99,58 @@ get_header(); ?>
 
       <!-- Right: Boxed Checklist Card with All 12 Items -->
       <aside class="incl reveal in">
-        <h3>Airbnb Cleaning</h3>
-        <div class="pr">Bespoke turnover pricing · tailored to your property</div>
+        <h3>Short-Let Service</h3>
+        <div class="pr">Custom changeover rates · tailored to your property footprint</div>
         
         <div class="checklist-title">12-Point Turnover Checklist Included:</div>
         <ul>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Bed making &amp; linen changes
+            Hospitality bed styling &amp; crisp sheet change
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Laundry services
+            In-unit wash, dry &amp; linen turnaround
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Bathroom deep cleaning &amp; sanitising
+            Complete bathroom descaling &amp; sanitisation
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Kitchen cleaning, including worktops and appliances
+            Kitchen degreasing, hob, sink &amp; appliance exteriors
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Vacuuming &amp; mopping all floors
+            Complete vacuuming &amp; hard-floor sanitising
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Dusting furniture and surfaces
+            Dusting surfaces, shelving &amp; entertainment consoles
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Cleaning and wiping skirting boards
+            Skirting boards, woodwork &amp; edge detail wiping
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Cleaning doors, handles and high-touch areas
+            Disinfection of entry handles, keypads &amp; switches
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Cleaning accessible glass and mirrors
+            Internal window glass &amp; vanity mirror polishing
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Emptying bins and replacing liners
+            Bin clearance, waste sorting &amp; liner refresh
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Checking and arranging toiletries
+            Arranging welcome kits &amp; replenishment of soaps
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Final quality check before the next guest arrives
+            Pre-arrival room audit &amp; staging walkthrough
           </li>
         </ul>
 
@@ -165,28 +165,28 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Recent Results
+          Portfolio Snapshots
         </span>
-        <h2 class="section-title">Photos from <em>real short-let turnovers.</em></h2>
-        <p class="section-lead">Actual results from recent guest turnover cleaning jobs across London — the standard we bring to every visit.</p>
+        <h2 class="section-title">Visuals from <em>active guest turnovers.</em></h2>
+        <p class="section-lead">Documented changeover outcomes from properties across London — reflecting the exacting benchmarks applied to every check-in.</p>
       </div>
 
       <div class="work-grid reveal">
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Fresh hotel-style bed linen dressing" loading="lazy">
-          <figcaption>Bed Dressing &amp; Linens</figcaption>
+          <figcaption>Hotel-Standard Bed Styling</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Spotless kitchen counters and hob" loading="lazy">
-          <figcaption>Kitchen Sanitised</figcaption>
+          <figcaption>Degreased Kitchen Worktops</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="Sanitised bathroom and folded towels" loading="lazy">
-          <figcaption>Bathroom Guest-Ready</figcaption>
+          <figcaption>Sparkling Sanitary Ware</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Pristine living room presentation" loading="lazy">
-          <figcaption>Living Area Presentation</figcaption>
+          <figcaption>Guest-Ready Reception Lounge</figcaption>
         </figure>
       </div>
     </div>
@@ -198,51 +198,51 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Frequently Asked
+          Clarifications &amp; Details
         </span>
-        <h2 class="section-title">The small <em>print.</em></h2>
+        <h2 class="section-title">Frequently <em>asked questions.</em></h2>
       </div>
 
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-q" type="button">What is included in an Airbnb turnover clean?<span class="pm"></span></button>
+          <button class="faq-q" type="button">What tasks are covered in an Airbnb changeover clean?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Our Airbnb service covers the complete guest turnaround: stripping and making beds with fresh linens, laundry services, sanitising bathrooms, degreasing kitchen appliances, vacuuming and mopping, dusting, restocking toiletries, emptying bins, and conducting a final quality inspection before your next guest checks in.</p>
+            <p>Our turnover package encompasses full guest reset duties: stripping and remaking beds with fresh bedding, on-site laundering, descaling and sanitising bathrooms, degreasing kitchen appliances and counters, vacuuming and damp-mopping all floor types, dusting surfaces, topping up amenity packs, emptying rubbish, and performing an all-room staging walkthrough prior to incoming guests.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Can you manage tight check-out and check-in windows?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Can you accommodate strict turnaround times between guests?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. Most host turnovers take place between 10:00 AM and 3:00 PM. We allocate dedicated cleaners to ensure the property is fully inspected and guest-ready before your next arrival.</p>
+            <p>Certainly. The vast majority of our turnovers occur within the standard 10:00 AM to 3:00 PM timeframe. We schedule our teams to guarantee the residence is fully prepped, inspected, and ready well before arrival time.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Do you handle laundry and fresh bed linen?<span class="pm"></span></button>
+          <button class="faq-q" type="button">How do you manage linen rotation and laundry?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. We strip used linens and towels, wash and dry them on-site (or rotate your spare sets), and dress all beds to high hotel presentation standards.</p>
+            <p>We strip used sheets and towels, wash and dry them on-site using your laundry appliances, or swap in your secondary backup sets while neatly folding and staging the rest to hospitality presentation standards.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Do you restock toiletries and welcome amenities?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Will your cleaners restock toiletries and guest welcome supplies?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. If you keep supplies on-site (toilet rolls, soaps, shampoo, tea/coffee), our cleaners will restock them neatly according to your instructions.</p>
+            <p>Yes. Simply provide an inventory location for replacement items (toilet rolls, hand washes, hospitality tea/coffee packs), and our staff will restock and arrange them neatly according to your staging guidelines.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">What if a guest damages or leaves the property excessively dirty?<span class="pm"></span></button>
+          <button class="faq-q" type="button">How do you handle unexpected property damage or excessive mess?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Our cleaners take photos immediately and flag any damages or left-behind items directly to you via WhatsApp before proceeding, helping you manage guest resolution claims quickly.</p>
+            <p>Upon stepping inside, our staff photograph any irregularities, property damage, or guest-left belongings and notify you immediately via WhatsApp so you have clear visual documentation ready for resolution claims.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">What areas do you cover for short-let turnovers?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Which London regions do your turnover teams service?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We provide full Airbnb turnover coverage across all London boroughs: Central, North, East, South, and West London.</p>
+            <p>We provide full turnover support across all London postcodes: spanning Central, West, North, East, and South London boroughs.</p>
           </div>
         </div>
       </div>

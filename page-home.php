@@ -15,10 +15,10 @@ get_header(); ?>
       <div class="reveal in">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Professional Cleaning · London
+          Bespoke Cleaning Specialists · London
         </span>
-        <h1>A home that <span class="shine">truly shines.</span></h1>
-        <p class="sub">Reliable cleaners, clear communication and a home done properly the first time — across all London postcodes.</p>
+        <h1>Spaces restored to <span class="shine">flawless perfection.</span></h1>
+        <p class="sub">Vetted professionals, punctual attendance, and uncompromising standards across every central and greater London postcode.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="tel:+447919033684" target="_blank" rel="noopener noreferrer">07919 033684</a>
           <a class="btn btn-ghost" href="https://api.whatsapp.com/send?phone=447919033684&text=Hi%20Expertcare%20Cleaning%2C%20I%27d%20like%20a%20cleaning%20quote%20please." target="_blank" rel="noopener noreferrer">Message on WhatsApp →</a>
@@ -26,25 +26,25 @@ get_header(); ?>
         <div class="hero-stats">
           <div class="stat">
             <div class="n stars">★★★★★</div>
-            <div class="l">5-Star Rated</div>
+            <div class="l">5-Star Client Rating</div>
           </div>
           <div class="stat">
             <div class="n">London</div>
-            <div class="l">All Areas Covered</div>
+            <div class="l">Postcode-Wide Service</div>
           </div>
           <div class="stat">
-            <div class="n">Fast</div>
-            <div class="l">Quote turnaround</div>
+            <div class="n">Rapid</div>
+            <div class="l">Estimate Response</div>
           </div>
         </div>
       </div>
       <div class="hero-photo reveal in">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Freshly cleaned London living room" loading="eager">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Impeccably detailed London living area" loading="eager">
         <div class="hero-badge">
           <div class="hb-stars">★★★★★</div>
           <div class="hb-text">
-            <b>Expertcare Standard</b>
-            <span>London Homes &amp; Airbnb Turnovers</span>
+            <b>The Expertcare Guarantee</b>
+            <span>Private Residences &amp; Airbnb Turnovers</span>
           </div>
         </div>
       </div>
@@ -60,11 +60,11 @@ get_header(); ?>
     <div class="wrap" style="max-width:880px;margin:0 auto;text-align:center">
       <span class="eyebrow" style="justify-content:center">
         <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        Professional Cleaning · London
+        Our Quality Commitment
       </span>
-      <h2 class="section-title" style="margin-top:10px">Not the cheapest. <em>The most thorough.</em></h2>
-      <p class="section-lead" style="margin:20px auto 0;text-align:center">We’re not the cheapest cleaning company — and that’s intentional. If you’re simply looking for the lowest quote, we may not be the right fit. But if you want reliable cleaners, clear communication, attention to detail, and a service completed properly the first time, Expertcare Cleaning Service is built for exactly that.</p>
-      <p class="section-lead" style="margin:16px auto 0;text-align:center">From domestic cleaning to end of tenancy and guest-ready Airbnb turnovers, we focus on quality, professionalism and consistency.</p>
+      <h2 class="section-title" style="margin-top:10px">Never rushed. <em>Comprehensively detailed.</em></h2>
+      <p class="section-lead" style="margin:20px auto 0;text-align:center">We intentionally step away from budget cut-rate operations. If speed-running surface dust is your priority, we might not be your match. However, if your home demands dedicated operatives, honest upfront updates, and deep sanitisation done right without corner-cutting, Expertcare Cleaning is tailored precisely for you.</p>
+      <p class="section-lead" style="margin:16px auto 0;text-align:center">From recurring domestic care to full deposit-return tenancy cleans and hotel-grade short-let turnovers, our focus remains on precision, accountability, and pristine results.</p>
       <div class="hero-cta" style="justify-content:center;margin-top:30px">
         <a class="btn btn-primary" href="#quote">Request Your Tailored Quote</a>
       </div>
@@ -77,10 +77,10 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Our Services
+          Tailored Solutions
         </span>
-        <h2 class="section-title">Three cleans. <em>One standard.</em></h2>
-        <p class="section-lead">Every visit follows the same meticulous checklist — no rushed jobs, no cut corners.</p>
+        <h2 class="section-title">Three specialisms. <em>One rigorous checklist.</em></h2>
+        <p class="section-lead">Each booking operates under strict quality protocols — guaranteeing consistency across every room.</p>
       </div>
 
       <div class="svc-grid">
@@ -88,46 +88,46 @@ get_header(); ?>
         <!-- CARD 01: REGULAR DOMESTIC CLEANING -->
         <div class="svc reveal">
           <div class="svc-img">
-            <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80" alt="Freshly cleaned home interior" loading="lazy">
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/service-3.jpg" alt="Pristine interior living room" loading="lazy">
           </div>
-          <div class="no">01 · Domestic Cleaning</div>
-          <h3>Regular Cleaning</h3>
+          <div class="no">01 · Domestic Care</div>
+          <h3>Routine Home Cleaning</h3>
           <div class="price">Tailored quote</div>
           <ul>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>General dusting, wiping &amp; surface care</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Tidying &amp; refreshing all living spaces</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Kitchen worktops, sinks &amp; splashbacks</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Appliance exteriors: hob, fridge &amp; microwave</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Full bathroom, shower &amp; toilet sanitising</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Mirrors &amp; glass polishing</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bed making &amp; fresh linen changing</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Vacuuming carpets, rugs &amp; runners</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Hard floor mopping &amp; skirting wipe</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bin emptying &amp; replacing fresh liners</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Comprehensive dusting, ledge care &amp; surface sanitising</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Tidying, arranging &amp; rejuvenating living spaces</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Kitchen counter degreasing, sink polishing &amp; splashbacks</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>External wipe of stove hobs, ovens, fridges &amp; kettles</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Sanitisation of toilets, bathtubs, screens &amp; basins</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Streak-free glass polishing &amp; vanity mirror wiping</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bed styling &amp; fresh bed sheet replacements</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>High-power vacuuming of rugs, runners &amp; carpets</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Hard floor mopping &amp; skirting board wipe-downs</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Waste collection, recycling sort &amp; bin lining</li>
           </ul>
           <a class="btn btn-ghost" href="<?php echo esc_url(home_url('/regular-cleaning/')); ?>">Learn more</a>
         </div>
 
         <!-- CARD 02: AIRBNB CLEANING -->
         <div class="svc featured reveal" id="airbnb">
-          <span class="tag">Most Booked</span>
+          <span class="tag">Host Favourite</span>
           <div class="svc-img">
-            <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Airbnb turnover clean" loading="lazy">
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/service-2.jpg" alt="Hospitality ready Airbnb bedroom" loading="lazy">
           </div>
-          <div class="no">02 · Short-Let Turnover</div>
-          <h3>Airbnb Cleaning</h3>
+          <div class="no">02 · Short-Stay Turnover</div>
+          <h3>Airbnb &amp; Host Cleans</h3>
           <div class="price">Tailored quote</div>
           <ul class="airbnb-dense-list">
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Hotel-standard bed making &amp; linen change</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>On-site laundry &amp; towel arranging</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bathroom deep cleaning &amp; sanitising</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Kitchen worktops, sink &amp; appliances</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Vacuuming &amp; mopping all floor areas</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Dusting furniture, tables &amp; open surfaces</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Doors, handles &amp; high-touch wipe down</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Accessible window glass &amp; mirrors polished</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Restocking toiletries &amp; welcome supplies</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Final inspection before next guest arrives</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Hospitality-grade linen rotation &amp; bed dressing</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>In-unit towel laundry, folding &amp; presentation styling</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep bathroom scrubbing, descaling &amp; antibacterial prep</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Kitchen station detailing, microwave scrub &amp; glassware polish</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Wall-to-wall vacuuming &amp; hygienic hard floor cleaning</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Complete dusting of media consoles, desks &amp; fixtures</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Disinfection of keypads, light switches &amp; handles</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Internal glass &amp; reflective vanity surface polishing</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Consumable replenishment: soaps, tea &amp; guest essentials</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Pre-check-in photo audit &amp; final walk-through guarantee</li>
           </ul>
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('/airbnb-clean/')); ?>">Learn more</a>
         </div>
@@ -135,19 +135,19 @@ get_header(); ?>
         <!-- CARD 03: END OF TENANCY -->
         <div class="svc reveal">
           <div class="svc-img">
-            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Spotless kitchen handover" loading="lazy">
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/service-1.jpg" alt="Spotless kitchen handover for inventory" loading="lazy">
           </div>
-          <div class="no">03 · Move-In / Move-Out</div>
-          <h3>End of Tenancy</h3>
+          <div class="no">03 · Move Transition</div>
+          <h3>Tenancy Handover Clean</h3>
           <div class="price">Tailored quote</div>
           <ul>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Full deep cleaning reset throughout property</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Inside &amp; out of cupboards, wardrobes &amp; drawers</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Oven, hob, extractor &amp; kitchen degreasing</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Fridge, freezer &amp; microwave deep sanitised</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Full bathroom descaling: tiles, shower &amp; taps</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Skirting boards, doors, switches &amp; sockets</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Internal windows, frames, sills &amp; tracks</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Full inventory-standard deep scrub throughout property</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Internal and external detailing of all cabinetry &amp; wardrobes</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep grease removal from cookers, hoods &amp; oven racks</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Defrost &amp; sanitising of fridges, freezers and microwaves</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Targeted limescale extraction from tiles, heads &amp; basins</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Wipe-down of baseboards, architraves, panels &amp; sockets</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Interior window panes, frames, sliding tracks &amp; ledges</li>
           </ul>
           <a class="btn btn-ghost" href="<?php echo esc_url(home_url('/end-of-tenancy-clean/')); ?>">Learn more</a>
         </div>
@@ -163,19 +163,19 @@ get_header(); ?>
         <div>
           <span class="eyebrow">
             <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-            Reviews &amp; Testimonials
+            Client Endorsements
           </span>
-          <h2 class="section-title">What clients <em>say.</em></h2>
+          <h2 class="section-title">Genuine experiences, <em>shared.</em></h2>
         </div>
         <div class="rev-score">
           <div class="big">4.8</div>
           <div>
             <div class="stars">★★★★★</div>
-            <div class="sub">Rated 4.8 from verified London client reviews</div>
+            <div class="sub">Rated 4.8 across verified London reviews</div>
             <div style="display:flex;gap:14px;align-items:center;margin-top:6px;flex-wrap:wrap">
-              <a class="sub" href="https://www.facebook.com/share/1UE1JEWeiB/" target="_blank" rel="noopener noreferrer" style="color:var(--blue-bright)">Read our Facebook reviews →</a>
+              <a class="sub" href="https://www.facebook.com/share/1UE1JEWeiB/" target="_blank" rel="noopener noreferrer" style="color:var(--blue-bright)">View Facebook Testimonials →</a>
               <span style="color:var(--muted);font-size:0.8rem">·</span>
-              <a class="sub" href="<?php echo esc_url(home_url('/reviews/')); ?>" style="color:var(--blue);font-weight:600">Leave a Review →</a>
+              <a class="sub" href="<?php echo esc_url(home_url('/reviews/')); ?>" style="color:var(--blue);font-weight:600">Submit Your Review →</a>
             </div>
           </div>
         </div>
@@ -238,17 +238,17 @@ get_header(); ?>
             ?>
             <div class="rev">
               <div class="stars">★★★★★</div>
-              <p>Very impressed with the turnover clean on my apartment. The attention to detail was exceptional and the communications were prompt throughout. Wouldn't hesitate to use them again.</p>
+              <p>Stellar standard on our 2-bedroom rental turnover. Their thoroughness was evident in every room, and coordination before and after was seamless. Easily my first call going forward.</p>
               <div class="who"><div class="av">KW</div><div><b>Kevin Wilson</b><small>Verified Client · London</small></div></div>
             </div>
             <div class="rev">
               <div class="stars">★★★★★</div>
-              <p>Amazing deep cleaning — extremely hard-working staff. They arrived on time and stayed until every bathroom tile and kitchen surface was spotless. 5 stars!</p>
+              <p>Outstanding deep cleaning work. The team showed up exactly when promised and stayed dedicated until every fixture, tile, and appliance was sparkling clean. Superb quality.</p>
               <div class="who"><div class="av">KO</div><div><b>Karen O’Neill</b><small>Verified Client · Central London</small></div></div>
             </div>
             <div class="rev">
               <div class="stars">★★★★★</div>
-              <p>Reliable Airbnb cleaning service. The beds were made impeccably, toiletries restocked neatly, and the place smelled completely fresh for my next incoming guests.</p>
+              <p>First-class short-let turnover service. Beds styled crisp and straight, toiletries replenished with care, and the flat had that fresh, inviting feeling guests notice right away.</p>
               <div class="who"><div class="av">CM</div><div><b>Chris Monckton</b><small>Airbnb Host · London</small></div></div>
             </div>
         <?php endif; ?>
@@ -267,10 +267,10 @@ get_header(); ?>
         <div class="tqp-copy">
           <span class="eyebrow">
             <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-            Instant Mobile Access
+            Fast Mobile Bridge
           </span>
-          <h3>Point your camera. <em>Connect in seconds.</em></h3>
-          <p>Scan with your smartphone camera to browse verified client reviews or save our direct booking and contact channels to your phone immediately.</p>
+          <h3>Scan via camera. <em>Connect instantly.</em></h3>
+          <p>Aim your mobile lens to view authenticated resident feedback or immediately bookmark our dispatch desk directly to your address book.</p>
           
           <div class="tqp-actions">
             <a class="btn btn-primary" href="tel:+447919033684">
@@ -336,19 +336,19 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Coverage
+          Service Reach
         </span>
-        <h2 class="section-title">Cleaning across <em>London.</em></h2>
-        <p class="section-lead">We cover all of London and surrounding boroughs. Our cleaners are local, so you get genuine knowledge of the area and a faster response.</p>
+        <h2 class="section-title">Covering every <em>London district.</em></h2>
+        <p class="section-lead">From central high-rises to residential outer zones, our locally deployed operatives ensure timely arrivals and dependable neighborhood familiarity.</p>
         <a class="btn btn-primary" href="tel:+447919033684" target="_blank" rel="noopener noreferrer" style="margin-top:24px">07919 033684</a>
       </div>
       <div class="area-grid reveal">
-        <div class="area"><b>Central London</b><small>EC · WC</small></div>
-        <div class="area"><b>North London</b><small>N · NW</small></div>
-        <div class="area"><b>East London</b><small>E</small></div>
-        <div class="area"><b>South London</b><small>SE · SW</small></div>
-        <div class="area"><b>West London</b><small>W</small></div>
-        <div class="area"><b>Greater London</b><small>&amp; surrounds</small></div>
+        <div class="area"><b>Central London</b><small>EC · WC Postcodes</small></div>
+        <div class="area"><b>North London</b><small>N · NW Postcodes</small></div>
+        <div class="area"><b>East London</b><small>E Postcodes</small></div>
+        <div class="area"><b>South London</b><small>SE · SW Postcodes</small></div>
+        <div class="area"><b>West London</b><small>W Postcodes</small></div>
+        <div class="area"><b>Greater London</b><small>&amp; Bordering Zones</small></div>
       </div>
     </div>
   </section>
@@ -359,22 +359,22 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          About Expertcare Cleaning
+          About Our Service
         </span>
-        <h2 class="section-title">Professional cleaning, <em>across London.</em></h2>
+        <h2 class="section-title">Reliable cleaning, <em>tailored to London life.</em></h2>
       </div>
       <div class="about-grid reveal">
         <div class="about-col">
-          <h4>Trusted cleaners across the capital</h4>
-          <p>Expertcare Cleaning Service is a professional cleaning provider covering all London boroughs. We specialise in regular weekly/fortnightly domestic maintenance, one-off deep cleans, full end-of-tenancy cleans, and seamless Airbnb guest turnovers. Every clean is delivered by a vetted, trained and fully insured cleaner who follows our strict checklist on every visit.</p>
-          <h4>Why clients choose us</h4>
-          <p>A cleaning service is built on trust. That’s why we vet and train every cleaner, ensuring they understand your property and your personal standards. We’re fully insured for every job, our quotes remain transparent, and our team is always on call.</p>
+          <h4>Vetted excellence for London homes</h4>
+          <p>Expertcare Cleaning provides dedicated, dependable cleaning solutions across all London boroughs. Our expertise spans periodic domestic appointments, comprehensive seasonal deep cleans, seamless Airbnb turnovers, and tenancy inventory clearances. Every booking is executed by background-checked, fully insured staff working systematically against our comprehensive specification list.</p>
+          <h4>Our difference</h4>
+          <p>Exceptional cleaning relies entirely on integrity and precision. We carefully train and evaluate all cleaners so they treat your property with utmost care. With public liability insurance on every job, transparent quotes, and quick-response customer support, you always know where you stand.</p>
         </div>
         <div class="about-col">
-          <h4>Domestic, tenancy &amp; Airbnb turnarounds</h4>
-          <p>Our domestic service suits busy professionals and families who want a dependable routine. Our deep clean tackles what regular cleans don’t reach — limescale, skirting boards, behind furniture and sanitising. And our Airbnb turnarounds ensure pristine bed setups, laundry processing, restocked supplies, and 5-star inspection quality.</p>
-          <h4>How booking works</h4>
-          <p>Booking takes about a minute — fill in our form below or call directly. We arrive fully equipped with professional products and tools as standard, or we are happy to use your own on-site materials if preferred.</p>
+          <h4>Homes, tenancies &amp; short-let management</h4>
+          <p>Our domestic care offers routine peace of mind for busy families and professionals. When handling deep cleans, we target stubborn build-ups — from descaling taps to wiping behind heavy units. For host management, we guarantee five-star presentation, timely linen resets, and guest-ready impressions every single turnover.</p>
+          <h4>Seamless scheduling</h4>
+          <p>Arranging your clean takes under two minutes via our quote form or quick phone call. We come equipped with commercial-grade cleaning materials and gear, but are equally glad to work with your preferred in-house supplies if requested.</p>
           <a class="btn btn-ghost" href="tel:+447919033684" target="_blank" rel="noopener noreferrer" style="margin-top:8px">07919 033684</a>
         </div>
       </div>
@@ -387,44 +387,44 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Frequently Asked
+          Common Questions
         </span>
-        <h2 class="section-title">The small <em>print.</em></h2>
+        <h2 class="section-title">Helpful <em>clarifications.</em></h2>
       </div>
 
       <div class="faq-list reveal">
         <div class="faq-item">
           <button class="faq-q">What is included in an Airbnb turnover clean?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Our Airbnb service covers the complete guest turnaround: stripping and making beds with fresh linens, laundry services, sanitising bathrooms, degreasing kitchen appliances, vacuuming and mopping, dusting, restocking toiletries, emptying bins, and conducting a final quality inspection before your next guest checks in.</p>
+            <p>Our turnaround clean handles the complete guest handover: stripping beds, replacing linens, washing/drying towels, descaling and sanitising bathrooms, degreasing cooking surfaces, vacuuming, mopping, dusting throughout, replenishing welcome amenities, and concluding with a quality audit before your next arrival.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q">Do I need to be home during the clean?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Not at all. Many regulars and short-let hosts give us a key or use a key safe / smart lock. Every cleaner is vetted, trained and fully insured, so you can hand over the keys and get on with your day.</p>
+            <p>No presence is necessary. Many homeowners, landlords, and hosts arrange access via concierge, key lockbox, or smart lock. Since every cleaner is fully vetted, trained, and insured, your property remains in safe hands throughout.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q">Do you bring your own products and equipment?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes, we bring everything we need as standard. If you’d prefer we use your own products, that’s easier still — just let us know when you book.</p>
+            <p>Yes, our operatives arrive completely equipped with all requisite solutions and tools. Should you have specialist surfaces or prefer us to utilize your household products, just specify when submitting your request.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q">What areas do you cover?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We cover all of London and surrounding boroughs across North, South, East, West and Central London.</p>
+            <p>We serve properties throughout Greater London, spanning North, South, East, West, and Central areas.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q">What are your opening hours?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We’re open 24 hours a day, 7 days a week.</p>
+            <p>Our customer line and dispatch teams operate 24/7, year-round.</p>
           </div>
         </div>
       </div>
@@ -439,8 +439,8 @@ get_header(); ?>
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
           Get Started
         </span>
-        <h2 class="section-title">Tell us about <em>your home.</em></h2>
-        <p class="section-lead">Fill in a few details and we’ll send a no-obligation quote. We’re open 24 hours a day, 7 days a week. Prefer to chat? Use any option below.</p>
+        <h2 class="section-title">Tell us about <em>your property.</em></h2>
+        <p class="section-lead">Share a few quick specifics and receive a clear, tailored proposal. We operate around the clock, 7 days a week. Want to speak directly? Select your preferred channel below.</p>
         
         <div class="contact-opt">
           <a class="copt" href="tel:+447919033684" target="_blank" rel="noopener noreferrer">
@@ -449,7 +449,7 @@ get_header(); ?>
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>
               </svg>
             </span>
-            <div><b>Call 07919 033684</b><small>Tap to call · open 24/7</small></div>
+            <div><b>Call 07919 033684</b><small>Direct phone line · 24/7</small></div>
           </a>
 
           <a class="copt" href="https://api.whatsapp.com/send?phone=447919033684&text=Hi%20Expertcare%20Cleaning%2C%20I%27d%20like%20a%20cleaning%20quote%20please." target="_blank" rel="noopener noreferrer">
@@ -458,14 +458,14 @@ get_header(); ?>
                 <path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.1c.2-.2.5-.3.6-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.6.8c.3.1.4.2.5.3.1.2.1.6-.1 1.1Z"/>
               </svg>
             </span>
-            <div><b>WhatsApp 07919 033684</b><small>Instant replies · 24/7</small></div>
+            <div><b>WhatsApp 07919 033684</b><small>Immediate chat · 24/7</small></div>
           </a>
         </div>
       </div>
 
       <div class="form-card reveal">
-        <div class="fh">Get your quote</div>
-        <p class="fnote">Send your details and we’ll reply with a tailored quote and available dates — usually within minutes.</p>
+        <div class="fh">Request Your Estimate</div>
+        <p class="fnote">Submit your requirements and receive a prompt, tailored quotation and schedule options — typically within minutes.</p>
         <form id="quoteForm">
           <input type="hidden" name="form-name" value="quote-request">
           <p class="hp"><label>Don’t fill this in if you’re human: <input name="bot-field"></label></p>
@@ -587,18 +587,18 @@ get_header(); ?>
           <div class="field">
             <label>Photos of your property (optional)</label>
             <input type="file" name="photos" accept="image/*" multiple>
-            <small style="display:block;color:var(--muted-dim);font-size:.74rem;margin-top:6px">Add a few photos — ovens, bathrooms, whole rooms. It helps us give an accurate quote faster.</small>
+            <small style="display:block;color:var(--muted-dim);font-size:.74rem;margin-top:6px">Attach key room images — cookers, bathrooms, living areas. Helps us price accurately without delay.</small>
           </div>
 
           <div class="field">
             <label>Anything else? (dates, linen instructions, parking details...)</label>
-            <textarea name="notes" placeholder="Tell us anything that helps us quote accurately."></textarea>
+            <textarea name="notes" placeholder="Include any details that assist us in preparing an accurate quote."></textarea>
           </div>
 
           <button class="btn btn-primary" type="button" id="formSubmitBtn">Request My Quote →</button>
           <div class="or-wa">or</div>
           <button class="btn btn-wa" type="button" id="waCompose">Send My Details on WhatsApp</button>
-          <div class="form-foot">No obligation · we’ll never share your details</div>
+          <div class="form-foot">Zero obligation · Your details remain strictly confidential</div>
         </form>
       </div>
     </div>
@@ -612,8 +612,8 @@ get_header(); ?>
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
           Direct Communication
         </span>
-        <h2 class="section-title">Contact <em>Expertcare Cleaning.</em></h2>
-        <p class="section-lead" style="margin:16px auto 0">Get in touch directly with our dispatch and booking office. We are available 24 hours a day, 7 days a week.</p>
+        <h2 class="section-title">Get in Touch with <em>Expertcare Cleaning.</em></h2>
+        <p class="section-lead" style="margin:16px auto 0">Reach out directly to our central London operations and dispatch desk. We are on hand 24 hours a day, 7 days a week.</p>
       </div>
 
       <div class="contact-grid reveal" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px">
@@ -623,7 +623,7 @@ get_header(); ?>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
           <h4 style="font-family:var(--display);font-size:1.1rem;font-weight:600;margin-bottom:6px">Call Direct</h4>
-          <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Instant phone bookings &amp; emergency turnover support.</p>
+          <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Rapid telephone bookings &amp; urgent turnover requests.</p>
           <a href="tel:+447919033684" target="_blank" rel="noopener noreferrer" style="font-weight:600;color:var(--blue);font-size:.92rem">07919 033684</a>
         </div>
 
@@ -633,7 +633,7 @@ get_header(); ?>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.1c.2-.2.5-.3.6-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.6.8c.3.1.4.2.5.3.1.2.1.6-.1 1.1Z"/></svg>
           </div>
           <h4 style="font-family:var(--display);font-size:1.1rem;font-weight:600;margin-bottom:6px">WhatsApp</h4>
-          <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Instant replies, quotes and photo appraisals.</p>
+          <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Fast messaging, instant estimates &amp; property photo reviews.</p>
           <a href="https://api.whatsapp.com/send?phone=447919033684&text=Hi%20Expertcare%20Cleaning%2C%20I%27d%20like%20a%20cleaning%20quote%20please." target="_blank" rel="noopener noreferrer" style="font-weight:600;color:var(--blue);font-size:.92rem">Chat on WhatsApp</a>
         </div>
 
@@ -642,8 +642,8 @@ get_header(); ?>
           <div class="c-icon" style="width:46px;height:46px;border-radius:12px;background:rgba(47,147,204,.14);display:flex;align-items:center;justify-content:center;color:var(--blue);margin-bottom:16px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </div>
-          <h4 style="font-family:var(--display);font-size:1.1rem;font-weight:600;margin-bottom:6px">Email Us</h4>
-          <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Send tenancy checklists, requirements &amp; feedback.</p>
+          <h4 style="font-family:var(--display);font-size:1.1rem;font-weight:600;margin-bottom:6px">Email Inquiries</h4>
+          <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Send tenancy checklists, job scopes &amp; bespoke requirements.</p>
           <a href="<?php echo esc_url('mailto:' . antispambot('Expertcarecleaninglondon@gmail.com')); ?>" target="_blank" rel="noopener noreferrer" style="font-weight:600;color:var(--blue);font-size:.92rem">Email Us</a>
         </div>
 
@@ -652,8 +652,8 @@ get_header(); ?>
           <div class="c-icon" style="width:46px;height:46px;border-radius:12px;background:rgba(47,147,204,.14);display:flex;align-items:center;justify-content:center;color:var(--blue);margin-bottom:16px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <h4 style="font-family:var(--display);font-size:1.1rem;font-weight:600;margin-bottom:6px">London Coverage</h4>
-          <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Open 24 hours a day, 7 days a week.</p>
+          <h4 style="font-family:var(--display);font-size:1.1rem;font-weight:600;margin-bottom:6px">London-Wide Coverage</h4>
+          <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Available 24 hours a day, 7 days a week.</p>
           <a href="<?php echo esc_url(home_url('#areas')); ?>" style="font-weight:600;color:var(--blue);font-size:.92rem">All London Boroughs</a>
         </div>
       </div>

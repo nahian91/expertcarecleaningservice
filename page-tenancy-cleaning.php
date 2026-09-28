@@ -70,10 +70,10 @@ get_header(); ?>
       </div>
       <span class="eyebrow">
         <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        03 · Move-In / Move-Out
+        03 · Lease Handover Solutions
       </span>
-      <h1>End of tenancy cleaning, <span class="shine">deposit handover standard.</span></h1>
-      <p class="sub">Rigorous, inventory-ready move-out cleaning tailored to pass strict landlord and letting-agent checkouts across London.</p>
+      <h1>Tenancy departure cleaning, <span class="shine">approved for full deposit return.</span></h1>
+      <p class="sub">Comprehensive, inspection-grade changeover sanitisation structured specifically to satisfy demanding letting agents and independent inventory clerks across Greater London.</p>
     </div>
   </section>
 
@@ -82,14 +82,14 @@ get_header(); ?>
     <div class="wrap split">
       <!-- Left: Prose Description -->
       <div class="prose reveal in">
-        <h3>What’s included.</h3>
-        <p>Moving is stressful enough without losing your tenancy deposit over checkout cleaning issues. Our end of tenancy cleaning service is built specifically around official inventory checkout requirements: inside and outside of all kitchen cupboards, wardrobes and drawers, deep kitchen and bathroom cleaning, descaling, interior window panes, frames and sills, vacuuming carpets, mopping hard floors, and removing general household waste.</p>
+        <h3>Scope of the clean.</h3>
+        <p>Relocating is stressful enough without risking unfair deductions from your tenancy bond over minor cleanliness disputes. Our checkout sanitisation package directly replicates professional inventory check standards: deep internal and external scrubbing of kitchen cabinetry and wardrobes, complete descaling of sanitary fittings, degreased cooking appliances, interior window tracks and panes, floor rejuvenation, and removal of stray debris.</p>
 
-        <h3>Ideal for</h3>
-        <p>Tenants moving out who need their security deposit returned in full, landlords preparing a vacant property for incoming tenants, and estate agents requiring reliable turnaround handovers across London.</p>
+        <h3>Who this is for</h3>
+        <p>Outgoing tenants safeguarding their complete damage deposit, private landlords prepping an empty property for prime market listing, and managing agents seeking reliable turnaround standards throughout the London rental sector.</p>
 
-        <h3>How it works</h3>
-        <p>Send us your property size, postcode, and move-out date for an immediate quote. We arrive with all industrial-strength equipment, limescale removers, and appliance degreasers. Our team stays on-site until every single point on the move-out inventory checklist is completed, leaving the property in immaculate handover condition.</p>
+        <h3>Our operational procedure</h3>
+        <p>Provide your property layout, location, and key collection date to secure a confirmed, transparent proposal. Our specialists arrive equipped with commercial rotary descalers, industrial extractors, and heavy-duty degreasers. Our crew remains until every single specification on our comprehensive checkout checklist is satisfied, presenting your property in flawless handover condition.</p>
 
         <div class="split-actions">
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Request Handover Quote</a>
@@ -99,70 +99,70 @@ get_header(); ?>
 
       <!-- Right: Boxed Checklist Card with All 15 Items -->
       <aside class="incl reveal in">
-        <h3>End of Tenancy</h3>
-        <div class="pr">Deposit guarantee standard · tailored to your property</div>
+        <h3>Inventory Handover</h3>
+        <div class="pr">Deposit return benchmark · tailored to property footprint</div>
         
         <div class="checklist-title">15-Point Tenancy Checkout Checklist Included:</div>
         <ul>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Bed making &amp; fresh linen changing
+            Bed staging &amp; clean mattress protector placement
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Laundry, washing &amp; drying
+            Domestic linen washing &amp; cycle handling
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Folding and organising clean laundry
+            Towel laundering, neat folding &amp; wardrobe alignment
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Deep cleaning throughout the property
+            Full top-to-bottom property deep scrub &amp; reset
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Kitchen deep cleaning
+            Kitchen degreasing: splashbacks, counters &amp; sinks
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Bathroom &amp; toilet deep cleaning
+            Shower, tub &amp; toilet descaling and antibacterial cleanse
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Cleaning cupboards, wardrobes &amp; drawers
+            Inside and outside wipe-down of all storage units &amp; drawers
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Interior windows, frames &amp; sills
+            Interior window glass, frames, runners &amp; ledges polished
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Skirting boards, doors, handles &amp; switches
+            Baseboards, doors, handles &amp; power sockets sanitised
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Dusting and cleaning furniture
+            Detailed dusting and polishing of remaining furniture items
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Vacuuming carpets and floors
+            Wall-to-wall vacuuming across all carpeted rooms
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Mopping hard floors
+            Hard floor sanitisation &amp; damp mopping
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Emptying and replacing bin liners
+            Waste bin clearance &amp; fresh liner replacement
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Removing general household waste
+            Disposal of left-behind light domestic packaging
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Final detailed checks to make sure nothing is missed
+            Rigorous checkout inspection against inventory standards
           </li>
         </ul>
 
@@ -177,28 +177,28 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Recent Results
+          Handover Portfolio
         </span>
-        <h2 class="section-title">Photos from <em>real tenancy handovers.</em></h2>
-        <p class="section-lead">Actual results from move-out cleaning jobs across London — the standard we bring to every inspection.</p>
+        <h2 class="section-title">Visual evidence from <em>completed tenancy checkouts.</em></h2>
+        <p class="section-lead">Photographic records from checkout transformations across London rental properties — demonstrating the standards delivered ahead of inventory inspections.</p>
       </div>
 
       <div class="work-grid reveal">
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Kitchen cupboards and appliances cleaned" loading="lazy">
-          <figcaption>Kitchen Handover Standard</figcaption>
+          <figcaption>Inventory-Ready Kitchen Station</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1590725140246-201509650275?auto=format&fit=crop&w=800&q=80" alt="Oven interior degreased" loading="lazy">
-          <figcaption>Oven &amp; Cooker Detailing</figcaption>
+          <figcaption>Cooker &amp; Extractor Detailing</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="Descaled bathroom tiles and bath" loading="lazy">
-          <figcaption>Bathroom Limescale Removed</figcaption>
+          <figcaption>Descaled Bath &amp; Tilework</figcaption>
         </figure>
         <figure class="work-card">
           <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Spotless empty apartment living room" loading="lazy">
-          <figcaption>Empty Property Handover</figcaption>
+          <figcaption>Pristine Handover Presentation</figcaption>
         </figure>
       </div>
     </div>
@@ -210,44 +210,44 @@ get_header(); ?>
       <div class="reveal">
         <span class="eyebrow">
           <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Frequently Asked
+          Important Policies
         </span>
-        <h2 class="section-title">The small <em>print.</em></h2>
+        <h2 class="section-title">Common tenancy <em>questions answered.</em></h2>
       </div>
 
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-q" type="button">Will this clean pass my inventory clerk's inspection?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Will this clean satisfy an official inventory checkout report?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. Our end of tenancy cleaning checklist is modelled directly on standard UK inventory and letting agency guidelines. We clean inside cupboards, ovens, fridge/freezers, and descale bathrooms to ensure your deposit is safeguarded.</p>
+            <p>Yes. Our tenancy checklist directly aligns with standard UK landlord, estate agency, and inventory clerk specifications. We systematically clean inside storage, address ovens and white goods, and descale all sanitary fixtures to safeguard your deposit.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Does the property need to be empty before the clean starts?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Should the property be vacant of personal effects before arrival?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes, all personal belongings, rubbish, and furniture (if unfurnished) should be removed before our team arrives so we can access every cupboard, drawer, corner, and skirting board.</p>
+            <p>Yes. All personal belongings, packing boxes, and residential waste must be cleared prior to our arrival. An empty space ensures our cleaners can access and sanitise every corner, wardrobe shelf, and skirting board without hindrance.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" type="button">Should the fridge and freezer be defrosted beforehand?<span class="pm"></span></button>
+          <button class="faq-q" type="button">Does the refrigerator/freezer need to be defrosted beforehand?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes. Please switch off and defrost the freezer at least 24 hours prior to our arrival so our cleaners can thoroughly clean and sanitise the interior trays and seals.</p>
+            <p>Yes, please. Switch off and defrost freezers at least 24 hours in advance of the visit so our operatives can safely clean, disinfect, and dry all internal shelving, trays, and rubber door seals.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" type="button">Do you bring your own cleaning supplies and equipment?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>Yes, we arrive fully equipped with heavy-duty degreasers, descalers, vacuums, and specialised cleaning tools as standard. You don't need to provide any materials.</p>
+            <p>Yes, our crew arrives completely self-sufficient with commercial-grade vacuums, heavy-duty descaling compounds, grease removers, and microfibre equipment. You do not need to provide any materials.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" type="button">What areas in London do you cover for end of tenancy cleans?<span class="pm"></span></button>
           <div class="faq-a">
-            <p>We provide full end of tenancy cleaning coverage across all London boroughs: Central, North, East, South, and West London.</p>
+            <p>We provide comprehensive end of tenancy services across every London borough, spanning Central, North, West, East, and South districts.</p>
           </div>
         </div>
       </div>
