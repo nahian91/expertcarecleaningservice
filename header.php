@@ -33,7 +33,7 @@
             </svg>
           </button>
           <div class="dropdown">
-  <a href="<?php echo esc_url(home_url('/services/')); ?>">All services</a>
+  <a href="#">All services</a>
   <a href="<?php echo esc_url(home_url('/regular-cleaning/')); ?>">Regular Cleaning</a>
   <a href="<?php echo esc_url(home_url('/airbnb-cleaning/')); ?>">Airbnb Turnover Cleaning</a>
   <a href="<?php echo esc_url(home_url('/deep-cleaning/')); ?>">Deep Clean</a>
