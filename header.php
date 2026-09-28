@@ -47,6 +47,7 @@
         <a href="<?php echo esc_url(home_url('#reviews')); ?>">Reviews</a>
         <a href="<?php echo esc_url(home_url('#areas')); ?>">Areas</a>
         <a href="<?php echo esc_url(home_url('#faq')); ?>">FAQ</a>
+        <a href="<?php echo esc_url(home_url('/reviews')); ?>">Give Reviews</a>
         <a href="<?php echo esc_url(home_url('#quote')); ?>">Contact</a>
       </nav>
 
