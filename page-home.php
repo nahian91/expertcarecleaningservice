@@ -39,7 +39,7 @@ get_header(); ?>
         </div>
       </div>
       <div class="hero-photo reveal in">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Impeccably detailed London living area" loading="eager">
+        <img src="<?php echo get_template_directory_uri();?>/assets/img/hero.jpg" alt="Impeccably detailed London living area" loading="eager">
         <div class="hero-badge">
           <div class="hb-stars">★★★★★</div>
           <div class="hb-text">
@@ -71,7 +71,7 @@ get_header(); ?>
     </div>
   </section>
 
-  <!-- 3-COLUMN SERVICES SECTION (10 FEATURES PER CARD) -->
+ <!-- 3-COLUMN SERVICES SECTION (10 FEATURES PER CARD) -->
   <section class="section" id="services">
     <div class="wrap">
       <div class="reveal">
@@ -85,7 +85,7 @@ get_header(); ?>
 
       <div class="svc-grid">
         
-        <!-- CARD 01: REGULAR DOMESTIC CLEANING -->
+        <!-- CARD 01: REGULAR DOMESTIC CLEANING (10 FEATURES) -->
         <div class="svc reveal">
           <div class="svc-img">
             <img src="<?php echo get_template_directory_uri();?>/assets/img/service-3.jpg" alt="Pristine interior living room" loading="lazy">
@@ -94,21 +94,21 @@ get_header(); ?>
           <h3>Routine Home Cleaning</h3>
           <div class="price">Tailored quote</div>
           <ul>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Comprehensive dusting, ledge care &amp; surface sanitising</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Tidying, arranging &amp; rejuvenating living spaces</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Kitchen counter degreasing, sink polishing &amp; splashbacks</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>External wipe of stove hobs, ovens, fridges &amp; kettles</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Sanitisation of toilets, bathtubs, screens &amp; basins</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Streak-free glass polishing &amp; vanity mirror wiping</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bed styling &amp; fresh bed sheet replacements</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>High-power vacuuming of rugs, runners &amp; carpets</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Hard floor mopping &amp; skirting board wipe-downs</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Waste collection, recycling sort &amp; bin lining</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>General dusting, wiping &amp; surface cleaning</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Tidying and refreshing living spaces</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning kitchen worktops, sinks &amp; surfaces</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Fridge, oven, microwave, hob &amp; appliance cleaning</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bathroom &amp; shower area cleaning</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Mirrors and glass surface cleaning</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bed making &amp; fresh linen changing</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Washing, drying &amp; folding laundry</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Vacuuming carpets, rugs &amp; floors</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Mopping hard floors &amp; emptying bins</li>
           </ul>
           <a class="btn btn-ghost" href="<?php echo esc_url(home_url('/regular-cleaning/')); ?>">Learn more</a>
         </div>
 
-        <!-- CARD 02: AIRBNB CLEANING -->
+        <!-- CARD 02: AIRBNB CLEANING (10 FEATURES) -->
         <div class="svc featured reveal" id="airbnb">
           <span class="tag">Host Favourite</span>
           <div class="svc-img">
@@ -118,21 +118,21 @@ get_header(); ?>
           <h3>Airbnb &amp; Host Cleans</h3>
           <div class="price">Tailored quote</div>
           <ul class="airbnb-dense-list">
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Hospitality-grade linen rotation &amp; bed dressing</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>In-unit towel laundry, folding &amp; presentation styling</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep bathroom scrubbing, descaling &amp; antibacterial prep</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Kitchen station detailing, microwave scrub &amp; glassware polish</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Wall-to-wall vacuuming &amp; hygienic hard floor cleaning</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Complete dusting of media consoles, desks &amp; fixtures</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Disinfection of keypads, light switches &amp; handles</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Internal glass &amp; reflective vanity surface polishing</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Consumable replenishment: soaps, tea &amp; guest essentials</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Pre-check-in photo audit &amp; final walk-through guarantee</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bed making &amp; linen changes</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Laundry services</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bathroom deep cleaning &amp; sanitising</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Kitchen cleaning, including worktops and appliances</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Vacuuming &amp; mopping all floors</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Dusting furniture and surfaces</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning and wiping skirting boards</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning doors, handles and high-touch areas</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Checking and arranging toiletries</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Final quality check before the next guest arrives</li>
           </ul>
-          <a class="btn btn-primary" href="<?php echo esc_url(home_url('/airbnb-clean/')); ?>">Learn more</a>
+          <a class="btn btn-primary" href="<?php echo esc_url(home_url('/airbnb-cleaning/')); ?>">Learn more</a>
         </div>
 
-        <!-- CARD 03: END OF TENANCY -->
+        <!-- CARD 03: END OF TENANCY (10 FEATURES) -->
         <div class="svc reveal">
           <div class="svc-img">
             <img src="<?php echo get_template_directory_uri();?>/assets/img/service-1.jpg" alt="Spotless kitchen handover for inventory" loading="lazy">
@@ -141,15 +141,18 @@ get_header(); ?>
           <h3>Tenancy Handover Clean</h3>
           <div class="price">Tailored quote</div>
           <ul>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Full inventory-standard deep scrub throughout property</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Internal and external detailing of all cabinetry &amp; wardrobes</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep grease removal from cookers, hoods &amp; oven racks</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Defrost &amp; sanitising of fridges, freezers and microwaves</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Targeted limescale extraction from tiles, heads &amp; basins</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Wipe-down of baseboards, architraves, panels &amp; sockets</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Interior window panes, frames, sliding tracks &amp; ledges</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep cleaning throughout the entire property</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Kitchen deep cleaning: worktops, cupboards &amp; hobs</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bathroom and toilet deep cleaning and sanitisation</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning inside cupboards, wardrobes and drawers</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning interior windows, frames and window sills</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning skirting boards, doors, handles &amp; switches</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Vacuuming carpets, rugs and mopping all hard floors</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning radiators and other accessible fixtures</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Removing cobwebs, waste &amp; replacing bin liners</li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Final detailed checks to ensure nothing is missed</li>
           </ul>
-          <a class="btn btn-ghost" href="<?php echo esc_url(home_url('/end-of-tenancy-clean/')); ?>">Learn more</a>
+          <a class="btn btn-ghost" href="<?php echo esc_url(home_url('/tenancy-cleaning/')); ?>">Learn more</a>
         </div>
 
       </div>
@@ -263,70 +266,78 @@ get_header(); ?>
       </div>
 
       <!-- REDESIGNED CAMERA / INSTANT MOBILE ACCESS SCANNER -->
-      <div class="trust-qr-panel-premium reveal" style="margin-top:54px;">
-        <div class="tqp-copy">
-          <span class="eyebrow">
-            <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-            Fast Mobile Bridge
-          </span>
-          <h3>Scan via camera. <em>Connect instantly.</em></h3>
-          <p>Aim your mobile lens to view authenticated resident feedback or immediately bookmark our dispatch desk directly to your address book.</p>
-          
-          <div class="tqp-actions">
-            <a class="btn btn-primary" href="tel:+447919033684">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-              Call 07919 033684
-            </a>
-            <a class="btn btn-ghost" href="https://www.facebook.com/share/1UE1JEWeiB/" target="_blank" rel="noopener noreferrer">Facebook Page ↗</a>
-          </div>
-        </div>
+<div class="trust-qr-panel-premium reveal" style="margin-top:54px;">
+  <div class="tqp-copy">
+    <span class="eyebrow">
+      <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+      Fast Mobile Bridge
+    </span>
+    <h3>Scan via camera. <em>Connect instantly.</em></h3>
+    <p>Aim your mobile lens to view authenticated resident feedback or immediately bookmark our dispatch desk directly to your address book.</p>
+    
+    <div class="tqp-actions">
+      <a class="btn btn-primary" href="tel:+447919033684">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Call 07919 033684
+      </a>
+      <a class="btn btn-ghost" href="https://www.facebook.com/share/1UE1JEWeiB/" target="_blank" rel="noopener noreferrer">Facebook Page ↗</a>
+    </div>
+  </div>
 
-        <div class="tqp-dual-deck">
-          <!-- CARD 01: Client Feedback & Reviews -->
-          <div class="tqp-tile">
-            <span class="tqp-tile-badge">Verified Reviews</span>
-            <div class="qr-scanner-frame">
-              <span class="scanner-laser"></span>
-              <div class="qr-svg-holder">
-                <svg viewBox="0 0 33 33" shape-rendering="crispEdges">
-                  <path fill="#ffffff" d="M0 0h33v33H0z"/>
-                  <path fill="#0f172a" d="M2 2h7v7H2zm9 0h2v1h-1v1h1v1h-2v1h1v1h-1v1h2v1h-2V2zm4 0h1v1h-1zm2 0h1v1h-1zm2 0h7v7h-7zm-15 1v5h5V3zm16 0v5h5V3zM4 5h3v3H4zm16 0h3v3h-3zM2 11h1v1H2zm3 0h3v1H5zm4 0h1v2h1v-1h1v1h-1v2h-1v-1H9zm5 0h1v1h1v-1h1v2h-1v1h-1v-1h-1zm5 0h1v2h1v-1h1v1h-1v1h-2zm4 0h2v1H-2zm-18 2h1v1H5zm14 0h1v1H-1zm4 0h1v1h1v1h-2zm-17 1h1v2H6zm3 0h1v1H9zm3 0h2v1H-2zm8 0h1v1H-1zm-18 1h1v1H2zm4 0h2v1H6zm5 0h1v1H-1zm7 0h2v1H-2zm-17 1h1v2H1zm6 0h1v1H7zm11 0h1v2h-1zm3 0h1v1H-1zm-19 1h1v1H2zm3 0h1v2H5zm12 0h1v1H-1zm3 0h1v1H-1zm2 0h1v1H-1zm-19 1h1v1H1zm2 0h1v1H3zm6 0h1v1H9zm3 0h1v1H-1zm4 0h1v1H-1zm-17 1h1v1H0zm2 0h2v1H2zm6 0h1v1H8zm2 0h1v2h-1zm6 0h1v1H-1zm3 0h1v1H-1zm3 0h1v1H-1zm-21 1h1v1H1zm3 0h1v1H4zm3 0h1v1H7zm5 0h1v1H-1zm5 0h1v1H-1zm4 0h1v1H-1zm-20 1h2v1H2zm4 0h1v1H6zm4 0h1v1H-1zm2 0h1v1H-1zm3 0h1v1H-1zm3 0h1v1H-1zm2 0h1v1H-1zm-19 1h1v1H1zm3 0h1v1H4zm3 0h1v1H7zm5 0h1v1H-1zm3 0h1v1H-1zm5 0h1v1H-1zm-17 1h7v7H2zm10 0h1v1H-1zm4 0h2v1H-2zm4 0h1v1H-1zm3 0h2v1H-2zm-20 1v5h5v-5zm10 0h1v2h1v-1h1v1h-1v1h1v1h-1v-1h-1v2h-1zm7 0h2v1h-1v1h-1zm-15 1h3v3H4zm13 0h1v1H-1zm2 0h1v1H-1zm-2 2h1v1H-1zm3 0h1v1H-1z"/>
-                </svg>
-              </div>
-            </div>
-            <div class="tqp-tile-info">
-              <h4>Client Reviews</h4>
-              <span>All Testimonials</span>
-            </div>
-            <a class="tqp-tile-btn" href="<?php echo esc_url(home_url('/reviews/')); ?>">
-              Open Reviews
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
-          </div>
-
-          <!-- CARD 02: Direct Call & Web Connect -->
-          <div class="tqp-tile">
-            <span class="tqp-tile-badge badge-accent">Direct Line</span>
-            <div class="qr-scanner-frame">
-              <span class="scanner-laser"></span>
-              <div class="qr-svg-holder">
-                <svg viewBox="0 0 33 33" shape-rendering="crispEdges">
-                  <path fill="#ffffff" d="M0 0h33v33H0z"/>
-                  <path fill="#0066cc" d="M2 2h7v7H2zm11 0h1v1h-1zm2 0h3v1h-3zm4 0h1v2h-1zm2 0h7v7h-7zm-17 1v5h5V3zm16 0v5h5V3zM4 5h3v3H4zm16 0h3v3h-3zM2 11h2v1H2zm3 0h1v2H5zm3 0h2v1H8zm3 0h1v1h1v-1h2v1h-1v1h1v1h-1v1h2v-1h1v2h-1v1h-1v-1h-2v1h-1v-1h-1v-2h-1v-1h2v-1h-1zm11 0h1v1h-1zm2 0h1v2h-1zm2 0h1v1h-1zm-22 2h1v1H2zm4 0h1v1H6zm14 0h1v1h-1zm3 0h1v1h-1zm-21 1h1v2H2zm5 0h1v1H7zm11 0h1v1h-1zm3 0h1v1h-1zm-17 1h1v1H4zm14 0h1v1h-1zm3 0h1v1h-1zm-21 1h1v1H0zm2 0h1v1H2zm3 0h2v1H5zm6 0h2v1h-2zm3 0h1v1h-1zm3 0h1v1h-1zm4 0h1v2h-1zm3 0h1v1h-1zm-22 1h1v1H1zm3 0h1v1H4zm4 0h1v1H8zm3 0h1v1h-1zm4 0h1v1h-1zm2 0h1v1h-1zm4 0h1v1h-1zm-20 1h2v1H2zm3 0h1v1H5zm3 0h1v1H8zm2 0h2v1h-2zm4 0h1v1h-1zm2 0h1v1h-1zm3 0h1v1h-1zm-17 1h1v1H2zm4 0h1v1H6zm2 0h1v1H8zm3 0h1v1h-1zm2 0h1v1h-1zm4 0h1v1h-1zm4 0h1v1h-1zm-17 1h7v7H2zm9 0h1v1h-1zm2 0h1v1h-1zm2 0h2v1h-2zm3 0h1v1h-1zm3 0h2v1h-2zm-17 1v5h5v-5zm9 0h2v1h-2zm3 0h2v1h-2zm4 0h1v1h-1zm2 0h1v1h-1zm-16 1h3v3H4zm10 0h1v2h-1zm2 0h1v1h-1zm4 0h1v1h-1zm-4 1h1v1h-1zm3 0h1v1h-1zm-5 1h1v1h-1zm3 0h1v1h-1zm3 0h1v1h-1z"/>
-                </svg>
-              </div>
-            </div>
-            <div class="tqp-tile-info">
-              <h4>Call &amp; Book</h4>
-              <span>07919 033684</span>
-            </div>
-            <a class="tqp-tile-btn" href="tel:+447919033684">
-              Tap to Call
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
-          </div>
+  <div class="tqp-dual-deck">
+    <!-- CARD 01: Client Feedback & Reviews -->
+    <div class="tqp-tile">
+      <span class="tqp-tile-badge">Verified Reviews</span>
+      <div class="qr-scanner-frame" style="position:relative; background:#ffffff; padding:12px; border-radius:16px;">
+        <span class="scanner-laser" style="pointer-events:none; opacity:0.35;"></span>
+        <div class="qr-svg-holder" style="background:#ffffff; display:flex; align-items:center; justify-content:center;">
+          <img 
+            src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=<?php echo urlencode(home_url('/reviews/')); ?>&margin=1" 
+            alt="Scan to open reviews" 
+            width="140" 
+            height="140"
+            style="display:block; width:100%; max-width:140px; height:auto; aspect-ratio:1/1;"
+          />
         </div>
       </div>
+      <div class="tqp-tile-info">
+        <h4>Client Reviews</h4>
+        <span>All Testimonials</span>
+      </div>
+      <a class="tqp-tile-btn" href="<?php echo esc_url(home_url('/reviews/')); ?>">
+        Open Reviews
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+    </div>
+
+    <!-- CARD 02: Direct Call & Web Connect -->
+<div class="tqp-tile">
+  <span class="tqp-tile-badge badge-accent">Direct Line</span>
+  <div class="qr-scanner-frame" style="position:relative; background:#ffffff; padding:12px; border-radius:16px;">
+    <!-- Disabled laser interference for instant camera lock-on -->
+    <span class="scanner-laser" style="pointer-events:none; opacity:0.25;"></span>
+    <div class="qr-svg-holder" style="background:#ffffff; display:flex; align-items:center; justify-content:center; padding:4px;">
+      <img 
+        src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=<?php echo rawurlencode('TEL:07919033684'); ?>&color=0f172a&bgcolor=ffffff&margin=2" 
+        alt="Scan to call 07919 033684" 
+        width="140" 
+        height="140" 
+        loading="eager"
+        style="display:block; width:100%; max-width:140px; height:auto; aspect-ratio:1/1;"
+      />
+    </div>
+  </div>
+  <div class="tqp-tile-info">
+    <h4>Call &amp; Book</h4>
+    <span>07919 033684</span>
+  </div>
+  <a class="tqp-tile-btn" href="tel:07919033684">
+    Tap to Call
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+  </a>
+</div>
+  </div>
+</div>
     </div>
   </section>
 

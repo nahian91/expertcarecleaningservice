@@ -150,12 +150,29 @@ get_header(); ?>
     margin-top: 26px;
   }
 
-  /* Photos Grid */
-  .work-grid {
+  /* Two Equal Column Layout for Showcase & FAQ */
+  .showcase-faq-section {
+    padding-top: 0;
+  }
+  .showcase-faq-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .col-block-head {
+    margin-bottom: 24px;
+  }
+  .col-block-head .section-title {
+    font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+    margin-top: 8px;
+  }
+
+  /* Work Showcase: 2-Column Inner Images */
+  .work-grid-two-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
-    margin-top: 40px;
   }
   .work-card {
     position: relative;
@@ -189,7 +206,6 @@ get_header(); ?>
 
   /* FAQ Accordion List */
   .faq-list {
-    margin-top: 46px;
     border-top: 1px solid var(--color-border, #e2e8f0);
   }
   .faq-item {
@@ -205,16 +221,16 @@ get_header(); ?>
     font-family: var(--font-heading, 'Poppins', sans-serif);
     font-weight: 600;
     font-size: 1.05rem;
-    padding: 24px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
   }
   .faq-q .pm {
     flex: none;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     position: relative;
     transition: transform 0.3s;
   }
@@ -229,12 +245,12 @@ get_header(); ?>
     transform: translate(-50%, -50%);
   }
   .faq-q .pm::before {
-    width: 14px;
+    width: 13px;
     height: 2px;
   }
   .faq-q .pm::after {
     width: 2px;
-    height: 14px;
+    height: 13px;
     transition: transform 0.3s;
   }
   .faq-item.open .pm::after {
@@ -248,9 +264,9 @@ get_header(); ?>
   }
   .faq-a p {
     color: var(--color-text, #475569);
-    padding-bottom: 24px;
-    font-size: 0.96rem;
-    max-width: 70ch;
+    padding-bottom: 20px;
+    font-size: 0.94rem;
+    line-height: 1.6;
     margin: 0;
   }
 
@@ -262,12 +278,13 @@ get_header(); ?>
     .incl {
       position: static;
     }
-    .work-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .showcase-faq-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
     }
   }
   @media (max-width: 560px) {
-    .work-grid {
+    .work-grid-two-col {
       grid-template-columns: 1fr;
     }
   }
@@ -309,68 +326,72 @@ get_header(); ?>
         </div>
       </div>
 
-      <!-- Right: Boxed Checklist Card with All 14 Items -->
+      <!-- Right: Boxed Checklist Card with All 15 Items -->
       <aside class="incl reveal in">
         <h3>Routine Domestic Care</h3>
         <div class="pr">Transparent pricing · adapted to your property footprint</div>
         
-        <div class="checklist-title">14-Point Domestic Cleaning Checklist:</div>
+        <div class="checklist-title">Domestic Cleaning Checklist:</div>
         <ul>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Systematic dusting, wiping &amp; furniture surface polishing
+            General dusting, wiping &amp; surface cleaning
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Straightening, decluttering &amp; styling living quarters
+            Tidying and refreshing living spaces
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Deep scrub of worktops, food-prep zones &amp; stainless sinks
+            Cleaning kitchen worktops, sinks &amp; surfaces
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Exterior wipedown of ovens, hobs, extractor fronts &amp; fridges
+            Fridge, oven, microwave, hob &amp; appliance cleaning
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Hygienic bathroom scrub: tubs, screens, showers &amp; toilets
+            Bathroom &amp; shower area cleaning
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Streak-free glass polishing &amp; vanity mirror wiping
+            Mirrors and glass surface cleaning
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Bed styling &amp; fresh linen changes
+            Bed making &amp; fresh linen changing
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            On-site laundry washing, tumble drying &amp; neat folding
+            Washing, drying &amp; folding laundry
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Edge-to-edge vacuuming of carpets, rugs &amp; runners
+            Vacuuming carpets, rugs &amp; floors
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Hard floor damp mopping with neutral floor wash
+            Mopping hard floors
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Waste bin clearance, recycling separation &amp; fresh liner fit
+            Emptying bins &amp; replacing liners
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Sanitising doors, grab handles &amp; high-touch light switches
+            Wiping doors, handles &amp; frequently touched areas
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Dusting and surface wipe-downs of accessible skirting boards
+            Light cleaning of skirting boards
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Hallway presentation &amp; complete room-by-room inspection
+            Keeping bedrooms, hallways &amp; living areas neat and fresh
+          </li>
+          <li>
+            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
+            Final detailed inspection to ensure nothing is missed
           </li>
         </ul>
 
@@ -379,85 +400,87 @@ get_header(); ?>
     </div>
   </section>
 
-  <!-- RECENT WORK GALLERY -->
-  <section class="section section--tight" style="padding-top:0">
+  <!-- 2-COLUMN EQUAL SECTION: WORK SHOWCASE & FAQ -->
+  <section class="section showcase-faq-section">
     <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">
-          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Work Showcase
-        </span>
-        <h2 class="section-title">Visuals from <em>ongoing domestic cleans.</em></h2>
-        <p class="section-lead">Verified photographic records from regular home appointments across London — reflecting the attention to detail brought to every routine visit.</p>
-      </div>
+      <div class="showcase-faq-grid">
+        
+        <!-- Left Column: Work Showcase with 2-Column Images -->
+        <div class="showcase-col reveal">
+          <div class="col-block-head">
+            <span class="eyebrow">
+              <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+              Work Showcase
+            </span>
+            <h2 class="section-title">Visuals from <em>recent cleans.</em></h2>
+            <p class="section-lead" style="margin-top: 10px;">Verified photographic records from regular home appointments across London.</p>
+          </div>
 
-      <div class="work-grid reveal">
-        <figure class="work-card">
-          <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80" alt="Living room cleaned" loading="lazy">
-          <figcaption>Reception Lounge Care</figcaption>
-        </figure>
-        <figure class="work-card">
-          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Spotless kitchen worktop" loading="lazy">
-          <figcaption>Kitchen Island Sanitised</figcaption>
-        </figure>
-        <figure class="work-card">
-          <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Freshly made bed" loading="lazy">
-          <figcaption>Crisp Bed Dressing</figcaption>
-        </figure>
-        <figure class="work-card">
-          <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="Clean polished bathroom" loading="lazy">
-          <figcaption>Gleaming Sanitary Ware</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ SECTION -->
-  <section class="section section--tight" id="faq">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">
-          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Common Questions
-        </span>
-        <h2 class="section-title">Important <em>clarifications.</em></h2>
-      </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item">
-          <button class="faq-q" type="button">Is it necessary for me to remain home during the clean?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>Not whatsoever. Many of our recurring clients entrust us with key safe codes, concierge drop-offs, or smart locks. Each operative is comprehensively vetted, DBS-checked, and covered by insurance, letting you carry on with your day uninterrupted.</p>
+          <div class="work-grid-two-col">
+            <figure class="work-card">
+              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-1.jpg" loading="lazy">
+            </figure>
+            <figure class="work-card">
+              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-6.jpg" loading="lazy">
+            </figure>
+            <figure class="work-card">
+              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-3.jpg" loading="lazy">
+            </figure>
+            <figure class="work-card">
+              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-7.jpg" loading="lazy">
+            </figure>
           </div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" type="button">Do your cleaners supply their own products and equipment?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>Yes, our professionals arrive fully prepared with industrial vacuums, fresh microfibres, and specialist cleaning solutions. Should you prefer us to utilise particular eco-friendly products or your own vacuum, we are delighted to comply.</p>
+        <!-- Right Column: FAQ -->
+        <div class="faq-col reveal">
+          <div class="col-block-head">
+            <span class="eyebrow">
+              <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+              Common Questions
+            </span>
+            <h2 class="section-title">Important <em>clarifications.</em></h2>
+            <p class="section-lead" style="margin-top: 10px;">Everything you need to know about keys, supplies, and booking flexibility.</p>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-q" type="button">Is it necessary for me to remain home during the clean?<span class="pm"></span></button>
+              <div class="faq-a">
+                <p>Not whatsoever. Many of our recurring clients entrust us with key safe codes, concierge drop-offs, or smart locks. Each operative is comprehensively vetted, DBS-checked, and covered by insurance, letting you carry on with your day uninterrupted.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">Do your cleaners supply their own products and equipment?<span class="pm"></span></button>
+              <div class="faq-a">
+                <p>Yes, our professionals arrive fully prepared with industrial vacuums, fresh microfibres, and specialist cleaning solutions. Should you prefer us to utilise particular eco-friendly products or your own vacuum, we are delighted to comply.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">What are your payment and rescheduling terms?<span class="pm"></span></button>
+              <div class="faq-a">
+                <p>A 50% deposit locks in your recurring calendar slot. The remaining 50% is settled following the visit once the work is checked and approved. While deposits hold your dedicated personnel, bookings can be moved without charge with at least 48 hours’ advance notice.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">Which London areas do you serve for regular domestic cleans?<span class="pm"></span></button>
+              <div class="faq-a">
+                <p>We provide routine housekeeping visits across every London borough, covering Central, North, West, South, and East postcodes. Simply share your postcode to find our nearest available cleaner.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">What are your customer support and operational hours?<span class="pm"></span></button>
+              <div class="faq-a">
+                <p>Our dispatch line and customer service channels remain open 24 hours a day, 7 days a week.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" type="button">What are your payment and rescheduling terms?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>A 50% deposit locks in your recurring calendar slot. The remaining 50% is settled following the visit once the work is checked and approved. While deposits hold your dedicated personnel, bookings can be moved without charge with at least 48 hours’ advance notice.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" type="button">Which London areas do you serve for regular domestic cleans?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>We provide routine housekeeping visits across every London borough, covering Central, North, West, South, and East postcodes. Simply share your postcode to find our nearest available cleaner.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" type="button">What are your customer support and operational hours?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>Our dispatch line and customer service channels remain open 24 hours a day, 7 days a week.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>

@@ -34,30 +34,38 @@ get_header(); ?>
   .incl li .ck{width:16px;height:16px;flex:none;margin-top:2px;stroke:var(--color-primary,#0066cc)}
   .incl .btn{width:100%;margin-top:24px}
 
-  .work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+  /* Two Equal Column Layout for Showcase & FAQ */
+  .showcase-faq-section{padding-top:0}
+  .showcase-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .col-block-head{margin-bottom:24px}
+  .col-block-head .section-title{font-size:clamp(1.6rem,2.5vw,2.1rem);margin-top:8px}
+
+  /* Handover Portfolio: 2-Column Inner Images */
+  .work-grid-two-col{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
   .work-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--color-border,#e2e8f0);aspect-ratio:1/1;margin:0}
   .work-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
   .work-card:hover img{transform:scale(1.06)}
   .work-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:.8rem;font-weight:600;color:#fff;background:linear-gradient(to top,rgba(5,8,11,.88),transparent)}
 
-  .faq-list{margin-top:46px;border-top:1px solid var(--color-border,#e2e8f0)}
+  /* FAQ Accordion List */
+  .faq-list{border-top:1px solid var(--color-border,#e2e8f0)}
   .faq-item{border-bottom:1px solid var(--color-border,#e2e8f0)}
-  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;color:var(--color-dark,#0f172a);font-family:var(--font-heading,'Poppins',sans-serif);font-weight:600;font-size:1.05rem;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:20px}
-  .faq-q .pm{flex:none;width:24px;height:24px;position:relative;transition:transform .3s}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;color:var(--color-dark,#0f172a);font-family:var(--font-heading,'Poppins',sans-serif);font-weight:600;font-size:1.05rem;padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:18px}
+  .faq-q .pm{flex:none;width:22px;height:22px;position:relative;transition:transform .3s}
   .faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;background:var(--color-primary,#0066cc);border-radius:2px;top:50%;left:50%;transform:translate(-50%,-50%)}
-  .faq-q .pm::before{width:14px;height:2px}
-  .faq-q .pm::after{width:2px;height:14px;transition:transform .3s}
+  .faq-q .pm::before{width:13px;height:2px}
+  .faq-q .pm::after{width:2px;height:13px;transition:transform .3s}
   .faq-item.open .pm::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-  .faq-a p{color:var(--color-text,#475569);padding-bottom:24px;font-size:.96rem;max-width:70ch;margin:0}
+  .faq-a p{color:var(--color-text,#475569);padding-bottom:20px;font-size:.94rem;line-height:1.6;margin:0}
 
   @media(max-width:980px){
     .split{grid-template-columns:1fr;gap:36px}
     .incl{position:static}
-    .work-grid{grid-template-columns:repeat(2,1fr)}
+    .showcase-faq-grid{grid-template-columns:1fr;gap:48px}
   }
   @media(max-width:560px){
-    .work-grid{grid-template-columns:1fr}
+    .work-grid-two-col{grid-template-columns:1fr}
   }
 </style>
 
@@ -97,72 +105,76 @@ get_header(); ?>
         </div>
       </div>
 
-      <!-- Right: Boxed Checklist Card with All 15 Items -->
+      <!-- Right: Boxed Checklist Card with All 16 Items -->
       <aside class="incl reveal in">
         <h3>Inventory Handover</h3>
         <div class="pr">Deposit return benchmark · tailored to property footprint</div>
         
-        <div class="checklist-title">15-Point Tenancy Checkout Checklist Included:</div>
+        <div class="checklist-title">Tenancy Checkout Checklist Included:</div>
         <ul>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Bed staging &amp; clean mattress protector placement
+            Deep cleaning throughout the entire property
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Domestic linen washing &amp; cycle handling
+            Kitchen deep cleaning, including worktops, cupboards, hobs and appliances
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Towel laundering, neat folding &amp; wardrobe alignment
+            Bathroom and toilet deep cleaning and sanitisation
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Full top-to-bottom property deep scrub &amp; reset
+            Cleaning inside cupboards, wardrobes and drawers
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Kitchen degreasing: splashbacks, counters &amp; sinks
+            Cleaning interior windows, frames and window sills
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Shower, tub &amp; toilet descaling and antibacterial cleanse
+            Cleaning skirting boards, doors, door frames, handles and light switches
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Inside and outside wipe-down of all storage units &amp; drawers
+            Dusting and wiping all accessible surfaces and furniture
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Interior window glass, frames, runners &amp; ledges polished
+            Cleaning sinks, taps and other fixtures
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Baseboards, doors, handles &amp; power sockets sanitised
+            Vacuuming carpets, rugs and floors
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Detailed dusting and polishing of remaining furniture items
+            Mopping all hard floors
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Wall-to-wall vacuuming across all carpeted rooms
+            Removing dust, dirt and marks from accessible surfaces
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Hard floor sanitisation &amp; damp mopping
+            Cleaning radiators and other accessible fixtures
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Waste bin clearance &amp; fresh liner replacement
+            Removing cobwebs from accessible areas
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Disposal of left-behind light domestic packaging
+            Emptying bins and replacing bin liners
           </li>
           <li>
             <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Rigorous checkout inspection against inventory standards
+            Removing general household waste, where agreed
+          </li>
+          <li>
+            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
+            Final detailed checks to ensure nothing is missed
           </li>
         </ul>
 
@@ -171,85 +183,87 @@ get_header(); ?>
     </div>
   </section>
 
-  <!-- RECENT RESULTS PHOTOS GRID -->
-  <section class="section section--tight" style="padding-top:0">
+  <!-- 2-COLUMN EQUAL SECTION: WORK SHOWCASE & FAQ -->
+  <section class="section showcase-faq-section">
     <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">
-          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Handover Portfolio
-        </span>
-        <h2 class="section-title">Visual evidence from <em>completed tenancy checkouts.</em></h2>
-        <p class="section-lead">Photographic records from checkout transformations across London rental properties — demonstrating the standards delivered ahead of inventory inspections.</p>
-      </div>
+      <div class="showcase-faq-grid">
+        
+        <!-- Left Column: Work Showcase with 2-Column Images -->
+        <div class="showcase-col reveal">
+          <div class="col-block-head">
+            <span class="eyebrow">
+              <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+              Handover Portfolio
+            </span>
+            <h2 class="section-title">Visual evidence from <em>completed checkouts.</em></h2>
+            <p class="section-lead" style="margin-top: 10px;">Photographic records from checkout transformations across London rental properties.</p>
+          </div>
 
-      <div class="work-grid reveal">
-        <figure class="work-card">
-          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Kitchen cupboards and appliances cleaned" loading="lazy">
-          <figcaption>Inventory-Ready Kitchen Station</figcaption>
-        </figure>
-        <figure class="work-card">
-          <img src="https://images.unsplash.com/photo-1590725140246-201509650275?auto=format&fit=crop&w=800&q=80" alt="Oven interior degreased" loading="lazy">
-          <figcaption>Cooker &amp; Extractor Detailing</figcaption>
-        </figure>
-        <figure class="work-card">
-          <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="Descaled bathroom tiles and bath" loading="lazy">
-          <figcaption>Descaled Bath &amp; Tilework</figcaption>
-        </figure>
-        <figure class="work-card">
-          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Spotless empty apartment living room" loading="lazy">
-          <figcaption>Pristine Handover Presentation</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section--tight" id="faq">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">
-          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Important Policies
-        </span>
-        <h2 class="section-title">Common tenancy <em>questions answered.</em></h2>
-      </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item">
-          <button class="faq-q" type="button">Will this clean satisfy an official inventory checkout report?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>Yes. Our tenancy checklist directly aligns with standard UK landlord, estate agency, and inventory clerk specifications. We systematically clean inside storage, address ovens and white goods, and descale all sanitary fixtures to safeguard your deposit.</p>
+          <div class="work-grid-two-col">
+            <figure class="work-card">
+              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-3.jpg" loading="lazy">
+            </figure>
+            <figure class="work-card">
+              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-7.jpg" loading="lazy">
+            </figure>
+            <figure class="work-card">
+              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-9.jpg" loading="lazy">
+            </figure>
+            <figure class="work-card">
+              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-10.jpg" loading="lazy">
+            </figure>
           </div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" type="button">Should the property be vacant of personal effects before arrival?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>Yes. All personal belongings, packing boxes, and residential waste must be cleared prior to our arrival. An empty space ensures our cleaners can access and sanitise every corner, wardrobe shelf, and skirting board without hindrance.</p>
+        <!-- Right Column: FAQ -->
+        <div class="faq-col reveal">
+          <div class="col-block-head">
+            <span class="eyebrow">
+              <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+              Important Policies
+            </span>
+            <h2 class="section-title">Common tenancy <em>questions answered.</em></h2>
+            <p class="section-lead" style="margin-top: 10px;">Clear details on inventory check criteria, freezer prep, and deposit guarantees.</p>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-q" type="button">Will this clean satisfy an official inventory checkout report?<span class="pm"></span></button>
+              <div class="faq-a">
+                <p>Yes. Our tenancy checklist directly aligns with standard UK landlord, estate agency, and inventory clerk specifications. We systematically clean inside storage, address ovens and white goods, and descale all sanitary fixtures to safeguard your deposit.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">Should the property be vacant of personal effects before arrival?<span class="pm"></span></button>
+              <div class="faq-a">
+                <p>Yes. All personal belongings, packing boxes, and residential waste must be cleared prior to our arrival. An empty space ensures our cleaners can access and sanitise every corner, wardrobe shelf, and skirting board without hindrance.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">Does the refrigerator/freezer need to be defrosted beforehand?<span class="pm"></span></button>
+              <div class="faq-a">
+                <p>Yes, please. Switch off and defrost freezers at least 24 hours in advance of the visit so our operatives can safely clean, disinfect, and dry all internal shelving, trays, and rubber door seals.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">Do you bring your own cleaning supplies and equipment?<span class="pm"></span></button>
+              <div class="faq-a">
+                <p>Yes, our crew arrives completely self-sufficient with commercial-grade vacuums, heavy-duty descaling compounds, grease removers, and microfibre equipment. You do not need to provide any materials.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button">What areas in London do you cover for end of tenancy cleans?<span class="pm"></span></button>
+              <div class="faq-a">
+                <p>We provide comprehensive end of tenancy services across every London borough, spanning Central, North, West, East, and South districts.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" type="button">Does the refrigerator/freezer need to be defrosted beforehand?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>Yes, please. Switch off and defrost freezers at least 24 hours in advance of the visit so our operatives can safely clean, disinfect, and dry all internal shelving, trays, and rubber door seals.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" type="button">Do you bring your own cleaning supplies and equipment?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>Yes, our crew arrives completely self-sufficient with commercial-grade vacuums, heavy-duty descaling compounds, grease removers, and microfibre equipment. You do not need to provide any materials.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" type="button">What areas in London do you cover for end of tenancy cleans?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>We provide comprehensive end of tenancy services across every London borough, spanning Central, North, West, East, and South districts.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>

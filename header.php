@@ -36,7 +36,8 @@
   <a href="#">All services</a>
   <a href="<?php echo esc_url(home_url('/regular-cleaning/')); ?>">Regular Cleaning</a>
   <a href="<?php echo esc_url(home_url('/airbnb-cleaning/')); ?>">Airbnb Turnover Cleaning</a>
-  <a href="<?php echo esc_url(home_url('/deep-cleaning/')); ?>">Deep Clean</a>
+  <a href="<?php echo esc_url(home_url('/deep-cleaning/')); ?>">Deep Cleaning</a>
+  <a href="<?php echo esc_url(home_url('/commercial-cleaning/')); ?>">Commercial Cleaning</a>
   <a href="<?php echo esc_url(home_url('/tenancy-cleaning/')); ?>">End of Tenancy</a>
   <a href="<?php echo esc_url(home_url('/oven-cleaning/')); ?>">Oven Cleaning</a>
   <a href="<?php echo esc_url(home_url('/sofa-cleaning/')); ?>">Upholstery &amp; Sofa</a>
