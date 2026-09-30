@@ -5,7 +5,68 @@
  * @package Expertcare_Cleaning
  */
 
-get_header(); ?>
+get_header(); 
+
+// Global Settings
+$phone    = get_option('expertcare_phone', '');
+$whatsapp = get_option('expertcare_whatsapp', '');
+$fb_url   = get_option('expertcare_facebook_url', '');
+
+// Dynamic Home Page Data
+$h = get_option('expertcare_home_data', []);
+
+// 1. Hero
+$hero_eyebrow  = $h['hero_eyebrow'] ?? '';
+$hero_h1_main  = $h['hero_h1_main'] ?? '';
+$hero_h1_shine = $h['hero_h1_shine'] ?? '';
+$hero_sub      = $h['hero_sub'] ?? '';
+$hero_img_val  = $h['hero_img'] ?? '';
+$hero_img      = filter_var($hero_img_val, FILTER_VALIDATE_URL) ? $hero_img_val : (!empty($hero_img_val) ? get_template_directory_uri() . '/assets/img/' . ltrim($hero_img_val, '/') : '');
+$hero_badge_t  = $h['hero_badge_t'] ?? '';
+$hero_badge_s  = $h['hero_badge_s'] ?? '';
+$stat_rating   = $h['stat_rating'] ?? '';
+$stat_reach    = $h['stat_reach'] ?? '';
+$stat_speed    = $h['stat_speed'] ?? '';
+
+// 2. Why Us
+$why_eyebrow = $h['why_eyebrow'] ?? '';
+$why_title_m = $h['why_title_m'] ?? '';
+$why_title_e = $h['why_title_e'] ?? '';
+$why_p1      = $h['why_p1'] ?? '';
+$why_p2      = $h['why_p2'] ?? '';
+
+// 3. Featured Services Header
+$svc_eyebrow = $h['svc_eyebrow'] ?? '';
+$svc_title_m = $h['svc_title_m'] ?? '';
+$svc_title_e = $h['svc_title_e'] ?? '';
+$svc_lead    = $h['svc_lead'] ?? '';
+
+// 4. Coverage Areas
+$areas_eyebrow = $h['areas_eyebrow'] ?? '';
+$areas_title_m = $h['areas_title_m'] ?? '';
+$areas_title_e = $h['areas_title_e'] ?? '';
+$areas_lead    = $h['areas_lead'] ?? '';
+$areas_list    = !empty($h['areas_list']) && is_array($h['areas_list']) ? $h['areas_list'] : [];
+
+// 5. About Us
+$about_eyebrow = $h['about_eyebrow'] ?? '';
+$about_title_m = $h['about_title_m'] ?? '';
+$about_title_e = $h['about_title_e'] ?? '';
+$about_c1_t1   = $h['about_c1_t1'] ?? '';
+$about_c1_p1   = $h['about_c1_p1'] ?? '';
+$about_c1_t2   = $h['about_c1_t2'] ?? '';
+$about_c1_p2   = $h['about_c1_p2'] ?? '';
+$about_c2_t1   = $h['about_c2_t1'] ?? '';
+$about_c2_p1   = $h['about_c2_p1'] ?? '';
+$about_c2_t2   = $h['about_c2_t2'] ?? '';
+$about_c2_p2   = $h['about_c2_p2'] ?? '';
+
+// 6. FAQs
+$home_faqs = !empty($h['faqs']) && is_array($h['faqs']) ? $h['faqs'] : [];
+
+// 7. Contact Email
+$contact_email = $h['contact_email'] ?? '';
+?>
 
   <span id="top"></span>
 
@@ -13,41 +74,68 @@ get_header(); ?>
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="reveal in">
-        <span class="eyebrow">
-          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Bespoke Cleaning Specialists · London
-        </span>
-        <h1>Spaces restored to <span class="shine">flawless perfection.</span></h1>
-        <p class="sub">Vetted professionals, punctual attendance, and uncompromising standards across every central and greater London postcode.</p>
+        <?php if (!empty($hero_eyebrow)) : ?>
+          <span class="eyebrow">
+            <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+            <?php echo esc_html($hero_eyebrow); ?>
+          </span>
+        <?php endif; ?>
+
+        <?php if (!empty($hero_h1_main) || !empty($hero_h1_shine)) : ?>
+          <h1><?php echo esc_html($hero_h1_main); ?> <?php if (!empty($hero_h1_shine)) : ?><span class="shine"><?php echo esc_html($hero_h1_shine); ?></span><?php endif; ?></h1>
+        <?php endif; ?>
+
+        <?php if (!empty($hero_sub)) : ?>
+          <p class="sub"><?php echo esc_html($hero_sub); ?></p>
+        <?php endif; ?>
+        
         <div class="hero-cta">
-          <a class="btn btn-primary" href="tel:+447919033684" target="_blank" rel="noopener noreferrer">07919 033684</a>
-          <a class="btn btn-ghost" href="https://api.whatsapp.com/send?phone=447919033684&text=Hi%20Expertcare%20Cleaning%2C%20I%27d%20like%20a%20cleaning%20quote%20please." target="_blank" rel="noopener noreferrer">Message on WhatsApp →</a>
+          <?php if (!empty($phone)) : ?>
+            <a class="btn btn-primary" href="<?php echo esc_url(expertcare_get_phone_url()); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($phone); ?></a>
+          <?php endif; ?>
+          <?php if (!empty($whatsapp)) : ?>
+            <a class="btn btn-ghost" href="<?php echo esc_url(expertcare_get_whatsapp_url("Hi Expertcare Cleaning, I'd like a cleaning quote please.")); ?>" target="_blank" rel="noopener noreferrer">Message on WhatsApp →</a>
+          <?php endif; ?>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="n stars">★★★★★</div>
-            <div class="l">5-Star Client Rating</div>
+
+        <?php if (!empty($stat_rating) || !empty($stat_reach) || !empty($stat_speed)) : ?>
+          <div class="hero-stats">
+            <?php if (!empty($stat_rating)) : ?>
+              <div class="stat">
+                <div class="n stars">★★★★★</div>
+                <div class="l"><?php echo esc_html($stat_rating); ?></div>
+              </div>
+            <?php endif; ?>
+            <?php if (!empty($stat_reach)) : ?>
+              <div class="stat">
+                <div class="n">London</div>
+                <div class="l"><?php echo esc_html($stat_reach); ?></div>
+              </div>
+            <?php endif; ?>
+            <?php if (!empty($stat_speed)) : ?>
+              <div class="stat">
+                <div class="n">Rapid</div>
+                <div class="l"><?php echo esc_html($stat_speed); ?></div>
+              </div>
+            <?php endif; ?>
           </div>
-          <div class="stat">
-            <div class="n">London</div>
-            <div class="l">Postcode-Wide Service</div>
-          </div>
-          <div class="stat">
-            <div class="n">Rapid</div>
-            <div class="l">Estimate Response</div>
-          </div>
-        </div>
+        <?php endif; ?>
       </div>
-      <div class="hero-photo reveal in">
-        <img src="<?php echo get_template_directory_uri();?>/assets/img/hero.jpg" alt="Impeccably detailed London living area" loading="eager">
-        <div class="hero-badge">
-          <div class="hb-stars">★★★★★</div>
-          <div class="hb-text">
-            <b>The Expertcare Guarantee</b>
-            <span>Private Residences &amp; Airbnb Turnovers</span>
-          </div>
+
+      <?php if (!empty($hero_img)) : ?>
+        <div class="hero-photo reveal in">
+          <img src="<?php echo esc_url($hero_img); ?>" alt="Expertcare Cleaning" loading="eager">
+          <?php if (!empty($hero_badge_t) || !empty($hero_badge_s)) : ?>
+            <div class="hero-badge">
+              <div class="hb-stars">★★★★★</div>
+              <div class="hb-text">
+                <?php if (!empty($hero_badge_t)) : ?><b><?php echo esc_html($hero_badge_t); ?></b><?php endif; ?>
+                <?php if (!empty($hero_badge_s)) : ?><span><?php echo esc_html($hero_badge_s); ?></span><?php endif; ?>
+              </div>
+            </div>
+          <?php endif; ?>
         </div>
-      </div>
+      <?php endif; ?>
     </div>
   </section>
 
@@ -56,110 +144,143 @@ get_header(); ?>
   </div>
 
   <!-- WHY US BANNER SECTION -->
+  <?php if (!empty($why_eyebrow) || !empty($why_title_m) || !empty($why_p1)) : ?>
   <section class="section section--tight" id="why-us">
     <div class="wrap" style="max-width:880px;margin:0 auto;text-align:center">
-      <span class="eyebrow" style="justify-content:center">
-        <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        Our Quality Commitment
-      </span>
-      <h2 class="section-title" style="margin-top:10px">Never rushed. <em>Comprehensively detailed.</em></h2>
-      <p class="section-lead" style="margin:20px auto 0;text-align:center">We intentionally step away from budget cut-rate operations. If speed-running surface dust is your priority, we might not be your match. However, if your home demands dedicated operatives, honest upfront updates, and deep sanitisation done right without corner-cutting, Expertcare Cleaning is tailored precisely for you.</p>
-      <p class="section-lead" style="margin:16px auto 0;text-align:center">From recurring domestic care to full deposit-return tenancy cleans and hotel-grade short-let turnovers, our focus remains on precision, accountability, and pristine results.</p>
+      <?php if (!empty($why_eyebrow)) : ?>
+        <span class="eyebrow" style="justify-content:center">
+          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+          <?php echo esc_html($why_eyebrow); ?>
+        </span>
+      <?php endif; ?>
+
+      <?php if (!empty($why_title_m) || !empty($why_title_e)) : ?>
+        <h2 class="section-title" style="margin-top:10px">
+          <?php echo esc_html($why_title_m); ?>
+          <?php if (!empty($why_title_e)) : ?><em><?php echo esc_html($why_title_e); ?></em><?php endif; ?>
+        </h2>
+      <?php endif; ?>
+
+      <?php if (!empty($why_p1)) : ?>
+        <p class="section-lead" style="margin:20px auto 0;text-align:center"><?php echo esc_html($why_p1); ?></p>
+      <?php endif; ?>
+
+      <?php if (!empty($why_p2)) : ?>
+        <p class="section-lead" style="margin:16px auto 0;text-align:center"><?php echo esc_html($why_p2); ?></p>
+      <?php endif; ?>
+
       <div class="hero-cta" style="justify-content:center;margin-top:30px">
         <a class="btn btn-primary" href="#quote">Request Your Tailored Quote</a>
       </div>
     </div>
   </section>
+  <?php endif; ?>
 
- <!-- 3-COLUMN SERVICES SECTION (10 FEATURES PER CARD) -->
+  <!-- DYNAMIC 3-COLUMN SERVICES SECTION WITH FEATURED IMAGES -->
   <section class="section" id="services">
     <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">
-          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Tailored Solutions
-        </span>
-        <h2 class="section-title">Three specialisms. <em>One rigorous checklist.</em></h2>
-        <p class="section-lead">Each booking operates under strict quality protocols — guaranteeing consistency across every room.</p>
-      </div>
+      <?php if (!empty($svc_eyebrow) || !empty($svc_title_m) || !empty($svc_lead)) : ?>
+        <div class="reveal">
+          <?php if (!empty($svc_eyebrow)) : ?>
+            <span class="eyebrow">
+              <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+              <?php echo esc_html($svc_eyebrow); ?>
+            </span>
+          <?php endif; ?>
 
-      <div class="svc-grid">
+          <?php if (!empty($svc_title_m) || !empty($svc_title_e)) : ?>
+            <h2 class="section-title">
+              <?php echo esc_html($svc_title_m); ?>
+              <?php if (!empty($svc_title_e)) : ?><em><?php echo esc_html($svc_title_e); ?></em><?php endif; ?>
+            </h2>
+          <?php endif; ?>
+
+          <?php if (!empty($svc_lead)) : ?>
+            <p class="section-lead"><?php echo esc_html($svc_lead); ?></p>
+          <?php endif; ?>
+        </div>
+      <?php endif; ?>
+
+      <div class="svc-grid" style="display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;margin-top:40px;">
+        <?php 
+        $all_services = expertcare_get_services_config();
         
-        <!-- CARD 01: REGULAR DOMESTIC CLEANING (10 FEATURES) -->
-        <div class="svc reveal">
-          <div class="svc-img">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/service-3.jpg" alt="Pristine interior living room" loading="lazy">
-          </div>
-          <div class="no">01 · Domestic Care</div>
-          <h3>Routine Home Cleaning</h3>
-          <div class="price">Tailored quote</div>
-          <ul>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>General dusting, wiping &amp; surface cleaning</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Tidying and refreshing living spaces</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning kitchen worktops, sinks &amp; surfaces</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Fridge, oven, microwave, hob &amp; appliance cleaning</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bathroom &amp; shower area cleaning</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Mirrors and glass surface cleaning</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bed making &amp; fresh linen changing</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Washing, drying &amp; folding laundry</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Vacuuming carpets, rugs &amp; floors</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Mopping hard floors &amp; emptying bins</li>
-          </ul>
-          <a class="btn btn-ghost" href="<?php echo esc_url(home_url('/regular-cleaning/')); ?>">Learn more</a>
-        </div>
+        foreach ($all_services as $key => $svc) :
+          $svc_tab_data = get_option('expertcare_svc_' . $key . '_data', []);
+          
+          $price_display = $svc_tab_data['price'] ?? '';
+          $card_code = !empty($svc['code']) ? $svc['code'] : '';
+          $card_eyebrow = !empty($svc_tab_data['eyebrow']) ? $svc_tab_data['eyebrow'] : ($card_code ? $card_code . ' · ' . $svc['title'] : $svc['title']);
 
-        <!-- CARD 02: AIRBNB CLEANING (10 FEATURES) -->
-        <div class="svc featured reveal" id="airbnb">
-          <span class="tag">Host Favourite</span>
-          <div class="svc-img">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/service-2.jpg" alt="Hospitality ready Airbnb bedroom" loading="lazy">
-          </div>
-          <div class="no">02 · Short-Stay Turnover</div>
-          <h3>Airbnb &amp; Host Cleans</h3>
-          <div class="price">Tailored quote</div>
-          <ul class="airbnb-dense-list">
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bed making &amp; linen changes</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Laundry services</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bathroom deep cleaning &amp; sanitising</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Kitchen cleaning, including worktops and appliances</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Vacuuming &amp; mopping all floors</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Dusting furniture and surfaces</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning and wiping skirting boards</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning doors, handles and high-touch areas</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Checking and arranging toiletries</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Final quality check before the next guest arrives</li>
-          </ul>
-          <a class="btn btn-primary" href="<?php echo esc_url(home_url('/airbnb-cleaning/')); ?>">Learn more</a>
-        </div>
+          $checklist_raw = !empty($svc_tab_data['checklist']) && is_array($svc_tab_data['checklist']) ? $svc_tab_data['checklist'] : [];
+          $ten_features = array_slice($checklist_raw, 0, 10);
 
-        <!-- CARD 03: END OF TENANCY (10 FEATURES) -->
-        <div class="svc reveal">
-          <div class="svc-img">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/service-1.jpg" alt="Spotless kitchen handover for inventory" loading="lazy">
-          </div>
-          <div class="no">03 · Move Transition</div>
-          <h3>Tenancy Handover Clean</h3>
-          <div class="price">Tailored quote</div>
-          <ul>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep cleaning throughout the entire property</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Kitchen deep cleaning: worktops, cupboards &amp; hobs</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bathroom and toilet deep cleaning and sanitisation</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning inside cupboards, wardrobes and drawers</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning interior windows, frames and window sills</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning skirting boards, doors, handles &amp; switches</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Vacuuming carpets, rugs and mopping all hard floors</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning radiators and other accessible fixtures</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Removing cobwebs, waste &amp; replacing bin liners</li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Final detailed checks to ensure nothing is missed</li>
-          </ul>
-          <a class="btn btn-ghost" href="<?php echo esc_url(home_url('/tenancy-cleaning/')); ?>">Learn more</a>
-        </div>
+          // Check for Featured Service Image first, fallback to first gallery image if empty
+          $feat_img_val = $svc_tab_data['feat_img'] ?? '';
+          $card_img = '';
+          
+          if (!empty($feat_img_val)) {
+              $card_img = filter_var($feat_img_val, FILTER_VALIDATE_URL) ? $feat_img_val : get_template_directory_uri() . '/assets/img/' . ltrim($feat_img_val, '/');
+          } else {
+              $gallery_raw = !empty($svc_tab_data['imgs']) && is_array($svc_tab_data['imgs']) ? $svc_tab_data['imgs'] : [];
+              if (!empty($gallery_raw[0])) {
+                  $card_img = filter_var($gallery_raw[0], FILTER_VALIDATE_URL) ? $gallery_raw[0] : get_template_directory_uri() . '/assets/img/' . ltrim($gallery_raw[0], '/');
+              }
+          }
 
+          $service_page_url = home_url('/' . $key . '/');
+          $is_featured = ($key === 'airbnb-turnover');
+        ?>
+          <div class="svc <?php echo $is_featured ? 'featured' : ''; ?> reveal" style="display:flex;flex-direction:column;height:100%;">
+            <?php if ($is_featured) : ?>
+              <span class="tag">Host Favourite</span>
+            <?php endif; ?>
+
+            <?php if (!empty($card_img)) : ?>
+              <div class="svc-img" style="aspect-ratio:16/9;overflow:hidden;border-radius:12px;margin-bottom:18px;">
+                <img src="<?php echo esc_url($card_img); ?>" alt="<?php echo esc_attr($svc['title']); ?>" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+            <?php endif; ?>
+
+            <?php if (!empty($card_eyebrow)) : ?>
+              <div class="no" style="font-size:0.85rem;font-weight:700;color:var(--color-primary, #0066cc);text-transform:uppercase;letter-spacing:0.04em;">
+                <?php echo esc_html($card_eyebrow); ?>
+              </div>
+            <?php endif; ?>
+
+            <h3 style="font-family:var(--font-heading,'Poppins',sans-serif);font-size:1.35rem;font-weight:700;margin:6px 0 8px;color:var(--color-dark,#0f172a);">
+              <?php echo esc_html($svc['title']); ?>
+            </h3>
+
+            <?php if (!empty($price_display)) : ?>
+              <div class="price" style="font-size:0.95rem;color:var(--color-primary,#0066cc);font-weight:600;margin-bottom:18px;">
+                <?php echo esc_html($price_display); ?>
+              </div>
+            <?php endif; ?>
+
+            <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px;flex:1;">
+              <?php if (!empty($ten_features)) : ?>
+                <?php foreach ($ten_features as $feature_item) : ?>
+                  <li style="display:flex;gap:10px;font-size:0.88rem;color:var(--color-text,#475569);line-height:1.4;">
+                    <svg class="ck" viewBox="0 0 24 24" fill="none" stroke="#5cb8ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex:none;margin-top:2px;">
+                      <path d="M4 12l5 5L20 6"/>
+                    </svg>
+                    <span><?php echo esc_html($feature_item); ?></span>
+                  </li>
+                <?php endforeach; ?>
+              <?php endif; ?>
+            </ul>
+
+            <a class="btn <?php echo $is_featured ? 'btn-primary' : 'btn-ghost'; ?>" href="<?php echo esc_url($service_page_url); ?>" style="width:100%;text-align:center;justify-content:center;margin-top:auto;">
+              Learn more
+            </a>
+          </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
 
-<!-- TESTIMONIALS / REVIEWS & UPGRADED QR CODE SECTION -->
+  <!-- TESTIMONIALS / REVIEWS SECTION -->
   <section class="section" id="reviews">
     <div class="wrap">
       <div class="rev-head reveal">
@@ -176,35 +297,36 @@ get_header(); ?>
             <div class="stars">★★★★★</div>
             <div class="sub">Rated 4.8 across verified London reviews</div>
             <div style="display:flex;gap:14px;align-items:center;margin-top:6px;flex-wrap:wrap">
-              <a class="sub" href="https://www.facebook.com/share/1UE1JEWeiB/" target="_blank" rel="noopener noreferrer" style="color:var(--blue-bright)">View Facebook Testimonials →</a>
-              <span style="color:var(--muted);font-size:0.8rem">·</span>
+              <?php if (!empty($fb_url)) : ?>
+                <a class="sub" href="<?php echo esc_url($fb_url); ?>" target="_blank" rel="noopener noreferrer" style="color:var(--blue-bright)">View Facebook Testimonials →</a>
+                <span style="color:var(--muted);font-size:0.8rem">·</span>
+              <?php endif; ?>
               <a class="sub" href="<?php echo esc_url(home_url('/reviews/')); ?>" style="color:var(--blue);font-weight:600">Submit Your Review →</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- DYNAMIC WP_QUERY: LATEST 6 APPROVED REVIEWS -->
+      <!-- DYNAMIC WP_QUERY: APPROVED REVIEWS -->
       <div class="rev-grid reveal">
         <?php
         $home_reviews = new WP_Query([
             'post_type'      => 'expertcare_review',
-            'post_status'    => 'publish', // Shows only admin-approved reviews
+            'post_status'    => 'publish',
             'posts_per_page' => 6,
             'orderby'        => 'date',
             'order'          => 'DESC',
-            'no_found_rows'  => true, // Optimizes query performance
+            'no_found_rows'  => true,
         ]);
 
         if ($home_reviews->have_posts()) :
             while ($home_reviews->have_posts()) : $home_reviews->the_post();
                 $post_id  = get_the_ID();
                 $rating   = intval(get_post_meta($post_id, '_review_rating', true) ?: 5);
-                $location = get_post_meta($post_id, '_review_location', true) ?: 'Verified Client · London';
+                $location = get_post_meta($post_id, '_review_location', true) ?: '';
                 $name     = get_the_title();
                 $comment  = get_post_field('post_content', $post_id);
 
-                // Initials fallback if no photo exists
                 $initials = '';
                 $name_parts = explode(' ', trim($name));
                 foreach ($name_parts as $part) {
@@ -229,35 +351,17 @@ get_header(); ?>
                     <?php endif; ?>
                     <div>
                       <b><?php echo esc_html($name); ?></b>
-                      <small><?php echo esc_html($location); ?></small>
+                      <?php if (!empty($location)) : ?><small><?php echo esc_html($location); ?></small><?php endif; ?>
                     </div>
                   </div>
                 </div>
             <?php
             endwhile;
             wp_reset_postdata();
-        else :
-            // Clean fallback in case no reviews are published yet
-            ?>
-            <div class="rev">
-              <div class="stars">★★★★★</div>
-              <p>Stellar standard on our 2-bedroom rental turnover. Their thoroughness was evident in every room, and coordination before and after was seamless. Easily my first call going forward.</p>
-              <div class="who"><div class="av">KW</div><div><b>Kevin Wilson</b><small>Verified Client · London</small></div></div>
-            </div>
-            <div class="rev">
-              <div class="stars">★★★★★</div>
-              <p>Outstanding deep cleaning work. The team showed up exactly when promised and stayed dedicated until every fixture, tile, and appliance was sparkling clean. Superb quality.</p>
-              <div class="who"><div class="av">KO</div><div><b>Karen O’Neill</b><small>Verified Client · Central London</small></div></div>
-            </div>
-            <div class="rev">
-              <div class="stars">★★★★★</div>
-              <p>First-class short-let turnover service. Beds styled crisp and straight, toiletries replenished with care, and the flat had that fresh, inviting feeling guests notice right away.</p>
-              <div class="who"><div class="av">CM</div><div><b>Chris Monckton</b><small>Airbnb Host · London</small></div></div>
-            </div>
-        <?php endif; ?>
+        endif;
+        ?>
       </div>
 
-      <!-- BOTTOM CTA BAR: DIRECT BUTTON TO REVIEW SUBMISSION -->
       <div style="text-align:center;margin-top:36px;" class="reveal">
         <a class="btn btn-primary" href="<?php echo esc_url(home_url('/reviews/')); ?>" style="display:inline-flex;align-items:center;gap:8px;">
           <span>Leave a Review</span>
@@ -265,134 +369,169 @@ get_header(); ?>
         </a>
       </div>
 
-      <!-- REDESIGNED CAMERA / INSTANT MOBILE ACCESS SCANNER -->
-<div class="trust-qr-panel-premium reveal" style="margin-top:54px;">
-  <div class="tqp-copy">
-    <span class="eyebrow">
-      <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-      Fast Mobile Bridge
-    </span>
-    <h3>Scan via camera. <em>Connect instantly.</em></h3>
-    <p>Aim your mobile lens to view authenticated resident feedback or immediately bookmark our dispatch desk directly to your address book.</p>
-    
-    <div class="tqp-actions">
-      <a class="btn btn-primary" href="tel:+447919033684">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-        Call 07919 033684
-      </a>
-      <a class="btn btn-ghost" href="https://www.facebook.com/share/1UE1JEWeiB/" target="_blank" rel="noopener noreferrer">Facebook Page ↗</a>
-    </div>
-  </div>
+      <!-- SCANNER DECK -->
+      <div class="trust-qr-panel-premium reveal" style="margin-top:54px;">
+        <div class="tqp-copy">
+          <span class="eyebrow">
+            <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+            Fast Mobile Bridge
+          </span>
+          <h3>Scan via camera. <em>Connect instantly.</em></h3>
+          <p>Aim your mobile lens to view authenticated resident feedback or immediately bookmark our dispatch desk directly to your address book.</p>
+          
+          <div class="tqp-actions">
+            <?php if (!empty($phone)) : ?>
+              <a class="btn btn-primary" href="<?php echo esc_url(expertcare_get_phone_url()); ?>">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+                Call <?php echo esc_html($phone); ?>
+              </a>
+            <?php endif; ?>
+            <?php if (!empty($fb_url)) : ?>
+              <a class="btn btn-ghost" href="<?php echo esc_url($fb_url); ?>" target="_blank" rel="noopener noreferrer">Facebook Page ↗</a>
+            <?php endif; ?>
+          </div>
+        </div>
 
-  <div class="tqp-dual-deck">
-    <!-- CARD 01: Client Feedback & Reviews -->
-    <div class="tqp-tile">
-      <span class="tqp-tile-badge">Verified Reviews</span>
-      <div class="qr-scanner-frame" style="position:relative; background:#ffffff; padding:12px; border-radius:16px;">
-        <span class="scanner-laser" style="pointer-events:none; opacity:0.35;"></span>
-        <div class="qr-svg-holder" style="background:#ffffff; display:flex; align-items:center; justify-content:center;">
-          <img 
-            src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=<?php echo urlencode(home_url('/reviews/')); ?>&margin=1" 
-            alt="Scan to open reviews" 
-            width="140" 
-            height="140"
-            style="display:block; width:100%; max-width:140px; height:auto; aspect-ratio:1/1;"
-          />
+        <div class="tqp-dual-deck">
+          <div class="tqp-tile">
+            <span class="tqp-tile-badge">Verified Reviews</span>
+            <div class="qr-scanner-frame" style="position:relative; background:#ffffff; padding:12px; border-radius:16px;">
+              <span class="scanner-laser" style="pointer-events:none; opacity:0.35;"></span>
+              <div class="qr-svg-holder" style="background:#ffffff; display:flex; align-items:center; justify-content:center;">
+                <img 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=<?php echo urlencode(home_url('/reviews/')); ?>&margin=1" 
+                  alt="Scan to open reviews" 
+                  width="140" 
+                  height="140"
+                  style="display:block; width:100%; max-width:140px; height:auto; aspect-ratio:1/1;"
+                />
+              </div>
+            </div>
+            <div class="tqp-tile-info">
+              <h4>Client Reviews</h4>
+              <span>All Testimonials</span>
+            </div>
+            <a class="tqp-tile-btn" href="<?php echo esc_url(home_url('/reviews/')); ?>">
+              Open Reviews
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+
+          <?php if (!empty($phone)) : ?>
+          <div class="tqp-tile">
+            <span class="tqp-tile-badge badge-accent">Direct Line</span>
+            <div class="qr-scanner-frame" style="position:relative; background:#ffffff; padding:12px; border-radius:16px;">
+              <span class="scanner-laser" style="pointer-events:none; opacity:0.25;"></span>
+              <div class="qr-svg-holder" style="background:#ffffff; display:flex; align-items:center; justify-content:center; padding:4px;">
+                <img 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=<?php echo rawurlencode('TEL:' . preg_replace('/[^0-9+]/', '', $phone)); ?>&color=0f172a&bgcolor=ffffff&margin=2" 
+                  alt="Scan to call <?php echo esc_attr($phone); ?>" 
+                  width="140" 
+                  height="140" 
+                  loading="eager"
+                  style="display:block; width:100%; max-width:140px; height:auto; aspect-ratio:1/1;"
+                />
+              </div>
+            </div>
+            <div class="tqp-tile-info">
+              <h4>Call &amp; Book</h4>
+              <span><?php echo esc_html($phone); ?></span>
+            </div>
+            <a class="tqp-tile-btn" href="<?php echo esc_url(expertcare_get_phone_url()); ?>">
+              Tap to Call
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+          <?php endif; ?>
         </div>
       </div>
-      <div class="tqp-tile-info">
-        <h4>Client Reviews</h4>
-        <span>All Testimonials</span>
-      </div>
-      <a class="tqp-tile-btn" href="<?php echo esc_url(home_url('/reviews/')); ?>">
-        Open Reviews
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-      </a>
-    </div>
-
-    <!-- CARD 02: Direct Call & Web Connect -->
-<div class="tqp-tile">
-  <span class="tqp-tile-badge badge-accent">Direct Line</span>
-  <div class="qr-scanner-frame" style="position:relative; background:#ffffff; padding:12px; border-radius:16px;">
-    <!-- Disabled laser interference for instant camera lock-on -->
-    <span class="scanner-laser" style="pointer-events:none; opacity:0.25;"></span>
-    <div class="qr-svg-holder" style="background:#ffffff; display:flex; align-items:center; justify-content:center; padding:4px;">
-      <img 
-        src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=<?php echo rawurlencode('TEL:07919033684'); ?>&color=0f172a&bgcolor=ffffff&margin=2" 
-        alt="Scan to call 07919 033684" 
-        width="140" 
-        height="140" 
-        loading="eager"
-        style="display:block; width:100%; max-width:140px; height:auto; aspect-ratio:1/1;"
-      />
-    </div>
-  </div>
-  <div class="tqp-tile-info">
-    <h4>Call &amp; Book</h4>
-    <span>07919 033684</span>
-  </div>
-  <a class="tqp-tile-btn" href="tel:07919033684">
-    Tap to Call
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-  </a>
-</div>
-  </div>
-</div>
     </div>
   </section>
 
   <!-- COVERAGE SECTION -->
+  <?php if (!empty($areas_eyebrow) || !empty($areas_title_m) || !empty($areas_list)) : ?>
   <section class="section section--tight" id="areas">
     <div class="wrap areas-wrap">
       <div class="reveal">
-        <span class="eyebrow">
-          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          Service Reach
-        </span>
-        <h2 class="section-title">Covering every <em>London district.</em></h2>
-        <p class="section-lead">From central high-rises to residential outer zones, our locally deployed operatives ensure timely arrivals and dependable neighborhood familiarity.</p>
-        <a class="btn btn-primary" href="tel:+447919033684" target="_blank" rel="noopener noreferrer" style="margin-top:24px">07919 033684</a>
+        <?php if (!empty($areas_eyebrow)) : ?>
+          <span class="eyebrow">
+            <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+            <?php echo esc_html($areas_eyebrow); ?>
+          </span>
+        <?php endif; ?>
+
+        <?php if (!empty($areas_title_m) || !empty($areas_title_e)) : ?>
+          <h2 class="section-title">
+            <?php echo esc_html($areas_title_m); ?>
+            <?php if (!empty($areas_title_e)) : ?><em><?php echo esc_html($areas_title_e); ?></em><?php endif; ?>
+          </h2>
+        <?php endif; ?>
+
+        <?php if (!empty($areas_lead)) : ?>
+          <p class="section-lead"><?php echo esc_html($areas_lead); ?></p>
+        <?php endif; ?>
+
+        <?php if (!empty($phone)) : ?>
+          <a class="btn btn-primary" href="<?php echo esc_url(expertcare_get_phone_url()); ?>" target="_blank" rel="noopener noreferrer" style="margin-top:24px"><?php echo esc_html($phone); ?></a>
+        <?php endif; ?>
       </div>
-      <div class="area-grid reveal">
-        <div class="area"><b>Central London</b><small>EC · WC Postcodes</small></div>
-        <div class="area"><b>North London</b><small>N · NW Postcodes</small></div>
-        <div class="area"><b>East London</b><small>E Postcodes</small></div>
-        <div class="area"><b>South London</b><small>SE · SW Postcodes</small></div>
-        <div class="area"><b>West London</b><small>W Postcodes</small></div>
-        <div class="area"><b>Greater London</b><small>&amp; Bordering Zones</small></div>
-      </div>
+
+      <?php if (!empty($areas_list)) : ?>
+        <div class="area-grid reveal">
+          <?php foreach ($areas_list as $area) : ?>
+            <div class="area">
+              <?php if (!empty($area['title'])) : ?><b><?php echo esc_html($area['title']); ?></b><?php endif; ?>
+              <?php if (!empty($area['postcodes'])) : ?><small><?php echo esc_html($area['postcodes']); ?></small><?php endif; ?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
     </div>
   </section>
+  <?php endif; ?>
 
   <!-- ABOUT US SECTION -->
+  <?php if (!empty($about_title_m) || !empty($about_c1_p1)) : ?>
   <section class="section" id="about-us">
     <div class="wrap">
       <div class="reveal">
-        <span class="eyebrow">
-          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-          About Our Service
-        </span>
-        <h2 class="section-title">Reliable cleaning, <em>tailored to London life.</em></h2>
+        <?php if (!empty($about_eyebrow)) : ?>
+          <span class="eyebrow">
+            <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+            <?php echo esc_html($about_eyebrow); ?>
+          </span>
+        <?php endif; ?>
+
+        <?php if (!empty($about_title_m) || !empty($about_title_e)) : ?>
+          <h2 class="section-title">
+            <?php echo esc_html($about_title_m); ?>
+            <?php if (!empty($about_title_e)) : ?><em><?php echo esc_html($about_title_e); ?></em><?php endif; ?>
+          </h2>
+        <?php endif; ?>
       </div>
       <div class="about-grid reveal">
         <div class="about-col">
-          <h4>Vetted excellence for London homes</h4>
-          <p>Expertcare Cleaning provides dedicated, dependable cleaning solutions across all London boroughs. Our expertise spans periodic domestic appointments, comprehensive seasonal deep cleans, seamless Airbnb turnovers, and tenancy inventory clearances. Every booking is executed by background-checked, fully insured staff working systematically against our comprehensive specification list.</p>
-          <h4>Our difference</h4>
-          <p>Exceptional cleaning relies entirely on integrity and precision. We carefully train and evaluate all cleaners so they treat your property with utmost care. With public liability insurance on every job, transparent quotes, and quick-response customer support, you always know where you stand.</p>
+          <?php if (!empty($about_c1_t1)) : ?><h4><?php echo esc_html($about_c1_t1); ?></h4><?php endif; ?>
+          <?php if (!empty($about_c1_p1)) : ?><p><?php echo esc_html($about_c1_p1); ?></p><?php endif; ?>
+          <?php if (!empty($about_c1_t2)) : ?><h4><?php echo esc_html($about_c1_t2); ?></h4><?php endif; ?>
+          <?php if (!empty($about_c1_p2)) : ?><p><?php echo esc_html($about_c1_p2); ?></p><?php endif; ?>
         </div>
         <div class="about-col">
-          <h4>Homes, tenancies &amp; short-let management</h4>
-          <p>Our domestic care offers routine peace of mind for busy families and professionals. When handling deep cleans, we target stubborn build-ups — from descaling taps to wiping behind heavy units. For host management, we guarantee five-star presentation, timely linen resets, and guest-ready impressions every single turnover.</p>
-          <h4>Seamless scheduling</h4>
-          <p>Arranging your clean takes under two minutes via our quote form or quick phone call. We come equipped with commercial-grade cleaning materials and gear, but are equally glad to work with your preferred in-house supplies if requested.</p>
-          <a class="btn btn-ghost" href="tel:+447919033684" target="_blank" rel="noopener noreferrer" style="margin-top:8px">07919 033684</a>
+          <?php if (!empty($about_c2_t1)) : ?><h4><?php echo esc_html($about_c2_t1); ?></h4><?php endif; ?>
+          <?php if (!empty($about_c2_p1)) : ?><p><?php echo esc_html($about_c2_p1); ?></p><?php endif; ?>
+          <?php if (!empty($about_c2_t2)) : ?><h4><?php echo esc_html($about_c2_t2); ?></h4><?php endif; ?>
+          <?php if (!empty($about_c2_p2)) : ?><p><?php echo esc_html($about_c2_p2); ?></p><?php endif; ?>
+          <?php if (!empty($phone)) : ?>
+            <a class="btn btn-ghost" href="<?php echo esc_url(expertcare_get_phone_url()); ?>" target="_blank" rel="noopener noreferrer" style="margin-top:8px"><?php echo esc_html($phone); ?></a>
+          <?php endif; ?>
         </div>
       </div>
     </div>
   </section>
+  <?php endif; ?>
 
   <!-- FAQ SECTION -->
+  <?php if (!empty($home_faqs)) : ?>
   <section class="section section--tight" id="faq">
     <div class="wrap">
       <div class="reveal">
@@ -404,43 +543,20 @@ get_header(); ?>
       </div>
 
       <div class="faq-list reveal">
-        <div class="faq-item">
-          <button class="faq-q">What is included in an Airbnb turnover clean?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>Our turnaround clean handles the complete guest handover: stripping beds, replacing linens, washing/drying towels, descaling and sanitising bathrooms, degreasing cooking surfaces, vacuuming, mopping, dusting throughout, replenishing welcome amenities, and concluding with a quality audit before your next arrival.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q">Do I need to be home during the clean?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>No presence is necessary. Many homeowners, landlords, and hosts arrange access via concierge, key lockbox, or smart lock. Since every cleaner is fully vetted, trained, and insured, your property remains in safe hands throughout.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q">Do you bring your own products and equipment?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>Yes, our operatives arrive completely equipped with all requisite solutions and tools. Should you have specialist surfaces or prefer us to utilize your household products, just specify when submitting your request.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q">What areas do you cover?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>We serve properties throughout Greater London, spanning North, South, East, West, and Central areas.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q">What are your opening hours?<span class="pm"></span></button>
-          <div class="faq-a">
-            <p>Our customer line and dispatch teams operate 24/7, year-round.</p>
-          </div>
-        </div>
+        <?php foreach ($home_faqs as $faq) : ?>
+          <?php if (!empty($faq['q'])) : ?>
+            <div class="faq-item">
+              <button class="faq-q" type="button"><?php echo esc_html($faq['q']); ?><span class="pm"></span></button>
+              <div class="faq-a">
+                <p><?php echo esc_html($faq['a'] ?? ''); ?></p>
+              </div>
+            </div>
+          <?php endif; ?>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
+  <?php endif; ?>
 
   <!-- QUOTE FORM SECTION -->
   <section class="section quote" id="quote">
@@ -454,22 +570,24 @@ get_header(); ?>
         <p class="section-lead">Share a few quick specifics and receive a clear, tailored proposal. We operate around the clock, 7 days a week. Want to speak directly? Select your preferred channel below.</p>
         
         <div class="contact-opt">
-          <a class="copt" href="tel:+447919033684" target="_blank" rel="noopener noreferrer">
-            <span class="ic">
-              <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>
-              </svg>
-            </span>
-            <div><b>Call 07919 033684</b><small>Direct phone line · 24/7</small></div>
-          </a>
+          <?php if (!empty($phone)) : ?>
+            <a class="copt" href="<?php echo esc_url(expertcare_get_phone_url()); ?>" target="_blank" rel="noopener noreferrer">
+              <span class="ic">
+                <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>
+                </svg>
+              </span>
+              <div><b>Call <?php echo esc_html($phone); ?></b><small>Direct phone line · 24/7</small></div>
+            </a>
+          <?php endif; ?>
 
-          <a class="copt" href="https://api.whatsapp.com/send?phone=447919033684&text=Hi%20Expertcare%20Cleaning%2C%20I%27d%20like%20a%20cleaning%20quote%20please." target="_blank" rel="noopener noreferrer">
+          <a class="copt" href="<?php echo esc_url(expertcare_get_whatsapp_url("Hi Expertcare Cleaning, I'd like a cleaning quote please.")); ?>" target="_blank" rel="noopener noreferrer">
             <span class="ic">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.1c.2-.2.5-.3.6-.3h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.6.8c.3.1.4.2.5.3.1.2.1.6-.1 1.1Z"/>
               </svg>
             </span>
-            <div><b>WhatsApp 07919 033684</b><small>Immediate chat · 24/7</small></div>
+            <div><b>WhatsApp Us Directly</b><small>Immediate chat · 24/7</small></div>
           </a>
         </div>
       </div>
@@ -477,9 +595,13 @@ get_header(); ?>
       <div class="form-card reveal">
         <div class="fh">Request Your Estimate</div>
         <p class="fnote">Submit your requirements and receive a prompt, tailored quotation and schedule options — typically within minutes.</p>
-        <form id="quoteForm">
-          <input type="hidden" name="form-name" value="quote-request">
-          <p class="hp"><label>Don’t fill this in if you’re human: <input name="bot-field"></label></p>
+        
+        <div id="quoteFormNotice" style="display:none;margin-bottom:16px;padding:12px 14px;border-radius:8px;font-size:13.5px;font-weight:600;"></div>
+
+        <form id="quoteForm" enctype="multipart/form-data">
+          <?php wp_nonce_field('expertcare_quote_nonce_action', 'quote_nonce'); ?>
+          <input type="hidden" name="action" value="submit_expertcare_quote">
+          <p class="hp" style="display:none !important;"><label>Leave empty: <input name="bot-field"></label></p>
           
           <div class="frow">
             <div class="field"><label>First name</label><input name="name" required placeholder="e.g. Alex" autocomplete="name"></div>
@@ -495,6 +617,10 @@ get_header(); ?>
               <option value="Airbnb Turnover Clean">Airbnb Turnover Cleaning</option>
               <option value="Deep clean">Deep clean</option>
               <option value="End of tenancy (move-in / move-out)">End of tenancy (move-in / move-out)</option>
+              <option value="Commercial Cleaning">Commercial Cleaning</option>
+              <option value="Oven Cleaning">Oven Cleaning</option>
+              <option value="Upholstery & Sofa Cleaning">Upholstery & Sofa Cleaning</option>
+              <option value="Inside Windows Cleaning">Inside Windows Cleaning</option>
               <option value="Not sure — please advise">Not sure — please advise</option>
             </select>
           </div>
@@ -597,8 +723,8 @@ get_header(); ?>
 
           <div class="field">
             <label>Photos of your property (optional)</label>
-            <input type="file" name="photos" accept="image/*" multiple>
-            <small style="display:block;color:var(--muted-dim);font-size:.74rem;margin-top:6px">Attach key room images — cookers, bathrooms, living areas. Helps us price accurately without delay.</small>
+            <input type="file" name="photos[]" accept="image/*" multiple>
+            <small style="display:block;color:var(--muted-dim);font-size:.74rem;margin-top:6px">Attach key room images — cookers, bathrooms, living areas.</small>
           </div>
 
           <div class="field">
@@ -606,9 +732,11 @@ get_header(); ?>
             <textarea name="notes" placeholder="Include any details that assist us in preparing an accurate quote."></textarea>
           </div>
 
-          <button class="btn btn-primary" type="button" id="formSubmitBtn">Request My Quote →</button>
+          <button class="btn btn-primary" type="submit" id="formSubmitBtn">Request My Quote →</button>
+          
           <div class="or-wa">or</div>
           <button class="btn btn-wa" type="button" id="waCompose">Send My Details on WhatsApp</button>
+          
           <div class="form-foot">Zero obligation · Your details remain strictly confidential</div>
         </form>
       </div>
@@ -635,7 +763,9 @@ get_header(); ?>
           </div>
           <h4 style="font-family:var(--display);font-size:1.1rem;font-weight:600;margin-bottom:6px">Call Direct</h4>
           <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Rapid telephone bookings &amp; urgent turnover requests.</p>
-          <a href="tel:+447919033684" target="_blank" rel="noopener noreferrer" style="font-weight:600;color:var(--blue);font-size:.92rem">07919 033684</a>
+          <?php if (!empty($phone)) : ?>
+            <a href="<?php echo esc_url(expertcare_get_phone_url()); ?>" target="_blank" rel="noopener noreferrer" style="font-weight:600;color:var(--blue);font-size:.92rem"><?php echo esc_html($phone); ?></a>
+          <?php endif; ?>
         </div>
 
         <!-- WhatsApp Support -->
@@ -645,7 +775,7 @@ get_header(); ?>
           </div>
           <h4 style="font-family:var(--display);font-size:1.1rem;font-weight:600;margin-bottom:6px">WhatsApp</h4>
           <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Fast messaging, instant estimates &amp; property photo reviews.</p>
-          <a href="https://api.whatsapp.com/send?phone=447919033684&text=Hi%20Expertcare%20Cleaning%2C%20I%27d%20like%20a%20cleaning%20quote%20please." target="_blank" rel="noopener noreferrer" style="font-weight:600;color:var(--blue);font-size:.92rem">Chat on WhatsApp</a>
+          <a href="<?php echo esc_url(expertcare_get_whatsapp_url("Hi Expertcare Cleaning, I'd like a cleaning quote please.")); ?>" target="_blank" rel="noopener noreferrer" style="font-weight:600;color:var(--blue);font-size:.92rem">Chat on WhatsApp</a>
         </div>
 
         <!-- Email Inquiries -->
@@ -655,7 +785,9 @@ get_header(); ?>
           </div>
           <h4 style="font-family:var(--display);font-size:1.1rem;font-weight:600;margin-bottom:6px">Email Inquiries</h4>
           <p style="color:var(--muted);font-size:.86rem;margin-bottom:12px">Send tenancy checklists, job scopes &amp; bespoke requirements.</p>
-          <a href="<?php echo esc_url('mailto:' . antispambot('Expertcarecleaninglondon@gmail.com')); ?>" target="_blank" rel="noopener noreferrer" style="font-weight:600;color:var(--blue);font-size:.92rem">Email Us</a>
+          <?php if (!empty($contact_email)) : ?>
+            <a href="<?php echo esc_url('mailto:' . antispambot($contact_email)); ?>" target="_blank" rel="noopener noreferrer" style="font-weight:600;color:var(--blue);font-size:.92rem">Email Us</a>
+          <?php endif; ?>
         </div>
 
         <!-- Service Hours & Area -->

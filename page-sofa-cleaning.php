@@ -5,7 +5,44 @@
  * @package Expertcare_Cleaning
  */
 
-get_header(); ?>
+get_header(); 
+
+// 1. Service Identification
+$service_key = 'upholstery-sofa';
+
+// 2. Fetch Master Defaults & Live Backend Customizations
+$all_configs = expertcare_get_services_config();
+$svc_config  = $all_configs[$service_key] ?? [];
+$svc_data    = get_option('expertcare_svc_' . $service_key . '_data', []);
+
+// 3. Dynamic Values (Zero Fallbacks)
+$eyebrow  = $svc_data['eyebrow'] ?? '';
+$h1_main  = $svc_data['h1_main'] ?? '';
+$h1_shine = $svc_data['h1_shine'] ?? '';
+$sub      = $svc_data['sub'] ?? '';
+$price    = $svc_data['price'] ?? '';
+
+// Editorial Prose Blocks Repeater
+$prose_blocks = !empty($svc_data['prose']) && is_array($svc_data['prose']) ? $svc_data['prose'] : [];
+
+// Checklist Items
+$checklist = !empty($svc_data['checklist']) && is_array($svc_data['checklist']) ? $svc_data['checklist'] : [];
+
+// Media Gallery Images
+$raw_imgs = !empty($svc_data['imgs']) && is_array($svc_data['imgs']) ? $svc_data['imgs'] : [];
+$images = [];
+foreach ($raw_imgs as $img) {
+    if (empty($img)) continue;
+    if (filter_var($img, FILTER_VALIDATE_URL)) {
+        $images[] = $img;
+    } else {
+        $images[] = get_template_directory_uri() . '/assets/img/' . ltrim($img, '/');
+    }
+}
+
+// FAQs
+$faqs = !empty($svc_data['faqs']) && is_array($svc_data['faqs']) ? $svc_data['faqs'] : [];
+?>
 
 <style>
   /* Internal CSS for Upholstery & Sofa Cleaning Service Page */
@@ -42,10 +79,9 @@ get_header(); ?>
 
   /* Results Gallery: 2-Column Inner Images */
   .work-grid-two-col{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  .work-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--color-border,#e2e8f0);aspect-ratio:1/1;margin:0}
+  .work-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--color-border,#e2e8f0);aspect-ratio:1/1;margin:0;background:#f8fafc}
   .work-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
   .work-card:hover img{transform:scale(1.06)}
-  .work-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:.8rem;font-weight:600;color:#fff;background:linear-gradient(to top,rgba(5,8,11,.88),transparent)}
 
   /* FAQ Accordion List */
   .faq-list{border-top:1px solid var(--color-border,#e2e8f0)}
@@ -74,97 +110,86 @@ get_header(); ?>
   <section class="page-hero">
     <div class="wrap">
       <div class="crumb">
-        <a href="<?php echo esc_url(home_url('/')); ?>">Home</a> / <a href="<?php echo esc_url(home_url('#services')); ?>">Services</a> / <span>Upholstery &amp; Sofa Cleaning</span>
+        <a href="<?php echo esc_url(home_url('/')); ?>">Home</a> / <a href="<?php echo esc_url(home_url('#services')); ?>">Services</a> / <span><?php echo esc_html($svc_config['title'] ?? ''); ?></span>
       </div>
-      <span class="eyebrow">
-        <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        06 · Upholstery &amp; Soft Furnishings
-      </span>
-      <h1>Sofa &amp; fabric restoration, <span class="shine">deeply purified and renewed.</span></h1>
-      <p class="sub">Advanced deep-steam extraction, delicate stain breakdown, and restorative fabric conditioning for settees, modular suites, armchairs, and dining seating across London.</p>
+      <?php if (!empty($eyebrow)) : ?>
+        <span class="eyebrow">
+          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+          <?php echo esc_html($eyebrow); ?>
+        </span>
+      <?php endif; ?>
+
+      <?php if (!empty($h1_main) || !empty($h1_shine)) : ?>
+        <h1><?php echo esc_html($h1_main); ?> <?php if (!empty($h1_shine)) : ?><span class="shine"><?php echo esc_html($h1_shine); ?></span><?php endif; ?></h1>
+      <?php endif; ?>
+
+      <?php if (!empty($sub)) : ?>
+        <p class="sub"><?php echo esc_html($sub); ?></p>
+      <?php endif; ?>
     </div>
   </section>
 
   <!-- WHAT'S INCLUDED / SERVICE BREAKDOWN SPLIT -->
   <section class="section">
     <div class="wrap split">
-      <!-- Left: Prose Description -->
+      <!-- Left: Dynamic Editorial Prose Blocks Repeater -->
       <div class="prose reveal in">
-        <h3>Scope of the treatment.</h3>
-        <p>Over time, soft furnishings accumulate fine particulate dust, skin flakes, food micro-spills, pet dander, and stale aromas that domestic vacuuming simply cannot lift. Our upholstery restoration process reaches deep into the weave using pressurized thermal extraction, fiber-safe spot treatments, and neutralising rinses to lift ground-in dirt while preserving the soft texture and original weave of your pieces.</p>
-
-        <h3>Who this is for</h3>
-        <p>Pet owners, active family homes with spill-prone fabrics, sensitive individuals managing dust allergies, and short-stay Airbnb hosts ensuring every incoming guest is greeted by immaculate, fresh-smelling furniture.</p>
-
-        <h3>Our operational workflow</h3>
-        <p>Provide your configuration (whether an armchair, two-seater loveseat, chaise lounge, or multi-piece sectional) and the upholstery material. We begin with comprehensive dry particulate extraction, pre-condition heavy wear areas, and run high-suction moisture-controlled extraction. Our safe deodorising rinses eliminate persistent trapped scents without leaving heavy fragrances or detergent residue behind.</p>
+        <?php if (!empty($prose_blocks)) : ?>
+          <?php foreach ($prose_blocks as $block) : ?>
+            <?php if (!empty($block['title'])) : ?>
+              <h3><?php echo esc_html($block['title']); ?></h3>
+            <?php endif; ?>
+            <?php if (!empty($block['body'])) : ?>
+              <p><?php echo nl2br(esc_html($block['body'])); ?></p>
+            <?php endif; ?>
+          <?php endforeach; ?>
+        <?php endif; ?>
 
         <div class="split-actions">
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Request Fabric Quote</a>
-          <a class="btn btn-ghost" href="https://api.whatsapp.com/send?phone=447919033684&text=Hi%20Expertcare%20Cleaning%2C%20I%27d%20like%20an%20upholstery%20cleaning%20quote%20please." target="_blank" rel="noopener noreferrer">WhatsApp us →</a>
+          <a class="btn btn-ghost" href="<?php echo esc_url(expertcare_get_whatsapp_url("Hi Expertcare Cleaning, I'd like an upholstery cleaning quote please.")); ?>" target="_blank" rel="noopener noreferrer">WhatsApp us →</a>
         </div>
       </div>
 
-      <!-- Right: Boxed Checklist Card with 10 Items -->
+      <!-- Right: Dynamic Boxed Checklist Card -->
+      <?php if (!empty($svc_config['title']) || !empty($checklist)) : ?>
       <aside class="incl reveal in">
-        <h3>Fabric &amp; Suite Care</h3>
-        <div class="pr">Customised quote · tailored to your seating layout</div>
+        <?php if (!empty($svc_config['title'])) : ?>
+          <h3><?php echo esc_html($svc_config['title']); ?></h3>
+        <?php endif; ?>
         
-        <div class="checklist-title">10-Point Fabric Revitalisation Checklist:</div>
-        <ul>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            High-filtration dry extraction to lift deep particulate matter
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Pre-treatment of surface marks, spills &amp; drink stains
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Pressurized hot-water extraction &amp; embedded soil removal
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Enzymatic deodorising to neutralize stubborn odors at the root
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Dual-sided detailing for all loose back and seat cushions
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Focused cleaning along armrests, headrests &amp; bolster pads
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Crevice tool extraction between frame seams &amp; folds
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Pet hair separation, lint removal &amp; allergen reduction
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Fibre-safe solutions tested for velvet, linen, synthetics &amp; wool
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            High-velocity vacuum pass to minimize remaining moisture
-          </li>
-        </ul>
+        <?php if (!empty($price)) : ?>
+          <div class="pr"><?php echo esc_html($price); ?></div>
+        <?php endif; ?>
+        
+        <?php if (!empty($checklist)) : ?>
+          <div class="checklist-title">Fabric Revitalisation Protocol:</div>
+          <ul>
+            <?php foreach ($checklist as $item) : ?>
+              <?php if (!empty(trim($item))) : ?>
+                <li>
+                  <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
+                  <?php echo esc_html($item); ?>
+                </li>
+              <?php endif; ?>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
 
         <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Book Upholstery Clean</a>
       </aside>
+      <?php endif; ?>
     </div>
   </section>
 
   <!-- 2-COLUMN EQUAL SECTION: WORK SHOWCASE & FAQ -->
+  <?php if (!empty($images) || !empty($faqs)) : ?>
   <section class="section showcase-faq-section">
     <div class="wrap">
       <div class="showcase-faq-grid">
         
-        <!-- Left Column: Work Showcase with 2-Column Images -->
+        <!-- Left Column: Work Showcase -->
+        <?php if (!empty($images)) : ?>
         <div class="showcase-col reveal">
           <div class="col-block-head">
             <span class="eyebrow">
@@ -176,22 +201,17 @@ get_header(); ?>
           </div>
 
           <div class="work-grid-two-col">
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-8.jpg" loading="lazy">
-            </figure>
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-7.jpg" loading="lazy">
-            </figure>
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-6.jpg" loading="lazy">
-            </figure>
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-2.jpg" loading="lazy">
-            </figure>
+            <?php foreach ($images as $img_url) : ?>
+              <figure class="work-card">
+                <img src="<?php echo esc_url($img_url); ?>" alt="Completed upholstery cleaning results" loading="lazy">
+              </figure>
+            <?php endforeach; ?>
           </div>
         </div>
+        <?php endif; ?>
 
         <!-- Right Column: FAQ -->
+        <?php if (!empty($faqs)) : ?>
         <div class="faq-col reveal">
           <div class="col-block-head">
             <span class="eyebrow">
@@ -203,46 +223,24 @@ get_header(); ?>
           </div>
 
           <div class="faq-list">
-            <div class="faq-item">
-              <button class="faq-q" type="button">What is the expected drying time for cleaned upholstery?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Drying times generally range between 3 and 6 hours, depending upon room airflow, indoor heating, and the density of the textile. Our commercial suction equipment extracts the vast majority of water during the final rinse to facilitate rapid drying.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">Can established or deep-set stains be fully lifted?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Every mark is addressed individually with specialized breakdown formulas. While most organic marks (such as coffee, tea, grease, wine, or pet mud) can be eliminated or noticeably faded, fiber damage caused by bleach or long-term chemical alteration cannot be reversed.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">Are your treatments safe on delicate materials like velvet, linen, or wool?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Yes. Our specialists examine manufacturer care tags and execute an initial patch test on a hidden section of fabric to confirm colorfastness and verify that the fiber weave will remain completely stable.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">Can this be scheduled alongside a general home or tenancy clean?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Yes. Sofa and fabric cleaning can be booked as an individual service or bundled alongside our routine, deep, or end-of-tenancy cleans for preferential package pricing.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">Which London postal areas do your upholstery technicians cover?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Our upholstery teams serve residential and commercial properties across all London boroughs: encompassing Central, North, West, East, and South districts.</p>
-              </div>
-            </div>
+            <?php foreach ($faqs as $faq) : ?>
+              <?php if (!empty($faq['q'])) : ?>
+                <div class="faq-item">
+                  <button class="faq-q" type="button"><?php echo esc_html($faq['q']); ?><span class="pm"></span></button>
+                  <div class="faq-a">
+                    <p><?php echo esc_html($faq['a'] ?? ''); ?></p>
+                  </div>
+                </div>
+              <?php endif; ?>
+            <?php endforeach; ?>
           </div>
         </div>
+        <?php endif; ?>
 
       </div>
     </div>
   </section>
+  <?php endif; ?>
 </main>
 
 <?php get_footer(); ?>

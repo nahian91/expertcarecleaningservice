@@ -5,7 +5,42 @@
  * @package Expertcare_Cleaning
  */
 
-get_header(); ?>
+get_header(); 
+
+// 1. Service Identification
+$service_key = 'oven-cleaning';
+
+// 2. Fetch Master Defaults & Live Backend Customizations
+$all_configs = expertcare_get_services_config();$svc_config  = $all_configs[$service_key] ?? [];
+$svc_data    = get_option('expertcare_svc_' .$service_key . '_data', []);
+
+// 3. Dynamic Values (Zero Fallbacks)
+$eyebrow  =$svc_data['eyebrow'] ?? '';
+$h1_main  =$svc_data['h1_main'] ?? '';
+$h1_shine =$svc_data['h1_shine'] ?? '';
+$sub      =$svc_data['sub'] ?? '';
+$price    =$svc_data['price'] ?? '';
+
+// Editorial Prose Blocks Repeater
+$prose_blocks = !empty($svc_data['prose']) && is_array($svc_data['prose']) ?$svc_data['prose'] : [];
+
+// Checklist Items
+$checklist = !empty($svc_data['checklist']) && is_array($svc_data['checklist']) ?$svc_data['checklist'] : [];
+
+// Media Gallery Images
+$raw_imgs = !empty($svc_data['imgs']) && is_array($svc_data['imgs']) ? $svc_data['imgs'] : [];$images = [];
+foreach ($raw_imgs as$img) {
+    if (empty($img)) continue;
+    if (filter_var($img, FILTER_VALIDATE_URL)) {
+        $images[] =$img;
+    } else {
+        $images[] = get_template_directory_uri() . '/assets/img/' . ltrim($img, '/');
+    }
+}
+
+// FAQs
+$faqs = !empty($svc_data['faqs']) && is_array($svc_data['faqs']) ?$svc_data['faqs'] : [];
+?>
 
 <style>
   /* Internal CSS for Oven Cleaning Service Page */
@@ -42,10 +77,9 @@ get_header(); ?>
 
   /* Transformation Gallery: 2-Column Inner Images */
   .work-grid-two-col{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  .work-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--color-border,#e2e8f0);aspect-ratio:1/1;margin:0}
+  .work-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--color-border,#e2e8f0);aspect-ratio:1/1;margin:0;background:#f8fafc}
   .work-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
   .work-card:hover img{transform:scale(1.06)}
-  .work-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:.8rem;font-weight:600;color:#fff;background:linear-gradient(to top,rgba(5,8,11,.88),transparent)}
 
   /* FAQ Accordion List */
   .faq-list{border-top:1px solid var(--color-border,#e2e8f0)}
@@ -74,97 +108,86 @@ get_header(); ?>
   <section class="page-hero">
     <div class="wrap">
       <div class="crumb">
-        <a href="<?php echo esc_url(home_url('/')); ?>">Home</a> / <a href="<?php echo esc_url(home_url('#services')); ?>">Services</a> / <span>Oven Cleaning</span>
+        <a href="<?php echo esc_url(home_url('/')); ?>">Home</a> / <a href="<?php echo esc_url(home_url('#services')); ?>">Services</a> / <span><?php echo esc_html($svc_config['title'] ?? ''); ?></span>
       </div>
-      <span class="eyebrow">
-        <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        05 · Specialist Cooker Care
-      </span>
-      <h1>Professional oven restoration, <span class="shine">immaculate and showroom-ready.</span></h1>
-      <p class="sub">Non-caustic, odourless deep cleaning for ranges, ovens, hobs, and extractors that lifts hardened carbon and burnt-in fat across all London postcodes.</p>
+      <?php if (!empty($eyebrow)) : ?>
+        <span class="eyebrow">
+          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+          <?php echo esc_html($eyebrow); ?>
+        </span>
+      <?php endif; ?>
+
+      <?php if (!empty($h1_main) || !empty($h1_shine)) : ?>
+        <h1><?php echo esc_html($h1_main); ?> <?php if (!empty($h1_shine)) : ?><span class="shine"><?php echo esc_html($h1_shine); ?></span><?php endif; ?></h1>
+      <?php endif; ?>
+
+      <?php if (!empty($sub)) : ?>
+        <p class="sub"><?php echo esc_html($sub); ?></p>
+      <?php endif; ?>
     </div>
   </section>
 
   <!-- WHAT'S INCLUDED / SERVICE BREAKDOWN SPLIT -->
   <section class="section">
     <div class="wrap split">
-      <!-- Left: Prose Description -->
+      <!-- Left: Dynamic Editorial Prose Blocks Repeater -->
       <div class="prose reveal in">
-        <h3>Scope of our treatment.</h3>
-        <p>Repeated roasting and baking leave layers of heat-crystallised fats, sticky splatters, and burnt soot across cavity walls, fan housings, and glazing. Our technical oven detailing breaks down months of polymerised grease without noxious fumes or toxic acids, reviving cooking efficiency and returning metal surfaces to gleaming condition.</p>
-
-        <h3>Who benefits most</h3>
-        <p>Private homeowners desiring a pristine kitchen environment, departing tenants needing to satisfy strict landlord inventory checks, short-stay hosts maintaining pristine standards, and enthusiastic home cooks tired of smoking appliances.</p>
-
-        <h3>How we deliver results</h3>
-        <p>Share whether you operate a single compact unit, double oven stack, broad range cooker, or induction surface. We methodically unmount removable components—including wire racks, side guides, internal fan cover plates, and multi-pane door glass—for isolated decarbonising baths. Using 100% biodegradable, food-safe agents, your cooker is primed for culinary use the moment we pack our tools.</p>
+        <?php if (!empty($prose_blocks)) : ?>
+          <?php foreach ($prose_blocks as$block) : ?>
+            <?php if (!empty($block['title'])) : ?>
+              <h3><?php echo esc_html($block['title']); ?></h3>
+            <?php endif; ?>
+            <?php if (!empty($block['body'])) : ?>
+              <p><?php echo nl2br(esc_html($block['body'])); ?></p>
+            <?php endif; ?>
+          <?php endforeach; ?>
+        <?php endif; ?>
 
         <div class="split-actions">
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Request an Oven Quote</a>
-          <a class="btn btn-ghost" href="https://api.whatsapp.com/send?phone=447919033684&text=Hi%20Expertcare%20Cleaning%2C%20I%27d%20like%20an%20oven%20cleaning%20quote%20please." target="_blank" rel="noopener noreferrer">WhatsApp us →</a>
+          <a class="btn btn-ghost" href="<?php echo esc_url(expertcare_get_whatsapp_url("Hi Expertcare Cleaning, I'd like an oven cleaning quote please.")); ?>" target="_blank" rel="noopener noreferrer">WhatsApp us →</a>
         </div>
       </div>
 
-      <!-- Right: Boxed Checklist Card (10-Point Detailing Checklist) -->
+      <!-- Right: Dynamic Boxed Checklist Card -->
+      <?php if (!empty($svc_config['title']) || !empty($checklist)) : ?>
       <aside class="incl reveal in">
-        <h3>Cooker Detailing</h3>
-        <div class="pr">Upfront, fixed rates · single, double &amp; range models</div>
+        <?php if (!empty($svc_config['title'])) : ?>
+          <h3><?php echo esc_html($svc_config['title']); ?></h3>
+        <?php endif; ?>
         
-        <div class="checklist-title">10-Point Appliance Detailing Checklist:</div>
-        <ul>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Complete breakdown of heat-hardened fats &amp; carbon layers
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Shelves, baking trays &amp; lateral supports stripped in dip tanks
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Door disassembly for inside glass pane clarity polishing
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Rear baffle panel, blower fan &amp; element housing desoiling
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Degreasing of gas burners, ceramic plates &amp; induction surfaces
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Canopy canopy hood wiping &amp; aluminium filter degreasing
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Rotary dials, control fascia, push buttons &amp; grab bars sanitised
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Thermal rubber gaskets, pivot hinges &amp; door jambs cleared
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            100% eco-friendly, non-abrasive &amp; fume-free formulation
-          </li>
-          <li>
-            <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
-            Post-clean operational test &amp; immediate cooking clearance
-          </li>
-        </ul>
+        <?php if (!empty($price)) : ?>
+          <div class="pr"><?php echo esc_html($price); ?></div>
+        <?php endif; ?>
+        
+        <?php if (!empty($checklist)) : ?>
+          <div class="checklist-title">Appliance Detailing Checklist:</div>
+          <ul>
+            <?php foreach ($checklist as$item) : ?>
+              <?php if (!empty(trim($item))) : ?>
+                <li>
+                  <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
+                  <?php echo esc_html($item); ?>
+                </li>
+              <?php endif; ?>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
 
         <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Book Oven Clean</a>
       </aside>
+      <?php endif; ?>
     </div>
   </section>
 
   <!-- 2-COLUMN EQUAL SECTION: WORK SHOWCASE & FAQ -->
+  <?php if (!empty($images) || !empty($faqs)) : ?>
   <section class="section showcase-faq-section">
     <div class="wrap">
       <div class="showcase-faq-grid">
         
-        <!-- Left Column: Work Showcase with 2-Column Images -->
+        <!-- Left Column: Work Showcase -->
+        <?php if (!empty($images)) : ?>
         <div class="showcase-col reveal">
           <div class="col-block-head">
             <span class="eyebrow">
@@ -176,22 +199,17 @@ get_header(); ?>
           </div>
 
           <div class="work-grid-two-col">
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-2.jpg" loading="lazy">
-            </figure>
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-4.jpg" loading="lazy">
-            </figure>
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-6.jpg" loading="lazy">
-            </figure>
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-5.jpg" loading="lazy">
-            </figure>
+            <?php foreach ($images as$img_url) : ?>
+              <figure class="work-card">
+                <img src="<?php echo esc_url($img_url); ?>" alt="Completed oven restoration results" loading="lazy">
+              </figure>
+            <?php endforeach; ?>
           </div>
         </div>
+        <?php endif; ?>
 
         <!-- Right Column: FAQ -->
+        <?php if (!empty($faqs)) : ?>
         <div class="faq-col reveal">
           <div class="col-block-head">
             <span class="eyebrow">
@@ -203,46 +221,24 @@ get_header(); ?>
           </div>
 
           <div class="faq-list">
-            <div class="faq-item">
-              <button class="faq-q" type="button">Is the appliance safe to cook in right after the appointment?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Yes, without delay. Because we employ caustic-free, plant-based bio-cleansers, there are zero persistent chemical residues or dangerous gas emissions. Your oven is 100% meal-ready straight away.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">Do you dismantle and wash inside multi-layered door glass?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Yes. Providing the model's design accommodates disassembly without seal damage, our specialists separate the glass panes to eliminate streaks, runs, and fog trapped within the door construction.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">How much time does an oven treatment typically require?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>An average single-cavity appliance takes approximately 90 to 120 minutes. Larger double units, standard range cookers, and wide cast-iron models like AGAs often require 2.5 to 3.5 hours for total restoration.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">Can this treatment be bundled with general or move-out cleans?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Certainly. While basic superficial wipe-downs accompany routine cleans, full restorative appliance detailing can be added to any regular, intensive deep, or end-of-tenancy clean at preferential package pricing.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">What geographical zones do your cooker cleaners cover?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Our dedicated cooker cleaning specialists travel to properties across Greater London, including Central, North, West, East, and South London postcodes.</p>
-              </div>
-            </div>
+            <?php foreach ($faqs as$faq) : ?>
+              <?php if (!empty($faq['q'])) : ?>
+                <div class="faq-item">
+                  <button class="faq-q" type="button"><?php echo esc_html($faq['q']); ?><span class="pm"></span></button>
+                  <div class="faq-a">
+                    <p><?php echo esc_html($faq['a'] ?? ''); ?></p>
+                  </div>
+                </div>
+              <?php endif; ?>
+            <?php endforeach; ?>
           </div>
         </div>
+        <?php endif; ?>
 
       </div>
     </div>
   </section>
+  <?php endif; ?>
 </main>
 
 <?php get_footer(); ?>

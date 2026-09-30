@@ -5,7 +5,44 @@
  * @package Expertcare_Cleaning
  */
 
-get_header(); ?>
+get_header(); 
+
+// 1. Service Identification
+$service_key = 'deep-cleaning';
+
+// 2. Fetch Master Defaults & Live Backend Customizations
+$all_configs = expertcare_get_services_config();
+$svc_config  = $all_configs[$service_key] ?? [];
+$svc_data    = get_option('expertcare_svc_' . $service_key . '_data', []);
+
+// 3. Dynamic Values (Zero Fallbacks)
+$eyebrow  = $svc_data['eyebrow'] ?? '';
+$h1_main  = $svc_data['h1_main'] ?? '';
+$h1_shine = $svc_data['h1_shine'] ?? '';
+$sub      = $svc_data['sub'] ?? '';
+$price    = $svc_data['price'] ?? '';
+
+// Editorial Prose Blocks Repeater
+$prose_blocks = !empty($svc_data['prose']) && is_array($svc_data['prose']) ? $svc_data['prose'] : [];
+
+// Checklist Items
+$checklist = !empty($svc_data['checklist']) && is_array($svc_data['checklist']) ? $svc_data['checklist'] : [];
+
+// Media Gallery Images
+$raw_imgs = !empty($svc_data['imgs']) && is_array($svc_data['imgs']) ? $svc_data['imgs'] : [];
+$images = [];
+foreach ($raw_imgs as $img) {
+    if (empty($img)) continue;
+    if (filter_var($img, FILTER_VALIDATE_URL)) {
+        $images[] = $img;
+    } else {
+        $images[] = get_template_directory_uri() . '/assets/img/' . ltrim($img, '/');
+    }
+}
+
+// FAQs
+$faqs = !empty($svc_data['faqs']) && is_array($svc_data['faqs']) ? $svc_data['faqs'] : [];
+?>
 
 <style>
   /* Internal CSS for Deep Clean Service Page */
@@ -42,10 +79,9 @@ get_header(); ?>
 
   /* Transformation Showcase: 2-Column Inner Images */
   .work-grid-two-col{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  .work-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--color-border,#e2e8f0);aspect-ratio:1/1;margin:0}
+  .work-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--color-border,#e2e8f0);aspect-ratio:1/1;margin:0;background:#f8fafc}
   .work-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
   .work-card:hover img{transform:scale(1.06)}
-  .work-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:.8rem;font-weight:600;color:#fff;background:linear-gradient(to top,rgba(5,8,11,.88),transparent)}
 
   /* FAQ Accordion List */
   .faq-list{border-top:1px solid var(--color-border,#e2e8f0)}
@@ -74,79 +110,86 @@ get_header(); ?>
   <section class="page-hero">
     <div class="wrap">
       <div class="crumb">
-        <a href="<?php echo esc_url(home_url('/')); ?>">Home</a> / <a href="<?php echo esc_url(home_url('#services')); ?>">Services</a> / <span>Deep Clean</span>
+        <a href="<?php echo esc_url(home_url('/')); ?>">Home</a> / <a href="<?php echo esc_url(home_url('#services')); ?>">Services</a> / <span><?php echo esc_html($svc_config['title'] ?? ''); ?></span>
       </div>
-      <span class="eyebrow">
-        <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
-        02 · Complete Intensive Restoration
-      </span>
-      <h1>Comprehensive deep cleaning, <span class="shine">restoring true pristine comfort.</span></h1>
-      <p class="sub">A rigorous, corner-to-corner sanitisation package targeting hardened limescale, baked-on grease, hidden dust traps, and high-frequency touch surfaces across London.</p>
+      <?php if (!empty($eyebrow)) : ?>
+        <span class="eyebrow">
+          <svg class="spk" viewBox="0 0 24 24"><path d="M12 1 C12 8 13 9 23 9 C13 9 12 10 12 23 C12 10 11 9 1 9 C11 9 12 8 12 1Z"/></svg>
+          <?php echo esc_html($eyebrow); ?>
+        </span>
+      <?php endif; ?>
+
+      <?php if (!empty($h1_main) || !empty($h1_shine)) : ?>
+        <h1><?php echo esc_html($h1_main); ?> <?php if (!empty($h1_shine)) : ?><span class="shine"><?php echo esc_html($h1_shine); ?></span><?php endif; ?></h1>
+      <?php endif; ?>
+
+      <?php if (!empty($sub)) : ?>
+        <p class="sub"><?php echo esc_html($sub); ?></p>
+      <?php endif; ?>
     </div>
   </section>
 
   <!-- WHAT'S INCLUDED / SERVICE BREAKDOWN SPLIT -->
   <section class="section">
     <div class="wrap split">
-      <!-- Left: Prose Description -->
+      <!-- Left: Dynamic Editorial Prose Blocks Repeater -->
       <div class="prose reveal in">
-        <h3>Scope of the treatment.</h3>
-        <p>A deep restorative clean targets the stubborn deposits that standard weekly routines cannot resolve. We address long-term residue head-on: high-level cobweb extraction, detailed baseboard and architrave washing, cleaning under moveable furniture, intensive degreasing of cooker hobs and backsplashes, appliance sanitisation, and complete bathroom scale removal across grout, screens, and fixtures.</p>
-
-        <h3>Who this is for</h3>
-        <p>Residences requiring a complete seasonal refresh, homes that have gone without professional maintenance for months, pre-hosting preparation, or properties setting a clean benchmark before commencing regular housekeeping visits.</p>
-
-        <h3>Our operational process</h3>
-        <p>Submit your postcode and room configuration for an all-inclusive, fixed estimate. Our operatives arrive equipped with industrial descalers, grease-dissolving formulas, and specialised extraction equipment. Every technician works systematically against our 22-point protocol, ensuring your home is left completely revitalised, hygienic, and spotless.</p>
+        <?php if (!empty($prose_blocks)) : ?>
+          <?php foreach ($prose_blocks as $block) : ?>
+            <?php if (!empty($block['title'])) : ?>
+              <h3><?php echo esc_html($block['title']); ?></h3>
+            <?php endif; ?>
+            <?php if (!empty($block['body'])) : ?>
+              <p><?php echo nl2br(esc_html($block['body'])); ?></p>
+            <?php endif; ?>
+          <?php endforeach; ?>
+        <?php endif; ?>
 
         <div class="split-actions">
           <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Request a Tailored Quote</a>
-          <a class="btn btn-ghost" href="https://api.whatsapp.com/send?phone=447919033684&text=Hi%20Expertcare%20Cleaning%2C%20I%27d%20like%20a%20deep%20cleaning%20quote%20please." target="_blank" rel="noopener noreferrer">WhatsApp us →</a>
+          <a class="btn btn-ghost" href="<?php echo esc_url(expertcare_get_whatsapp_url("Hi Expertcare Cleaning, I'd like a deep cleaning quote please.")); ?>" target="_blank" rel="noopener noreferrer">WhatsApp us →</a>
         </div>
       </div>
 
-      <!-- Right: Boxed Checklist Card with All 22 Items -->
+      <!-- Right: Dynamic Boxed Checklist Card -->
+      <?php if (!empty($svc_config['title']) || !empty($checklist)) : ?>
       <aside class="incl reveal in">
-        <h3>Intensive Reset</h3>
-        <div class="pr">Customised pricing · calculated to your layout</div>
+        <?php if (!empty($svc_config['title'])) : ?>
+          <h3><?php echo esc_html($svc_config['title']); ?></h3>
+        <?php endif; ?>
         
-        <div class="checklist-title">Deep Reset Checklist Included:</div>
-        <ul>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Detailed dusting of all accessible surfaces</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Removing cobwebs from ceilings, corners &amp; walls</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep cleaning skirting boards, edges &amp; corners</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning doors, door frames, handles &amp; switches</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning window sills, frames &amp; accessible interior glass</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning behind and underneath accessible furniture</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Detailed vacuuming of carpets, rugs &amp; upholstery</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep mopping of hard floors</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Degreasing kitchen surfaces, hobs &amp; splashbacks</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep cleaning fridges, ovens &amp; microwaves</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning inside and outside accessible cupboards &amp; drawers</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deep cleaning showers, baths, sinks &amp; bathroom surfaces</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Thorough toilet cleaning &amp; sanitising</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning mirrors and glass surfaces</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Bed making &amp; fresh linen changing</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Washing, drying &amp; folding laundry</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Emptying bins &amp; replacing bin liners</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Cleaning soap holders, taps &amp; bathroom accessories</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Dusting accessible light fittings &amp; lamps</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Wiping tables, chairs &amp; other furniture</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Extra attention to high-touch and frequently missed areas</li>
-          <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Final detailed check throughout the property</li>
-        </ul>
+        <?php if (!empty($price)) : ?>
+          <div class="pr"><?php echo esc_html($price); ?></div>
+        <?php endif; ?>
+        
+        <?php if (!empty($checklist)) : ?>
+          <div class="checklist-title">Deep Reset Checklist Included:</div>
+          <ul>
+            <?php foreach ($checklist as $item) : ?>
+              <?php if (!empty(trim($item))) : ?>
+                <li>
+                  <svg class="ck" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
+                  <?php echo esc_html($item); ?>
+                </li>
+              <?php endif; ?>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
 
         <a class="btn btn-primary" href="<?php echo esc_url(home_url('#quote')); ?>">Book this clean</a>
       </aside>
+      <?php endif; ?>
     </div>
   </section>
 
   <!-- 2-COLUMN EQUAL SECTION: WORK SHOWCASE & FAQ -->
+  <?php if (!empty($images) || !empty($faqs)) : ?>
   <section class="section showcase-faq-section">
     <div class="wrap">
       <div class="showcase-faq-grid">
         
-        <!-- Left Column: Work Showcase with 2-Column Images -->
+        <!-- Left Column: Work Showcase -->
+        <?php if (!empty($images)) : ?>
         <div class="showcase-col reveal">
           <div class="col-block-head">
             <span class="eyebrow">
@@ -158,23 +201,17 @@ get_header(); ?>
           </div>
 
           <div class="work-grid-two-col">
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-10.jpg" loading="lazy">
-            </figure>
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-9.jpg" loading="lazy">
-            </figure>
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-8.jpg" loading="lazy">
-            </figure>
-            <figure class="work-card">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/gallery-1.jpg" loading="lazy">
-              <figcaption>Refreshed Living Zone &amp; Flooring</figcaption>
-            </figure>
+            <?php foreach ($images as $img_url) : ?>
+              <figure class="work-card">
+                <img src="<?php echo esc_url($img_url); ?>" alt="Completed deep clean results" loading="lazy">
+              </figure>
+            <?php endforeach; ?>
           </div>
         </div>
+        <?php endif; ?>
 
         <!-- Right Column: FAQ -->
+        <?php if (!empty($faqs)) : ?>
         <div class="faq-col reveal">
           <div class="col-block-head">
             <span class="eyebrow">
@@ -186,46 +223,24 @@ get_header(); ?>
           </div>
 
           <div class="faq-list">
-            <div class="faq-item">
-              <button class="faq-q" type="button">What differentiates a deep clean from ongoing maintenance?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Routine housekeeping sustains day-to-day tidiness, whereas our deep reset removes stubborn, embedded contaminants: calcified limescale, high-level cobwebs, scuffs on baseboards, switches, dirt traps behind moveable furniture, internal appliance degreasing, and intensive tile grout revival.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">Do your operatives arrive with all equipment and detergents?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Yes. Our teams bring industrial-strength descaling agents, non-abrasive degreasers, HEPA filtration vacuums, and clean microfibre systems. If you prefer us to apply your own specialised solutions, we are happy to accommodate.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">Are customers expected to shift furniture prior to your arrival?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>Our team cleans behind and underneath accessible freestanding pieces (such as chairs, light sofas, and dining tables). To protect flooring and personnel, we do not relocate solid structural wardrobes, pianos, or delicate entertainment units unless arranged prior to the visit.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">What are your billing and booking deposit conditions?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>We require a 50% reservation deposit to secure your operational slot. The remaining 50% is settled upon final inspection and completion of the work. Appointments can be rescheduled without fee up to 48 hours in advance.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" type="button">Which London postal districts do you service for deep cleans?<span class="pm"></span></button>
-              <div class="faq-a">
-                <p>We provide full deep cleaning coverage across every London borough, encompassing Central, East, West, North, and South districts.</p>
-              </div>
-            </div>
+            <?php foreach ($faqs as $faq) : ?>
+              <?php if (!empty($faq['q'])) : ?>
+                <div class="faq-item">
+                  <button class="faq-q" type="button"><?php echo esc_html($faq['q']); ?><span class="pm"></span></button>
+                  <div class="faq-a">
+                    <p><?php echo esc_html($faq['a'] ?? ''); ?></p>
+                  </div>
+                </div>
+              <?php endif; ?>
+            <?php endforeach; ?>
           </div>
         </div>
+        <?php endif; ?>
 
       </div>
     </div>
   </section>
+  <?php endif; ?>
 </main>
 
 <?php get_footer(); ?>
